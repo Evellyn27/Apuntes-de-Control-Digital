@@ -100,22 +100,45 @@ Si el primero > ultimo, es estable, pero si sucede lo contrario es inestable
 
 ## 6. Ejercicios
 ### Ejercicio 1:
-Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario, considerando que el número de raíces fuera del círculo unitario es igual al número de coeficientes calculados en la primera columna que tienen signo negativo.
+Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.
 
-$A(z)= z^{3}+0.5z^{2}+0.25z+0.2$
+$A(z)= z^{4}-1,2z^{3}+0.07z^{2}+0.3z-0.08$
 
+#### Analizando las condiciones
 
+$a\left| 0,08 \right|\lt 1$
+$1^{4}-1,2*1^{3}+0.07*1^{2}+0.3*1-0.08 = 0.09 > 0$
+$-1^{4}-1,2*-1^{3}+0.07*-1^{2}+0.3*-1-0.08 = 1,89 > 0$
 
-$a=0,2$
-$a=0,15$
-$a=0,3$
+$\left| b3 \right|\gt \left| b0 \right| $
 
-Se concluye que no hay raíces inestables en el polinomio A(z). El polinomio A(z) no tiene raíces fuera de la circunferencia unitaria.
+$\left| 0,99 \right|\gt \left| 0,20 \right| $
+
+$\left| c3 \right|\gt \left| c0 \right| $
+
+$\left| 0,94 \right|\gt \left| 0,31 \right| $
+
+Se concluye que es estable.
 
 ### Ejercicio 2:
 Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.
 
-$A(z)= z^{3}+0.5z^{2}+0.25z+0.2$
+$A(z)= z^{3}-1,1z^{2}-0.1z+0.2$
+
+#### Analizando las condiciones
+
+$a\left| 0,2 \right|\lt 1$
+$1^{3}-1,1*1^{2}-0.1*1+0.2 = 0$
+$-1^{3}-1,1*-1^{2}-0.1*-1+0.2 = -1,8 \lt 0$
+
+$\left| b3 \right|\gt \left| b0 \right| $
+
+$\left| 0,96 \right|\gt \left| 0,12 \right| $
+
+Se concluye que es estable.
+
+## 7. Conclusiones
+ 
 
 ## Referencias
 Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
