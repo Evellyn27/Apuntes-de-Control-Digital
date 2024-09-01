@@ -76,7 +76,25 @@ Ventajas:
 > Un controlador estable en tiempo continuo no necesariamente es estable en tiempo discreto.
 
 
-## 5. Conclusiones
+## 5. Euler hacia atrás
+
+- La aproximación discreta de la derivada es:
+  \[\frac{d}{dkT} x(kT) = \frac{x(k) - x(k-1)}{T} \]
+
+- Se sabe:
+  \[ \mathcal{L} { \frac{d}{dt} x(t) } = s X(s)\]
+
+- Al aplicar la transformada Z:
+  \[ Z { \frac{x(k) - x(k-1)}{T} \right\} = \frac{X(z) - z^{-1} X(z)}{T} = \frac{1 - z^{-1}}{T} X(z)  \]
+
+- Obtenemos:
+  \[ s X(s) \approx \frac{1 - z^{-1}}{T} X(z)
+  \] \[ s \approx \frac{1 - z^{-1}}{T} = \frac{z - 1}{Tz}\]
+
+> Un controlador estable en tiempo continuo es estable en tiempo discreto.
+
+
+## 6. Conclusiones
 * La discretización de señales analógicas es crucial para la implementación de sistemas digitales. Este proceso convierte señales continuas en datos discretos que pueden ser procesados por sistemas digitales.
 * El proceso de discretización implica el muestreo (tomar muestras de la señal en intervalos regulares) y la cuantización (aproximar los valores de muestra a un conjunto finito de niveles). Ambas etapas afectan la precisión y calidad de la señal digitalizada.
 * El teorema de muestreo de Nyquist establece que para evitar el aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal analógica. Esto es fundamental para preservar la información en el proceso de discretización.
