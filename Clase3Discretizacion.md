@@ -94,7 +94,7 @@ $$\[s \approx \frac{2}{T} \cdot \frac{z - 1}{z + 1}\]$$
 ### Limitaciones
 * Sobrecarga computacional: Comparado con otros métodos más simples, como los métodos de Euler, la transformación de Tustin puede ser más computacionalmente intensiva debido a la necesidad de cálculos adicionales.
 
-##7. Teorema de Muestreo de Nyquist
+## 7. Teorema de Muestreo de Nyquist
 
 Es un principio fundamental en la teoría de señales y procesamiento digital. Este teorema establece las condiciones necesarias para poder reconstruir una señal continua a partir de sus muestras discretas sin pérdida de información.
 
