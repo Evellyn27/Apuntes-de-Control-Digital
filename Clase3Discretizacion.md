@@ -68,10 +68,10 @@ Ventajas:
   $$\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)$$
 
 - Al aplicar la transformada Z:
-  $$Z { \frac{x(k+1) - x(k)}{T}} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)$$
+  $$Z{ \frac{x(k+1) - x(k)}{T}} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)$$
 
 - Obtenemos:
-  $$s X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}$$
+  $$X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}$$
 
 > Un controlador estable en tiempo continuo no necesariamente es estable en tiempo discreto.
 
