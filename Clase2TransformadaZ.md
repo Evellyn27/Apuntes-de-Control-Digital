@@ -51,7 +51,7 @@ La Transformada Z es una herramienta poderosa para resolver ecuaciones en difere
 * Resolver la ecuación algebraica: Despejas la variable de interés en el dominio Z.
 * Aplicar la Transformada Z inversa: Conviertes la solución obtenida en el dominio Z de vuelta al dominio del tiempo discreto, obteniendo la secuencia de valores de la variable de estado.
 
-Ejemplo: Para la ecuación en diferencias:
+💡**Ejemplo 1:** Para la ecuación en diferencias 
 $$yh(k) - 0.5 \cdot y(k-1) = u(k)$$
 La solución general de la ecuación homogénea asociada es:
 $$Y(z) - 0.5z^{-1} Y(z) = U(z)$$
@@ -136,7 +136,7 @@ $$\[ H(z) = \frac{1 + a_1 z + a_2 z^2}{b_0 z^2 + b_1 z + b_2} \]$$
 Esta es la función de transferencia equivalente que ahora está en el formato de adelanto.
 
 ## 4. Sistemas Causales y no causales
->🔑 * Causales:*
+>🔑 *Causales:*
 Un sistema causal es aquel cuyo comportamiento en cualquier instante de tiempo depende únicamente de valores presentes y pasados de la entrada. En otras palabras, un sistema es causal si no reacciona a eventos futuros. Esta propiedad es fundamental en sistemas físicos y de procesamiento de señales reales porque no se puede anticipar el futuro.
 
 ### Caracteristicas:
@@ -160,7 +160,10 @@ El tiempo muerto en sistemas discretos se refiere al tiempo que transcurre entre
 
 ## 7. Referencias
 [1] CHAPRA, S.C. y CANALE, R.P M´etodos Numéricos para Ingenieros. McGraw-Hill, 1987.
+
 [2]  "Linear Systems and Signals" por B.P. Lathi (2ª edición, 2005).
+
 [3]  "Discrete-Time Signal Processing" por Alan V. Oppenheim, Ronald W. Schafer y John R. Buck (3ª edición, 2010).
+
 [4] "Modern Control Engineering" por Ogata Katsuhiko (5ª edición, 2010).
 
