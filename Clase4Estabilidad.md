@@ -23,14 +23,14 @@ La estabilidad absoluta en sistemas discretos se refiere a la capacidad del sist
 ## 2. Espacios de LaPlace y Z
 >🔑 *Transformada de LaPlace:*La Transformada de LaPlace es una técnica matemática comúnmente empleada para examinar sistemas lineales invariantes en el tiempo, tales como mecanismos, circuitos eléctricos y sistemas de control.
 
-La Transformada de Laplace es una herramienta matemática crucial en ingeniería, utilizada para simplificar el análisis de sistemas lineales e invariantes en el tiempo, como circuitos eléctricos, sistemas mecánicos y sistemas de control. Su función principal es convertir funciones del tiempo continuo en el dominio complejo, transformando problemas descritos por ecuaciones diferenciales en ecuaciones algebraicas más manejables. Esta conversión facilita la resolución de ecuaciones diferenciales y permite un análisis detallado de la estabilidad y la respuesta de los sistemas ante diversas entradas. Al examinar la ubicación de los polos en el plano s, los ingenieros pueden evaluar la estabilidad del sistema y prever su comportamiento dinámico, haciendo de la Transformada de Laplace una herramienta esencial para el diseño y la evaluación de sistemas complejos.
+La Transformada de Laplace es una herramienta matemática crucial en ingeniería, utilizada para simplificar el análisis de sistemas lineales e invariantes en el tiempo, como circuitos eléctricos, sistemas mecánicos y sistemas de control. Su función principal es convertir funciones del tiempo continuo en el dominio complejo, transformando problemas descritos por ecuaciones diferenciales en ecuaciones algebraicas más manejables. Esta conversión facilita la resolución de ecuaciones diferenciales y permite un análisis detallado de la estabilidad y la respuesta de los sistemas ante diversas entradas. Al examinar la ubicación de los polos en el plano s, los ingenieros pueden evaluar la estabilidad del sistema y prever su comportamiento dinámico, haciendo de la Transformada de Laplace una herramienta esencial para el diseño y la evaluación de sistemas complejos. [1] 
 
 >🔑 *Transformada Z:* La Transformada Z es un método matemático que se utiliza principalmente en el procesamiento digital de señales y en el control de sistemas y donde su objetivo principal es transformar una señal de tiempo discreto en una representación compleja en el dominio de la frecuencia.
 
-La Transformada Z permite a los ingenieros analizar la estabilidad y el comportamiento dinámico de sistemas discretos al evaluar la ubicación de los polos en el plano Z. Al hacerlo, proporciona una visión clara de cómo las señales se atenúan o amplifican a lo largo del tiempo, haciendo de la Transformada Z una herramienta indispensable para el diseño y la optimización de sistemas de control digital y procesamiento de señales.
+La Transformada Z permite a los ingenieros analizar la estabilidad y el comportamiento dinámico de sistemas discretos al evaluar la ubicación de los polos en el plano Z. Al hacerlo, proporciona una visión clara de cómo las señales se atenúan o amplifican a lo largo del tiempo, haciendo de la Transformada Z una herramienta indispensable para el diseño y la optimización de sistemas de control digital y procesamiento de señales. [1] 
 
 ## 3. Métodos de Evaluación de Estabilidad
-La estabilidad de un sistema discreto se evalúa mediante varios métodos, cada uno proporcionando una perspectiva diferente sobre la respuesta del sistema.
+La estabilidad de un sistema discreto se evalúa mediante varios métodos, cada uno proporcionando una perspectiva diferente sobre la respuesta del sistema.[2]
 
 ### Ubicación de Polos
 Los polos de un sistema discreto se obtienen al analizar la ecuación característica del sistema, que se forma a partir de la función de transferencia. La estabilidad de un sistema discreto depende de la posición de estos polos en el plano Z.
@@ -100,36 +100,44 @@ Si el primero > ultimo, es estable, pero si sucede lo contrario es inestable
 
 ## 6. Ejercicios
 ### Ejercicio 1:
-Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.
+Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.[3]
 
 $A(z)= z^{4}-1,2z^{3}+0.07z^{2}+0.3z-0.08$
 
 #### Analizando las condiciones
 
 $a\left| 0,08 \right|\lt 1$
+
 $1^{4}-1,2*1^{3}+0.07*1^{2}+0.3*1-0.08 = 0.09 > 0$
+
 $-1^{4}-1,2*-1^{3}+0.07*-1^{2}+0.3*-1-0.08 = 1,89 > 0$
+
+![](https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/c398026bf262fb0bd554adb00e16029f5031cbb2/imagen_2024-09-01_004938731.png)
 
 $\left| b3 \right|\gt \left| b0 \right| $
 
 $\left| 0,99 \right|\gt \left| 0,20 \right| $
 
-$\left| c3 \right|\gt \left| c0 \right| $
+$\left| c2 \right|\gt \left| c0 \right| $
 
 $\left| 0,94 \right|\gt \left| 0,31 \right| $
 
 Se concluye que es estable.
 
 ### Ejercicio 2:
-Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.
+Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario. [3]
 
 $A(z)= z^{3}-1,1z^{2}-0.1z+0.2$
 
 #### Analizando las condiciones
 
 $a\left| 0,2 \right|\lt 1$
+
 $1^{3}-1,1*1^{2}-0.1*1+0.2 = 0$
+
 $-1^{3}-1,1*-1^{2}-0.1*-1+0.2 = -1,8 \lt 0$
+
+![](https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/c398026bf262fb0bd554adb00e16029f5031cbb2/imagen_2024-09-01_005008973.png)
 
 $\left| b3 \right|\gt \left| b0 \right| $
 
@@ -138,7 +146,13 @@ $\left| 0,96 \right|\gt \left| 0,12 \right| $
 Se concluye que es estable.
 
 ## 7. Conclusiones
- 
+La estabilidad es un criterio fundamental en el diseño y análisis de sistemas discretos, ya que determina si un sistema podrá operar de manera controlada y predecible en el tiempo. A través de herramientas como el criterio de Jury y la ubicación de polos en el plano Z, se puede evaluar si los polos del sistema se encuentran dentro del círculo unitario, lo que garantiza que las salidas del sistema no se desestabilicen ni crezcan indefinidamente en respuesta a entradas acotadas.
+
+Adicionalmente, la estabilidad de un sistema discreto no solo garantiza que la salida sea acotada, sino que también influye en la calidad de la respuesta temporal del sistema, como la rapidez de la respuesta y la ausencia de oscilaciones indeseadas. 
 
 ## Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
+[1] “Transformada Z vs Transformada de Laplace: 'Matemáticas', 'Ingeniería' | StudySmarter”. StudySmarter ES. Accedido el 31 de agosto de 2024. [En línea]. Disponible: https://www.studysmarter.es/resumenes/ingenieria/matematicas-de-la-ingenieria/transformada-z-vs-transformada-de-laplace/
+
+[2] OCW - Universidad de Cantabria. Accedido el 31 de agosto  de 2024. [En línea]. Disponible: https://ocw.unican.es/pluginfile.php/3004/course/section/2887/Tema6.pdf
+
+[3] “Criterio de estabilidad de Jury. Control digital.” Herramientas de cálculo. Accedido el 31 de agosto de 2024. [En línea]. Disponible: https://herramientasdecalculo.com/2018/04/04/2-8-criterio-de-estabilidad-de-jury-control-digital/
