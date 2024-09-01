@@ -38,14 +38,27 @@ Los polos de un sistema discreto se obtienen al analizar la ecuación caracterí
 #### Criterios de Estabilidad:
 
 1. Estabilidad Global: Un sistema discreto es estable si todos sus polos están dentro del círculo unitario en el plano Z (es decir, si todos los polos tienen un módulo menor que 1). Esto garantiza que la respuesta del sistema a cualquier entrada será bounded (acotada) y no crecerá indefinidamente.
-2. Estabilidad Marginal: Un sistema es marginalmente estable si al menos uno de los polos está en el círculo unitario y ningún polo está fuera de él. Esto implica que el sistema puede tener una respuesta que permanece constante o crezca lentamente, pero no se vuelve inestable.
-3. Inestabilidad: Un sistema es inestable si al menos un polo está fuera del círculo unitario. En este caso, la respuesta del sistema crecerá sin límites, lo que indica que el sistema es inestable.
+
+3. Estabilidad Marginal: Un sistema es marginalmente estable si al menos uno de los polos está en el círculo unitario y ningún polo está fuera de él. Esto implica que el sistema puede tener una respuesta que permanece constante o crezca lentamente, pero no se vuelve inestable.
+ 
+5. Inestabilidad: Un sistema es inestable si al menos un polo está fuera del círculo unitario. En este caso, la respuesta del sistema crecerá sin límites, lo que indica que el sistema es inestable.
+
+💡**Ejemplo 1:**  Sistema Estable Considere un sistema con la función de transferencia:
+
+$H(z)= \frac{1}{\left(Z + 0,4  \right)\left(Z + 0,2\right)}$
+
+z = -0,2
+z = -0,4
+
+Los polos de la función se encuentran dentro del circulo unitario.
 
 ## 4. Estabilidad Asintótica
 Es una propiedad clave en el análisis de sistemas dinámicos, tanto en el contexto de sistemas continuos como discretos. En términos simples, un sistema es asintóticamente estable si, frente a una perturbación o una entrada, su salida regresa a un estado de equilibrio en el tiempo, y no solo esto, sino que lo hace de manera que se acerca al equilibrio conforme pasa el tiempo.
 
 ## 5. Estabilidad BIBO
 Un sistema es BIBO estable si para cualquier entrada acotada (bounded input), la salida también es acotada (bounded output). En otras palabras, si la entrada del sistema está limitada en magnitud, la salida del sistema también lo estará.
+
+
 
 
 ## 6. Ejercicios
