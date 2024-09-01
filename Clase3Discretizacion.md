@@ -62,7 +62,7 @@ Ventajas:
 ### Euler hacia adelante
 
 - La aproximación discreta de la derivada es:
-  $$frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}$$
+  $$\frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}$$
 
 - Se sabe:
   $$\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)$$
@@ -79,17 +79,17 @@ Ventajas:
 ## 5. Euler hacia atrás
 
 - La aproximación discreta de la derivada es:
-  \[\frac{d}{dkT} x(kT) = \frac{x(k) - x(k-1)}{T} \]
+  $$\[\frac{d}{dkT} x(kT) = \frac{x(k) - x(k-1)}{T} \]$$
 
 - Se sabe:
-  \[ \mathcal{L} { \frac{d}{dt} x(t) } = s X(s)\]
+  $$\[ \mathcal{L} { \frac{d}{dt} x(t) } = s X(s)\]$$
 
 - Al aplicar la transformada Z:
-  \[ Z { \frac{x(k) - x(k-1)}{T} \right\} = \frac{X(z) - z^{-1} X(z)}{T} = \frac{1 - z^{-1}}{T} X(z)  \]
+  $$\[ Z { \frac{x(k) - x(k-1)}{T} \right\} = \frac{X(z) - z^{-1} X(z)}{T} = \frac{1 - z^{-1}}{T} X(z)  \]$$
 
 - Obtenemos:
-  \[ s X(s) \approx \frac{1 - z^{-1}}{T} X(z)
-  \] \[ s \approx \frac{1 - z^{-1}}{T} = \frac{z - 1}{Tz}\]
+  $$\[ s X(s) \approx \frac{1 - z^{-1}}{T} X(z)$$
+  $$\] \[ s \approx \frac{1 - z^{-1}}{T} = \frac{z - 1}{Tz}\]$$
 
 > Un controlador estable en tiempo continuo es estable en tiempo discreto.
 
