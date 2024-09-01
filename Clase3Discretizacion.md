@@ -124,6 +124,7 @@ Esta frecuencia mínima de muestreo se conoce como la frecuencia de Nyquist.
 * La discretización de señales analógicas es crucial para la implementación de sistemas digitales. Este proceso convierte señales continuas en datos discretos que pueden ser procesados por sistemas digitales.
 * El proceso de discretización implica el muestreo (tomar muestras de la señal en intervalos regulares) y la cuantización (aproximar los valores de muestra a un conjunto finito de niveles). Ambas etapas afectan la precisión y calidad de la señal digitalizada.
 * El teorema de muestreo de Nyquist establece que para evitar el aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal analógica. Esto es fundamental para preservar la información en el proceso de discretización.
+* Es crucial en el diseño de sistemas de procesamiento de señales, como en la digitalización de audio, imágenes, y videos.
 
 
 ## 5. Referencias
