@@ -62,7 +62,7 @@ Ventajas:
 ### Euler hacia adelante
 
 - La aproximación discreta de la derivada es:
-  $$\frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}$$
+  $$frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}$$
 
 - Se sabe:
   $$\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)$$
