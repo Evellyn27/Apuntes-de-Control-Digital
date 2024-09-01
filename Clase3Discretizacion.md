@@ -1,4 +1,5 @@
 # Discretización de controladores Analógicos
+La discretización de controladores analógicos es un proceso fundamental en el control digital, ya que permite implementar controladores diseñados en el dominio continuo en sistemas digitales que operan de manera discreta. Este proceso es esencial cuando se desea trasladar un controlador analógico, típicamente descrito por ecuaciones diferenciales, a un controlador digital, que se describe mediante ecuaciones en diferencias.
 
 ## Indice
 1. Discretización de señales Analógicas
@@ -11,55 +12,43 @@
 8. Conclusiones
 9. Referencias
 
-
-
 ## 1. Discretización de señales Analógicas
 La discretización de señales analógicas es el proceso mediante el cual una señal continua en el tiempo y en amplitud se convierte en una señal discreta, que es una secuencia de valores en instantes específicos. Este proceso es esencial para el procesamiento digital de señales, ya que permite que las señales analógicas sean manipuladas y analizadas utilizando sistemas digitales como computadoras y microcontroladores.
 
 ## 2. Método de Invarianza al impulso
 Es una técnica para obtener una función de transferencia digital a partir de una función de transferencia analógica. La idea central es que la respuesta al impulso de un filtro analógico se puede mapear directamente a la respuesta al impulso de un filtro digital mediante una transformación.
->🔑*Proceso de Transformación:*
-* Obtención de la Respuesta al Impulso Analógica:
-Primero, se determina la respuesta al impulso del filtro analógico. La respuesta al impulso 
- $h_a(t)$ es la salida del filtro cuando se aplica un impulso unitario $δ(t)$ como entrada.
 
->🔑*Transformación a la Respuesta al Impulso Digital:*
-*La respuesta al impulso analógica $h_a(t)$ se convierte en una secuencia discreta aplicando un muestreo en el tiempo. Esto se hace evaluando 
- $h_a(t)$  en intervalos de tiempo $T$, donde $T$ es el período de muestreo del sistema digital.
+### Proceso de Transformación:
+#### Obtención de la Respuesta al Impulso Analógica:
+Primero, se determina la respuesta al impulso del filtro analógico. La respuesta al impulso  $h_a(t)$ es la salida del filtro cuando se aplica un impulso unitario $δ(t)$ como entrada.
 
->🔑*Transformación de la Función de Transferencia:*
-* La función de transferencia del filtro digital $H(z)$  se obtiene a partir de la transformada Z de la respuesta al impulso digital. Esto se puede hacer utilizando la transformada Z de la secuencia discreta obtenida en el paso anterior.
+### Transformación a la Respuesta al Impulso Digital:
+La respuesta al impulso analógica $h_a(t)$ se convierte en una secuencia discreta aplicando un muestreo en el tiempo. Esto se hace evaluando $h_a(t)$  en intervalos de tiempo $T$, donde $T$ es el período de muestreo del sistema digital.
 
-Ventajas:
-* Simplicidad: El método de invarianza al impulso es relativamente simple y directo, especialmente cuando se trabaja con filtros que tienen una respuesta al impulso que puede ser fácilmente muestreada.
-*Preservación de la Forma de Respuesta: Conserva la forma de la respuesta al impulso del filtro analógico, lo que puede ayudar a mantener ciertas propiedades del filtro original.
-
-Desventajas: 
-* Distorsión de Frecuencia: El método puede introducir distorsiones en la respuesta en frecuencia debido a la aproximación de la transformación.
-* Limitaciones en el Diseño: Puede no ser adecuado para todos los tipos de filtros analógicos, especialmente si la respuesta al impulso analógica no es fácilmente muestreable.
+| Ventajas 	| Desventajas 	|
+|:---:	|:---:	|
+| Método sencillo y directo. 	| Puede causar distorsiones en la respuesta en frecuencia debido a la aproximación de la transformación. 	|
+| Mantiene la forma de la respuesta al impulso del filtro analógico. 	| No siempre es adecuado para todos los tipos de filtros analógicos, especialmente si la respuesta al impulso no es fácilmente muestreable. 	|
 
 ## 3. Método de Invarianza al Paso
  El Método de Invarianza al Paso es una técnica utilizada para diseñar filtros digitales a partir de filtros analógicos mediante la preservación de la respuesta al paso de los filtros. Este método se basa en la idea de que la respuesta de un sistema digital a una entrada de escalón unitario debe coincidir con la respuesta del filtro analógico a una entrada de escalón unitario.
 
->🔑*Obtención de la Respuesta al Paso Analógica:*
+### Proceso de Transformación: 
+#### Obtención de la Respuesta al Paso Analógica:
 * Primero, se determina la respuesta al paso del filtro analógico. La respuesta al paso $h_a(t)$  es la salida del filtro cuando se aplica una entrada de escalón unitario $u(t)$ como entrada.
 *Matemáticamente, se puede expresar como  $$\[ h_a(t) = \mathcal{L}^{-1} { \frac{H_a(s)}{s}} \]$$  siendo $h_a(t)$ la función de transferencia del filtro analógico.
 
->🔑*Transformación a la Respuesta al Paso Digital:*
+#### Transformación a la Respuesta al Paso Digital:
 *La respuesta al paso del filtro digital $h_a[n]$ e obtiene muestreando la respuesta al paso analógica  $h_a(t)$  en intervalos regulares. Esto convierte la respuesta continua en una secuencia discreta.
 * La respuesta al paso digital se representa como una secuencia de valores discretos en función del índice $n$, es decir $h_d[n]$
-* 
->🔑*Transformación de la Función de Transferencia:*
+
+#### Transformación de la Función de Transferencia:
 * La función de transferencia del filtro digital $H(z)$ se calcula a partir de la transformada Z de la respuesta al paso digital $h_d[n]$. Esto proporciona la representación en el dominio Z del filtro digital.
 
-Ventajas: 
-* Simplicidad: El método es relativamente sencillo y proporciona una forma directa de convertir filtros analógicos en digitales preservando la respuesta al paso.
-* Preservación de la Respuesta: Conserva la respuesta al paso del filtro analógico, lo que ayuda a mantener ciertas características del filtro original.
-
- Desventajas
-* Distorsión de Frecuencia: La técnica puede introducir distorsiones en la respuesta en frecuencia debido a la aproximación utilizada para la transformación.
-* Limitaciones en el Diseño: Puede no ser adecuado para todos los tipos de filtros analógicos, especialmente si la respuesta al paso no se adapta bien a la discretización.
-
+| Ventajas 	| Desventajas 	|
+|:---:	|:---:	|
+| Permite ajustes finos para cumplir especificaciones de diseño. 	| Más complejo de implementar que métodos directos. 	|
+| Preserva la estabilidad del filtro analógico original. 	| Puede requerir más recursos computacionales. 	|
 
 ## 4. Método de Euler Adelante
 ### Euler hacia adelante
@@ -73,7 +62,7 @@ Ventajas:
 - Al aplicar la transformada Z:
   $$   \[Z{ \frac{x(k+1) - x(k)}{T}} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)\]$$
 
-- Obtenemos:
+- Se obtiene:
   $$X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}$$
 
 > Un controlador estable en tiempo continuo no necesariamente es estable en tiempo discreto.
@@ -90,7 +79,7 @@ Ventajas:
 - Al aplicar la transformada Z:
   $$\[ Z { \frac{x(k) - x(k-1)}{T}} = \frac{X(z) - z^{-1} X(z)}{T} = \frac{1 - z^{-1}}{T} X(z)  \]$$
 
-- Obtenemos:
+- Se obtiene:
   $$\[ s X(s) \approx \frac{1 - z^{-1}}{T} X(z)$$
   $$\] \[ s \approx \frac{1 - z^{-1}}{T} = \frac{z - 1}{Tz}\]$$
 
@@ -102,20 +91,14 @@ en términos de la variable z (de la transformada Z) de la siguiente manera:
 
 $$\[s \approx \frac{2}{T} \cdot \frac{z - 1}{z + 1}\]$$
 
-Ventajas del Método Tustin
-* Conservación de Estabilidad: Un sistema estable en el dominio continuo sigue siendo estable cuando se discretiza utilizando la transformación de Tustin.
-* Exactitud en la Respuesta en Frecuencia: El método proporciona una mejor aproximación a la respuesta en frecuencia del sistema continuo en comparación con otros métodos, como Euler hacia adelante o hacia atrás.
-* Aplicaciones en Control Digital: Es ampliamente utilizado debido a su capacidad para manejar de manera efectiva el comportamiento de los sistemas en la discretización.
-
-Limitaciones
+### Limitaciones
 * Sobrecarga computacional: Comparado con otros métodos más simples, como los métodos de Euler, la transformación de Tustin puede ser más computacionalmente intensiva debido a la necesidad de cálculos adicionales.
 
 ##7. Teorema de Muestreo de Nyquist
 
 Es un principio fundamental en la teoría de señales y procesamiento digital. Este teorema establece las condiciones necesarias para poder reconstruir una señal continua a partir de sus muestras discretas sin pérdida de información.
 
-*Principio del teorema:* 
-El teorema afirma que una señal continua en el tiempo $x(t)$ que tiene un ancho de banda finito, es decir, cuya frecuencia más alta es $f_max$, puede ser completamente reconstruida a partir de sus muestras siempre que la frecuencia de muestreo $f_s$ sea mayor que el doble de la frecuencia más alta presente en la señal. Matemáticamente, esto se expresa como:
+>🔑 *Teorema de Muestreo de Nyquist:* El teorema afirma que una señal continua en el tiempo $x(t)$ que tiene un ancho de banda finito, es decir, cuya frecuencia más alta es $f_max$, puede ser completamente reconstruida a partir de sus muestras siempre que la frecuencia de muestreo $f_s$ sea mayor que el doble de la frecuencia más alta presente en la señal. Matemáticamente, esto se expresa como:
 
 $$  f_s> f_max $$
 Esta frecuencia mínima de muestreo se conoce como la frecuencia de Nyquist.
