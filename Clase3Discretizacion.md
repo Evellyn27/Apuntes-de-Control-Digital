@@ -5,8 +5,10 @@
 2. Método de Invarianza al impulso
 3. Método de Invarianza al Paso
 4. Método de Euler Adelante
-5. Conclusiones
-6. Referencias
+5. Método de Euler Atras
+6. Método trapezoidal
+7. Conclusiones
+8. Referencias
 
 
 
@@ -93,8 +95,22 @@ Ventajas:
 
 > Un controlador estable en tiempo continuo es estable en tiempo discreto.
 
+## 7. Método trapezoidal
+Es una técnica utilizada para convertir sistemas de control continuos en sistemas discretos. Este método es particularmente valioso porque preserva las características de estabilidad y respuesta en frecuencia del sistema original cuando se traduce de tiempo continuo a tiempo discreto.La idea principal detrás del método de Tustin es utilizar una aproximación trapezoidal para la integral, que en esencia es un promedio ponderado de la derivada al principio y al final del intervalo de muestreo.
+en términos de la variable z (de la transformada Z) de la siguiente manera:
 
-## 6. Conclusiones
+$$\[s \approx \frac{2}{T} \cdot \frac{z - 1}{z + 1}\]$$
+
+Ventajas del Método Tustin
+* Conservación de Estabilidad: Un sistema estable en el dominio continuo sigue siendo estable cuando se discretiza utilizando la transformación de Tustin.
+* Exactitud en la Respuesta en Frecuencia: El método proporciona una mejor aproximación a la respuesta en frecuencia del sistema continuo en comparación con otros métodos, como Euler hacia adelante o hacia atrás.
+* Aplicaciones en Control Digital: Es ampliamente utilizado debido a su capacidad para manejar de manera efectiva el comportamiento de los sistemas en la discretización.
+
+Limitaciones
+* Sobrecarga computacional: Comparado con otros métodos más simples, como los métodos de Euler, la transformación de Tustin puede ser más computacionalmente intensiva debido a la necesidad de cálculos adicionales.
+
+
+## 8. Conclusiones
 * La discretización de señales analógicas es crucial para la implementación de sistemas digitales. Este proceso convierte señales continuas en datos discretos que pueden ser procesados por sistemas digitales.
 * El proceso de discretización implica el muestreo (tomar muestras de la señal en intervalos regulares) y la cuantización (aproximar los valores de muestra a un conjunto finito de niveles). Ambas etapas afectan la precisión y calidad de la señal digitalizada.
 * El teorema de muestreo de Nyquist establece que para evitar el aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal analógica. Esto es fundamental para preservar la información en el proceso de discretización.
