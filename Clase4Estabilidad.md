@@ -50,7 +50,7 @@ $H(z)= \frac{1}{\left(Z + 0,4  \right)\left(Z + 0,2\right)}$
 z = -0,2
 z = -0,4
 
-Los polos de la función se encuentran dentro del circulo unitario.
+Los polos de la función se encuentran dentro del circulo unitario, por tanto es estable.
 
 ## 4. Estabilidad Asintótica
 Es una propiedad clave en el análisis de sistemas dinámicos, tanto en el contexto de sistemas continuos como discretos. En términos simples, un sistema es asintóticamente estable si, frente a una perturbación o una entrada, su salida regresa a un estado de equilibrio en el tiempo, y no solo esto, sino que lo hace de manera que se acerca al equilibrio conforme pasa el tiempo.
@@ -58,8 +58,25 @@ Es una propiedad clave en el análisis de sistemas dinámicos, tanto en el conte
 ## 5. Estabilidad BIBO
 Un sistema es BIBO estable si para cualquier entrada acotada (bounded input), la salida también es acotada (bounded output). En otras palabras, si la entrada del sistema está limitada en magnitud, la salida del sistema también lo estará.
 
+### Criterio de Estabilidad de Jury
+El criterio de estabilidad de Jury es un método algebraico que se utiliza para analizar la estabilidad de sistemas discretos descritos por su ecuación característica. El método convierte la ecuación característica en una forma que permite verificar la estabilidad BIBO sin necesidad de calcular los polos directamente.
 
+1. Coeficiente a0>0: El coeficiente a0 es el coeficiente del término independiente en la ecuación característica, por tanto, para que un sistema sea BIBO estable, es necesario que a0 sea positivo.
+2. Coeficiente an<a0​: Este criterio compara el coeficiente del término de mayor orden an con el coeficiente a0​.
+3. Evaluar P(z) en z=1: El polinomio P(z) es la ecuación característica del sistema. Evaluar P(z) en z=1
+ 
+$P(1)=a0+a1+a2+⋯+an$ 
 
+Para que el sistema sea BIBO estable, P(1)>0. Esto asegura que el sistema no presenta una respuesta que se vuelve inestable cuando se somete a una entrada constante.
+
+4. Evaluar P(z) en z=−1: Para ciertos sistemas, evaluar P(z) en z=−1 puede proporcionar información adicional sobre la estabilidad:
+ 
+Si P(−1)>0 para n par, o Si P(−1)<0 para n impar,
+
+### Construcción del Arreglo de Jury
+El arreglo de Jury tiene la forma de una matriz que ayuda a determinar la estabilidad mediante la evaluación de los signos de sus elementos.
+
+![](https://herramientasdecalculo.com/wp-content/uploads/2018/03/tabla-criterio-de-estabilidad-de-jury.png)
 
 ## 6. Ejercicios
 
