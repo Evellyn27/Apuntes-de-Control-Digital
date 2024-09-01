@@ -62,16 +62,16 @@ Ventajas:
 ### Euler hacia adelante
 
 - La aproximación discreta de la derivada es:
-  $$\[\frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}\]$$
+  $$\frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}$$
 
 - Se sabe:
-  $$\[\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)\]$$
+  $$\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)$$
 
 - Al aplicar la transformada Z:
-  $$\[Z { \frac{x(k+1) - x(k)}{T}} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)\]$$
+  $$Z { \frac{x(k+1) - x(k)}{T}} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)$$
 
 - Obtenemos:
-  $$\[s X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}\]$$
+  $$s X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}$$
 
 > Un controlador estable en tiempo continuo no necesariamente es estable en tiempo discreto.
 
