@@ -7,8 +7,9 @@
 4. Método de Euler Adelante
 5. Método de Euler Atras
 6. Método trapezoidal
-7. Conclusiones
-8. Referencias
+7. Teorema de Muestreo de Nyquist
+8. Conclusiones
+9. Referencias
 
 
 
@@ -95,7 +96,7 @@ Ventajas:
 
 > Un controlador estable en tiempo continuo es estable en tiempo discreto.
 
-## 7. Método trapezoidal
+## 6. Método trapezoidal
 Es una técnica utilizada para convertir sistemas de control continuos en sistemas discretos. Este método es particularmente valioso porque preserva las características de estabilidad y respuesta en frecuencia del sistema original cuando se traduce de tiempo continuo a tiempo discreto.La idea principal detrás del método de Tustin es utilizar una aproximación trapezoidal para la integral, que en esencia es un promedio ponderado de la derivada al principio y al final del intervalo de muestreo.
 en términos de la variable z (de la transformada Z) de la siguiente manera:
 
@@ -109,6 +110,15 @@ Ventajas del Método Tustin
 Limitaciones
 * Sobrecarga computacional: Comparado con otros métodos más simples, como los métodos de Euler, la transformación de Tustin puede ser más computacionalmente intensiva debido a la necesidad de cálculos adicionales.
 
+##7. Teorema de Muestreo de Nyquist
+
+Es un principio fundamental en la teoría de señales y procesamiento digital. Este teorema establece las condiciones necesarias para poder reconstruir una señal continua a partir de sus muestras discretas sin pérdida de información.
+
+*Principio del teorema:* 
+El teorema afirma que una señal continua en el tiempo $x(t)$ que tiene un ancho de banda finito, es decir, cuya frecuencia más alta es $f_max$, puede ser completamente reconstruida a partir de sus muestras siempre que la frecuencia de muestreo $f_s$ sea mayor que el doble de la frecuencia más alta presente en la señal. Matemáticamente, esto se expresa como:
+
+$$  f_s> f_max $$
+Esta frecuencia mínima de muestreo se conoce como la frecuencia de Nyquist.
 
 ## 8. Conclusiones
 * La discretización de señales analógicas es crucial para la implementación de sistemas digitales. Este proceso convierte señales continuas en datos discretos que pueden ser procesados por sistemas digitales.
