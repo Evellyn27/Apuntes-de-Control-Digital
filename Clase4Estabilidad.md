@@ -78,7 +78,44 @@ El arreglo de Jury tiene la forma de una matriz que ayuda a determinar la estabi
 
 ![](https://herramientasdecalculo.com/wp-content/uploads/2018/03/tabla-criterio-de-estabilidad-de-jury.png)
 
+El procedimiento general para construir la matriz de Jury es el siguiente:
+
+#### Construir las Filas Iniciales:
+La primera fila de la matriz se forma con los coeficientes del polinomio 
+
+P(z):[a0,a1,a2,…,an−1,an]
+
+La segunda fila se forma con los coeficientes en orden inverso (es decir, empezando desde el coeficiente an​ hasta a0​): 
+
+[an,an−1,an−2,…,a1,a0]
+
+#### Completar la Matriz:
+
+Luego, se completa la matriz de Jury siguiendo un algoritmo recursivo que utiliza las filas anteriores para construir nuevas filas. Cada nueva fila se calcula restando una combinación lineal de las filas anteriores, siguiendo un proceso llamado "eliminación de filas".
+
+#### Evaluar la Estabilidad
+Para determinar la estabilidad BIBO usando el criterio de Jury, se compara el primer y ultimo elemento de la columna.
+
+Si el primero > ultimo, es estable, pero si sucede lo contrario es inestable
+
 ## 6. Ejercicios
+### Ejercicio 1:
+Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario, considerando que el número de raíces fuera del círculo unitario es igual al número de coeficientes calculados en la primera columna que tienen signo negativo.
+
+$A(z)= z^{3}+0.5z^{2}+0.25z+0.2$
+
+
+
+$a=0,2$
+$a=0,15$
+$a=0,3$
+
+Se concluye que no hay raíces inestables en el polinomio A(z). El polinomio A(z) no tiene raíces fuera de la circunferencia unitaria.
+
+### Ejercicio 2:
+Determine si A(z) que se enuncia tiene raíces fuera del círculo unitario.
+
+$A(z)= z^{3}+0.5z^{2}+0.25z+0.2$
 
 ## Referencias
 Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
