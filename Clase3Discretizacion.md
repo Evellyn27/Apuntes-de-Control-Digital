@@ -65,10 +65,10 @@ Ventajas:
   $$\[\frac{d}{dkT} x(kT) = \frac{x(k+1) - x(k)}{T}\]$$
 
 - Se sabe:
-  $$\[\mathcal{L} \left\{ \frac{d}{dt} x(t) \right\} = s X(s)\]$$
+  $$\[\mathcal{L} { \frac{d}{dt} x(t) } = s X(s)\]$$
 
 - Al aplicar la transformada Z:
-  $$\[Z \left\{ \frac{x(k+1) - x(k)}{T} \right\} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)\]$$
+  $$\[Z { \frac{x(k+1) - x(k)}{T} \right\} = \frac{zX(z) - X(z)}{T} = \frac{z - 1}{T} X(z)\]$$
 
 - Obtenemos:
   $$\[s X(s) \approx \frac{z - 1}{T} X(z)\]\[s \approx \frac{z - 1}{T}\]
