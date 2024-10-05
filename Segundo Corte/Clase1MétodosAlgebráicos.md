@@ -14,9 +14,10 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
 
 - **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
+<p align="center">$y\left( t \right)=x\left( t-1 \right)$</p>
 
   
-                      $y\left( t \right)=x\left( t-1 \right)$
+                      
 
 
 <p align="center">
