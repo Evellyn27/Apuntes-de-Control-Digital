@@ -12,8 +12,8 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 >🔑 *Sistema Causal:* Es aquel cuya salida en cualquier instante depende únicamente de los valores actuales o pasados de la entrada, nunca de valores futuros.
 ### 1.1. Características y Consideraciones
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
-**1. Causalidad:**
-**2. Estabilidad del modelo objetivo:**
+1. **Causalidad:**
+2. **Estabilidad del modelo objetivo:**
 **3. Evitar cancelaciones polo-cero:**
 **4. Grados de los polinomios:**
 **5. Ceros de fase no mínima:**
