@@ -16,6 +16,7 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 2. **Estabilidad del modelo objetivo:** El modelo de referencia debe ser estable, esto debido a que un sistema inestable en lazo cerrado podría llevar a oscilaciones incontroladas o divergencias en la respuesta del sistema.
 3. **Evitar cancelaciones polo-cero:** Es importante tener en cuenta que el diseño del controlador no debe permitir la cancelación de polos y ceros en el sistema. Esta acción conduce a comportamientos no regulados, como la desaparición de algunas dinámicas, lo cual es crítico para el funcionamiento del sistema. 
 4. **Grados de los polinomios:**
+Para garantizar la causalidad del sistema, es necesario que el númerador de la función de transferencia sea igual o menor que el denominador de la misma función.
 5. **Ceros de fase no mínima:**
 
 ### 1.2. Procedimiento 
