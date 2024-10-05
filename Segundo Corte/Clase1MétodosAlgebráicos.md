@@ -13,11 +13,15 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 ### 1.1. Características y Consideraciones
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
 1. **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
-2. **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario.
-3. **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
-4. **Grados de los polinomios:**
+
+![Figura de prueba]( https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png)
+Figura 1. Sistema en lazo abierto
+  
+3. **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario.
+4. **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
+5. **Grados de los polinomios:**
 El grado del numerador del controlador no debe superar al del denominador del sistema.
-5. **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
+6. **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
 
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
