@@ -17,7 +17,7 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png" />
 </p>
 <p align="center">
- < "Figura 1. Sistema en lazo abierto"/>
+ Figura 1. Sistema en lazo abierto
   </p>
 3. **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario.
 4. **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
