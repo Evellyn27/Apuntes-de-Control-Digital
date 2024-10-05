@@ -15,9 +15,9 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 
 - **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
 
-  <p align="center">
-$y\left( t \right)=x\left( t-1 \right)$
-</p>
+  
+                      $y\left( t \right)=x\left( t-1 \right)$
+
 
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/35f1954f074c0ea0cdaef944a6d5f84aa54e1f65/Imagenes/Causales.png" />
