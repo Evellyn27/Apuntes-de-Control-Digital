@@ -11,7 +11,7 @@ Los métodos algebraicos del control digital constituyen una herramienta clave p
 La igualación por modelo es un procedimiento en el diseño de sistemas de control que tiene como propósito que el sistema en lazo cerrado (sistema real) reproduzca el comportamiento de un determinado modelo de referencia ya establecido, y el cuál comprende determinadas características en lo que respecta a la estabilidad, la respuesta dinámica y en la robustez del sistema controlado. Por lo tanto, el objetivo de este método es diseñar un controlador que permita que la salida del sistema sea una aproximación de la salida de un modelo de referencia que se ha diseñado bajo las mismas condiciones de entrada.
 >🔑 *Sistema Causal:* Es aquel cuya salida en cualquier instante depende únicamente de los valores actuales o pasados de la entrada, nunca de valores futuros.
 ### 1.1. Características y Consideraciones
-Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:\n
+Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
 
 -**Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
 
@@ -20,9 +20,11 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 Figura 1. Sistema en lazo abierto
  
 -**Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario
+
 -**Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
--**Grados de los polinomios:**
-El grado del numerador del controlador no debe superar al del denominador del sistema.
+
+-**Grados de los polinomios:** El grado del numerador del controlador no debe superar al del denominador del sistema.
+
 -**Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
 
 ### 1.2. Procedimiento 
