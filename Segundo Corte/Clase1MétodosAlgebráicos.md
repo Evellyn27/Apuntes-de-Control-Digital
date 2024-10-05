@@ -21,7 +21,7 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 #### 1. Definir la función de la planta en lazo abierto: 
-Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto G(z) que describe la dinámica natural de la planta sin control. Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
+Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control. Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
 #### 2. Definir el modelo de referencia: 
 Con el comportamiento del sistema en lazo abierto determinado, se especificará la función de transferencia del modelo de referencia Go(z) que describe el comportamiento deseado del sistema en lazo cerrado, además este tendrá en cuenta aspectos como la estabilidad, el sobreimpulso o el tiempo de establecimiento.
 #### 3. Diseño del controlador:
