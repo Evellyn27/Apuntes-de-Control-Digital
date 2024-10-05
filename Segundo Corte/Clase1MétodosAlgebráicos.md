@@ -16,9 +16,11 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 - **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png" />
+
+  Figura 1. Sistema en lazo abierto
 </p>
 
-Figura 1. Sistema en lazo abierto
+
  
 - **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario
 
