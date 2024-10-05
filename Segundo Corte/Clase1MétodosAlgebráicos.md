@@ -1,7 +1,7 @@
 # Métodos algebráicos
 Los métodos algebraicos del control digital constituyen una herramienta clave para el diseño de controladores que permiten variar el comportamiento dinámico de los sistemas correspondientes en lazo cerrado, llevando a cabo así la estabilidad y el rendimiento deseados, en otras palabras se les describe como técnicas que permiten transformar las características de un sistema a partir de manipulaciones algebraicas de su función de transferencia, en ese sentido, entre los métodos algebraicos más relevantes están la igualación de modelo, que permite obtener la función de transferencia del sistema para seguir una respuesta predefinida; la igualación de coeficientes, que permite modificar los polos del sistema para garantizar la estabilidad y la respuesta rápida; y las ecuaciones diofánticas, que se ocupan de sistemas más complejos al combinar varias funciones de transferencia. Estos métodos de gran relevancia en aplicaciones en industrias como: el control de procesos, la automatización, y los sistemas embebidos seran revisados en este trabajo, y a partir de la explicación de los mismos, se evaluará su efectividad en la resolución de problemas prácticos, asi como sus consideraciones de implementación.
 ## Índice
-*[Método de igualación por modelo]#Método de igualación por modelo
+1. Método de igualación por modelo
 2. Método de igualación por coeficientes
 3. Ecuaciones diofánticas
 4. Ejercicios
@@ -12,9 +12,9 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 >🔑 *Sistema Causal:* Es aquel cuya salida en cualquier instante depende únicamente de los valores actuales o pasados de la entrada, nunca de valores futuros.
 ### 1.1. Características y Consideraciones
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
-1. **Causalidad:**
-2. **Estabilidad del modelo objetivo:**
-3. **Evitar cancelaciones polo-cero:**
+1. **Causalidad:** Es imperativo que los controladores o compensadores diseñados sean causales, lo que significa que sus salidas no pueden depender de futuras entradas, garantizando de esta manera su implementabilidad práctica.
+2. **Estabilidad del modelo objetivo:** El modelo de referencia debe ser estable, esto debido a que un sistema inestable en lazo cerrado podría llevar a oscilaciones incontroladas o divergencias en la respuesta del sistema.
+3. **Evitar cancelaciones polo-cero:** Es importante tener en cuenta que el diseño del controlador no debe permitir la cancelación de polos y ceros en el sistema. Esta acción conduce a comportamientos no regulados, como la desaparición de algunas dinámicas, lo cual es crítico para el funcionamiento del sistema. 
 4. **Grados de los polinomios:**
 5. **Ceros de fase no mínima:**
 
