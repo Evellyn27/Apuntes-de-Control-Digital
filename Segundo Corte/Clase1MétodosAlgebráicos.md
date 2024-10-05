@@ -10,14 +10,30 @@ Los métodos algebraicos del control digital constituyen una herramienta clave p
 ## 1. Método de igualación por modelo
 La igualación por modelo es un procedimiento en el diseño de sistemas de control que tiene como propósito que el sistema en lazo cerrado (sistema real) reproduzca el comportamiento de un determinado modelo de referencia ya establecido, y el cuál comprende determinadas características en lo que respecta a la estabilidad, la respuesta dinámica y en la robustez del sistema controlado. Por lo tanto, el objetivo de este método es diseñar un controlador que permita que la salida del sistema sea una aproximación de la salida de un modelo de referencia que se ha diseñado bajo las mismas condiciones de entrada.
 >🔑 *Sistema Causal:* Es aquel cuya salida en cualquier instante depende únicamente de los valores actuales o pasados de la entrada, nunca de valores futuros.
-## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+### 1.1. Características y Consideraciones
+Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
+1. Causalidad:
+2. Estabilidad del modelo objetivo:
+3. Evitar cancelaciones polo-cero:
+4. Grados de los polinomios:
+5. Ceros de fase no mínima:
 
-## 4. Ejemplos
+### 1.2. Procedimiento 
+
+### 1.3. Ejemplos
+### 1.4. Simluación
+
+## 2. Método de igualación por coeficientes
+### 2.1. Características y Consideraciones
+### 2.2. Procedimiento 
+### 2.3. Ejemplos
+### 2.4. Simluación
+
+## 3. Ecuaciones diofánticas en Contexto de Control Digital
+### 3.1. Clasificación de Ecuaciones Diofánticas
+### 3.2. Condiciones de Existencia de Soluciones
+### 3.4. Aplicaciones en teoría de numeros 
+
 Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
 
 ## 5. Ecuaciones
