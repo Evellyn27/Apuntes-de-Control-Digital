@@ -16,10 +16,6 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 - **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
 <p align="center">$y\left( t \right)=x\left( t-1 \right)$</p>
 
-  
-                      
-
-
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/35f1954f074c0ea0cdaef944a6d5f84aa54e1f65/Imagenes/Causales.png" />
 </p>
@@ -27,10 +23,11 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 Figura 1. Sistemas Causales
 </p>
 
-
- 
 - **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario
+<p align="center">$P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left| z_{p} \right|\lt 1$</p>
 
+Donde: 
+$z_{p}:$ Son los polos de la función
 - **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
 
 - **Grados de los polinomios:** El grado del numerador del controlador no debe superar al del denominador del sistema.
