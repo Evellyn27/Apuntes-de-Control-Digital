@@ -14,19 +14,19 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
 1. **Causalidad:**
 2. **Estabilidad del modelo objetivo:**
-**3. Evitar cancelaciones polo-cero:**
-**4. Grados de los polinomios:**
-**5. Ceros de fase no mínima:**
+3. **Evitar cancelaciones polo-cero:**
+4. **Grados de los polinomios:**
+5. **Ceros de fase no mínima:**
 
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
-**1. Definir la función de la planta en lazo abierto:**
+1. **Definir la función de la planta en lazo abierto:**
 Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control. Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
-**2. Definir el modelo de referencia:**
+2. **Definir el modelo de referencia:**
 Con el comportamiento del sistema en lazo abierto determinado, se especificará la función de transferencia del modelo de referencia Go(z) que describe el comportamiento deseado del sistema en lazo cerrado, además este tendrá en cuenta aspectos como la estabilidad, el sobreimpulso o el tiempo de establecimiento.
-**3. Diseño del controlador:**
+3. **Diseño del controlador:**
 Con G(z) y Go(z) definidos, se calcula la función de transferencia del controlador C(z) que, cuando ambas funciones se cierran en el lazo, permiten que la función de transferencia del sistema en lazo cerrado sea igual a Go(z), logrando de esta forma que el sistema siguiendo el comportamiento deseado.
-**4. Verificación:**
+4. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
 ### 1.3. Ejemplos
 ### 1.4. Simluación
