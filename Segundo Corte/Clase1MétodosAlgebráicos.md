@@ -14,11 +14,12 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
 
 - **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
+$y\left( t \right)=x\left( t-1 \right)$
 <p align="center">
-  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png" />
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/35f1954f074c0ea0cdaef944a6d5f84aa54e1f65/Imagenes/Causales.png" />
 </p>
 <p align="center">
-Figura 1. Sistema en lazo abierto
+Figura 1. Sistemas Causales
 </p>
 
 
@@ -35,11 +36,12 @@ Figura 1. Sistema en lazo abierto
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 1. **Definir la función de la planta en lazo abierto:**
 Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control. Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
-2. **Definir el modelo de referencia:**
+https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png
+3. **Definir el modelo de referencia:**
 Con el comportamiento del sistema en lazo abierto determinado, se especificará la función de transferencia del modelo de referencia Go(z) que describe el comportamiento deseado del sistema en lazo cerrado, además este tendrá en cuenta aspectos como la estabilidad, el sobreimpulso o el tiempo de establecimiento.
-3. **Diseño del controlador:**
+4. **Diseño del controlador:**
 Con G(z) y Go(z) definidos, se calcula la función de transferencia del controlador C(z) que, cuando ambas funciones se cierran en el lazo, permiten que la función de transferencia del sistema en lazo cerrado sea igual a Go(z), logrando de esta forma que el sistema siguiendo el comportamiento deseado.
-4. **Verificación:**
+5. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
 ### 1.3. Ejemplos
 ### 1.4. Simluación
