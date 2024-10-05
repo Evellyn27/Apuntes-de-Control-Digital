@@ -1,7 +1,7 @@
 # Métodos algebráicos
 Los métodos algebraicos del control digital constituyen una herramienta clave para el diseño de controladores que permiten variar el comportamiento dinámico de los sistemas correspondientes en lazo cerrado, llevando a cabo así la estabilidad y el rendimiento deseados, en otras palabras se les describe como técnicas que permiten transformar las características de un sistema a partir de manipulaciones algebraicas de su función de transferencia, en ese sentido, entre los métodos algebraicos más relevantes están la igualación de modelo, que permite obtener la función de transferencia del sistema para seguir una respuesta predefinida; la igualación de coeficientes, que permite modificar los polos del sistema para garantizar la estabilidad y la respuesta rápida; y las ecuaciones diofánticas, que se ocupan de sistemas más complejos al combinar varias funciones de transferencia. Estos métodos de gran relevancia en aplicaciones en industrias como: el control de procesos, la automatización, y los sistemas embebidos seran revisados en este trabajo, y a partir de la explicación de los mismos, se evaluará su efectividad en la resolución de problemas prácticos, asi como sus consideraciones de implementación.
 ## Índice
-1. *[Método de igualación por modelo]#Método de igualación por modelo
+*[Método de igualación por modelo]#Método de igualación por modelo
 2. Método de igualación por coeficientes
 3. Ecuaciones diofánticas
 4. Ejercicios
