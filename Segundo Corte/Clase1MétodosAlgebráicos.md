@@ -36,18 +36,8 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 
 Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
 
-## 5. Ecuaciones
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
-
 💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
 
-$$R=\frac{V}{I}$$
-
-## 6. Figuras
-Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
-* Primero escribimos ![]().
-* Después escribimos, dentro de los corchetes, el texto alternativo. Este es opcional y solo entra en acción cuando no se puede cargar la imagen correctamente.
-* Después escribimos, dentro de los paréntesis, la ubicación del archivo (ya sea una url o una ubicación dentro de algun folder local). Se recomienda poner las imágenes en una carpeta que se llame imágenes dentro del repositorio github para que no tengan problemas al cargar las imágenes.
 
 💡**Ejemplo 2:**
 
@@ -55,10 +45,7 @@ Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las
 
 Figura 1. Figura de prueba
 
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
 
-## 7. Tablas
-En caso de necesitar la inclusión de tablas para organizar información se recomienda el uso de la herramienta del siguiente enlace https://www.tablesgenerator.com/markdown_tables , la cual permite organizar la información dentro de la tabla y genera el código markdown automáticamente:
 
 💡**Ejemplo 3:** 
 
@@ -75,8 +62,6 @@ Tabla 1. Tabla de ejemplo
 
 Cada tabla debe llevar la etiqueta que describa su contenido y numeración consecutiva para todas las tablas
 
-## 8. Código
-
 💡**Ejemplo 4:**
 ```
 var sumar2 = function(numero) {
@@ -84,9 +69,9 @@ var sumar2 = function(numero) {
 }
 ```
 
-## 9. Ejercicios
+## 4. Ejercicios
 
-## 10. Conclusiones
+## 5. Conclusiones
 
-## 11. Referencias
+## Referencias
 
