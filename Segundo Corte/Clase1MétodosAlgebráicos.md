@@ -19,11 +19,11 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 <p align="center">
  Figura 1. Sistema en lazo abierto
   </p>
-3. **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario.
-4. **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
-5. **Grados de los polinomios:**
+2. **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario
+3. **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
+4. **Grados de los polinomios:**
 El grado del numerador del controlador no debe superar al del denominador del sistema.
-6. **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
+5. **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
 
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
