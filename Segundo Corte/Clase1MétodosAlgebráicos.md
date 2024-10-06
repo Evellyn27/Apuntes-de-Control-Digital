@@ -1,5 +1,5 @@
 # Métodos algebráicos
-Los métodos algebraicos del control digital constituyen una herramienta clave para el diseño de controladores que permiten variar el comportamiento dinámico de los sistemas correspondientes en lazo cerrado, llevando a cabo así la estabilidad y el rendimiento deseados, en otras palabras se les describe como técnicas que permiten transformar las características de un sistema a partir de manipulaciones algebraicas de su función de transferencia, en ese sentido, entre los métodos algebraicos más relevantes están la igualación de modelo, que permite obtener la función de transferencia del sistema para seguir una respuesta predefinida; la igualación de coeficientes, que permite modificar los polos del sistema para garantizar la estabilidad y la respuesta rápida; y las ecuaciones diofánticas, que se ocupan de sistemas más complejos al combinar varias funciones de transferencia. Estos métodos de gran relevancia en aplicaciones en industrias como: el control de procesos, la automatización, y los sistemas embebidos seran revisados en este trabajo, y a partir de la explicación de los mismos, se evaluará su efectividad en la resolución de problemas prácticos, asi como sus consideraciones de implementación.
+Los métodos algebraicos del control digital son esenciales para diseñar controladores que ajusten el comportamiento dinámico de sistemas en lazo cerrado, garantizando estabilidad y rendimiento del sistema, por ende, estos controladores transforman las características del sistema mediante manipulaciones algebraicas de la función de transferencia. Entre ellos, destacan la igualación de modelo y la igualación de coeficientes, así como un método para el análisis de los mismos conocidos como las ecuaciones diofánticas, que permiten abordar sistemas más complejos. En ese sentido, este trabajo revisa estos métodos y su aplicación en industrias como el control de procesos, la automatización y los sistemas embebidos, evaluando su efectividad y consideraciones de implementación.
 ## Índice
 1. Método de igualación por modelo
 2. Método de igualación por coeficientes
@@ -31,7 +31,7 @@ Donde:
 $z_{p}:$ Son los polos de la función
 
 - **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
-<p align="center">$z_{p}\neq  z_{c}$</p>
+<p align="center">$z_{p}\neqz_{c}$</p>
 
 - **Grados de los polinomios:** El grado del numerador del controlador no debe superar al del denominador del sistema.
 <p align="center">$N\lt D$</p>
@@ -43,7 +43,17 @@ $z_{p}:$ Son los polos de la función
 Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a 2 para asegurar la causalidad y realizabilidad.
 
 - **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
-
+\begin{table}[]
+\begin{tabular}{cll}
+\hline
+**Consideración**                                                                   & \multicolumn{1}{c}{**Descripción**}                                                                                                                    & **Condición Matematica**                                          \\ \hline
+**\_Causalidad\_**                                                                  & \begin{tabular}[c]{@{}l@{}}El controlador debe depender solo de valores presentes\\ o pasados para garantizar la implementación práctica.\end{tabular} & $y\left( t \right)=x\left( t-1 \right)$                           \\
+\begin{tabular}[c]{@{}c@{}}**\_Estabilidad del \\ modelo objetivo\_**\end{tabular}  & Los polos deben ubicarse dentro del circulo unitario                                                                                                   & $P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left| z_{p} \right|\lt 1$ \\
+\begin{tabular}[c]{@{}c@{}}**\_Evitar cancelaciones\\ de polo-cero\_**\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evitar la eliminación de polos y ceros, ya que esto\\ puede restar características al sistema\end{tabular}                  & $z_{p}\neq  z_{c}$                                                \\
+**\_Grado del polinomio\_**                                                         & \begin{tabular}[c]{@{}l@{}}El grado del numerador del controlador no debe superar \\ al del denominador del sistema.\end{tabular}                      & $N\lt D$                                                          \\
+\begin{tabular}[c]{@{}c@{}}**\_Ceros de fase \\ no mínima\_**\end{tabular}          & Preservar ceros de fase no mínima en el diseño                                                                                                         & Considerar ceros de fase no mínima en $C(z)$                      \\ \hline
+\end{tabular}
+\end{table}
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 
