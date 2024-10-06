@@ -74,6 +74,10 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 >🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
 
 ### 2.2. Procedimiento 
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/cc65b4113a45c8c91511db0b597729d4bfcf77c0/Imagenes/ProcedimientoE.png" />
+</p>
+
 ### 2.3.  Descripción del Proceso
 ### 2.3. Ejemplos
 ### 2.4. Simluación
