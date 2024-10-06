@@ -87,27 +87,39 @@ Al igual que el método anterior, como primer paso se identifica la función de 
 En ese sentido, la función de transferencia describe la relación entre la entrada y la salida del sistema en el dominio $z$
 
 2. **Establecimiento del Polinomio Deseado:**
+   
 En este paso, se define el polinomio característico deseado $P_{deseado}(z)$, el cual refleja las características de rendimiento que se esperan del sistema, en ese sentido, este polinomio se puede escribir en la forma general:
+
 </p><p align="center">$P_{deseado}(z)=z^{n}+a_{n-1}z^{n-1}+...+a_{0}$</p>
 
 3. **Formulación del Sistema en Lazo Cerrado:**
+   
 Este paso busca representar cómo interactúan la planta y el controlador cuando se aplica una retroalimentación negativa. En ese sentido se tiene que:
+
 </p><p align="center">$G_{0}(z)=\frac{N_{0}(z)}{D_{0}(z)}$</p>
 
 Sin embargo, esta expresión puede estar basada por la representación del controlador $C(z)$ y la función en lazo abierto $G(z)$:
+
 </p><p align="center">$G_{0}(z)=\frac{C(z)G(z)}{1+C(z)G(z)}$</p>
 
 Al desarrollar esta expresión, el polinomio característico en lazo cerrado se obtiene como:
+
 </p><p align="center">$P_{cerrado}(z)=A(z)D(z)+B(z)N(z)$</p>
+
 Aquí, $A(z)$ y $B(z)$ representan el denominador y el numerador de la función de transferencia del controlador $C(z)$
 
 4. **Igualación de los Polinomios:**
+   
 Se iguala el polinomio característico del sistema en lazo cerrado con el polinomio deseado:
+
 </p><p align="center">$P_{cerrado}=P_{deseado}$</p>
+
 Esta igualación establece que el comportamiento dinámico del sistema en lazo cerrado debe coincidir con el comportamiento deseado. Por lo tanto:
+
 </p><p align="center">$A(z)D(z)+B(z)N(z)=P_{deseado}$</p>
 
-6. **Obtención de ecuaciones:**
+5. **Obtención de ecuaciones:**
+   
 Expandiendo la igualdad anterior, se obtienen ecuaciones para cada potencia de $z.$ En ese sentido, aquì se identifica los términos del polinomio característico deseado y los términos que resultan de $A(z)D(z)+B(z)N(z).$ A continuación, se muestra como se igualan:
 
 * Para $z^{n}$ : para ecuaciones $A_{n}, B_{n}$
