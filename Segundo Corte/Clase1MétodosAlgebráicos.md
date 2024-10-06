@@ -62,7 +62,12 @@ Finalmente, una vez diseñado el controlador, se deben verificar las consideraci
 La igualación por coeficientes es un método algebraico que se utiliza con frecuencia para contrastar dos expresiones polinómicas o racionales y poder extraer las relaciones entre los coeficientes. En el contexto de control, el método iguala los distintos coeficientes del polinomio característico de un sistema, colocando los polos en las posiciones deseadas en el diseño de un controlador. 
 ### 2.1. Características y Consideraciones
 Al utilizar el método de igualación por coeficientes, es fundamental considerar las siguientes pautas de implementación:
-
+|                **Consideración**                |                                                                       **Descripción**                                                                      | **Condición Matematica**        |
+|:-----------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------|
+|      **_Incremento del Orden del Sistema_**     | Al multiplicar el polinomio del denominador de la planta  $D(z)$ por el denominador del controlador $A(z)$, el orden  del sistema en lazo cerrado aumenta. | $P_{0}=A(z)D(z)+B(z)N(z)$       |
+|         **_Propiedad de las Funciones_**        | Las funciones de transferencia del controlador $C(z)$ y de la planta $G(z)$ deben ser propias.                                                             | $B(z)\lt A(z)$ y $N(z)\lt D(z)$ |
+| **_Igualación en el Polinomio Característico_** | La igualación se realiza en el polinomio característico,  permite fijar la ubicación de los polos, pero no de ceros                                        | $D(z)=$Polinomio                |
+|           **_Orden del Controlador_**           | El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto                                 | $A(z)\lt D(z)$                  |
 - **Incremento del Orden del Sistema:**
 La función en lazo cerrado del sistema se describe de esta manera:
 </p><p align="center">$G_{0}=\frac{B(z)N(z)}{A(z)D(z)+B(z)N(z)}$</p>
@@ -81,6 +86,7 @@ Si se emplean las funciones de transferencia del controlador $C(z)$ y de la plan
 Aunque la ubicación de los polos puede fijarse en posiciones deseadas, no hay forma de lograr que los ceros del sistema estén en la misma ubicación, lo que significa que es posible que la respuesta transitoria del sistema no sea ajustable, ya que puede afectar a su comportamiento.
 -**Orden del Controlador:**
 El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto
+
 
 ### 2.2. Procedimiento 
 ### 2.3. Ejemplos
