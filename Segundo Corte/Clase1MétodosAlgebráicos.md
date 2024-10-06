@@ -26,6 +26,7 @@ El procedimiento para la igualación por modelo consiste en los siguientes pasos
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/0872a390c84464668af01df7957f61aade8816db/Imagenes/procedimiento.png" />
 </p>
+
 #### Descripción
 
 1. **Definir la función de la planta en lazo abierto:**
