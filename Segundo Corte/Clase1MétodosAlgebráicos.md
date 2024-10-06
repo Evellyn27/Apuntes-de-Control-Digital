@@ -148,9 +148,17 @@ Una vez resueltos los coeficientes de $A(z)$ y $B(z)$ se implementa el controlad
 Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de tipo entero, estas suelen ser utilizadas en áreas relevantes, como el caso del control digital, donde se aplican para la síntesis y el análisis de sistemas de control. 
 
 ### 3.1. Clasificación de Ecuaciones Diofánticas
-### 3.2. Condiciones de Existencia de Soluciones
-### 3.4. Aplicaciones en teoría de numeros 
-### 3.5 Ejemplo Práctico
+
+| Tipo de Ecuación Diofántica |     Expresión     |
+|:---------------------------:|:-----------------:|
+|     Ecuaciones Lineales     | $ax+by=c$         |
+|    Ecuaciones Cuadráticas   | $ax^{2}+by^{2}=c$ |
+|  Ecuaciones de Mayor Grado  | $ax^{n}+by^{m}=c$ |
+
+### 3.2. Aplicaciones en teoría de numeros 
+Las ecuaciones diofánticas tienen múltiples aplicaciones, tanto en matemáticas como en otras disciplinas, en primer lugar son fundamentales en la teoría de números, ya que ayudan en la factorización y el estudio de los números primos, además de intervenir también en los algoritmos de cifrado en función de su importancia en la criptografía, como por ejemplo el RSA, por otro lado también son utiles en ciencias computacionales, pues permiten el planteamiento de problemas de programación entera y el cálculo de optimización.
+
+### 3.3 Ejemplo Práctico
 Para resolver la ecuación diofántica lineal $3x+4y=6,$ como primer paso verificamos si existe una solución entera para el ejercicio por tanto necesitamos el máximo común divisor (MCD) de 3 y 4 divida al término independiente, 6.
 
 Entonces, dividimos en 4:
@@ -195,4 +203,10 @@ Dentro de la temática, se pudo llegar a las siguientes conclusiones:
 - Finalmente, se evidencia que la integración de ecuaciones diofánticas contribuyen a tener un análisis de sistemas, estableciendo condiciones de diseño que aseguran la viabilidad de las soluciones en contextos discretos, esto resalta la interrelación entre la teoría matemática y su aplicación práctica en ingeniería
 
 ## Referencias
+[1] Algoritmo de Euclides y como ENTENDERLO - Euclides. (s.f.). Euclides. https://euclides.org/algoritmo-de-euclides/
 
+[2] Ecuaciones diofánticas: Coeficientes enteros - guía completa y ejemplos | club de los teoremas. (s.f.). Club de los Teoremas. https://www.teoremas.club/ecuaciones-diofanticas-coeficientes-enteros/#:~:text=Tipos%20de%20Ecuaciones%20Diofánticas%201%20Ecuaciones%20Lineales%20Diofánticas:,grado%20que%20son%20generalmente%20más%20difíciles%20de%20resolver
+
+[3] Función de transferencia — teoría de control con matlab. (s.f.). Ezequiel Leonardo Castaño Personal Website. https://elc.github.io/control-theory-with-matlab/chapters/ELC02_Funcion_de_transferencia.html
+
+[4] Vista de Control digital de nivel para sistema de tanques interconectados mediante servo-válvula | Ingeniería Investigación y Desarrollo. (s.f.). PORTAL DE REVISTAS UPTC. https://revistas.uptc.edu.co/index.php/ingenieria_sogamoso/article/view/917/917
