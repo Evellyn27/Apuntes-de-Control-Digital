@@ -17,8 +17,19 @@ El análisis en frecuencia es un método que se basa en la suposición de que cu
 
 >🔑 *Sistema dinámico:* Es un conjunto de reglas matemáticas que describe cómo cambia el estado de un sistema a lo largo del tiempo, ya sea de forma continua o discreta.
 
-
 ### 1.1. Comportamiento de sistemas dinámicos frente a cambios de frecuencia
+Si un sistema dinámico está en el dominio tiempo y recibe una señal de entrada sinusoidal, la amplitud y la fase de la señal de salida pueden alterarse en función de la frecuencia de entrada.
+>🔑 *Ganancia:* Es el cambio en la magnitud de la salida en relación con la magnitud de la entrada.
+>🔑 *Fase:* La fase describe el retraso entre la entrada y la salida.
+
+El comportamiento de un sistema dinámico frente a diferentes frecuencias depende del tipo de sistema:
+
+*Filtros pasa-bajos: Atenúan las frecuencias altas y permiten el paso de las bajas.
+*Filtros pasa-altos: Permiten las frecuencias altas y atenúan las bajas.
+*Sistemas resonantes: Amplifican frecuencias en un rango específico.
+
+Estos cambios de amplitud y fase en función de la frecuencia se pueden analizar y visualizar utilizando diagramas de Bode, que muestran la relación entre la frecuencia y la respuesta del sistema.
+
 ### 1.2. Variaciones en Amplitud y Fase
 ### 1.3. Comparación entre Análisis en Frecuencia y Análisis Temporal
 ### 1.4. Efecto de los Polos y Ceros en el Comportamiento Frecuencial
