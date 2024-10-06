@@ -27,7 +27,7 @@ El procedimiento para la igualación por modelo consiste en los siguientes pasos
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/0872a390c84464668af01df7957f61aade8816db/Imagenes/procedimiento.png" />
 </p>
 
-#### Descripción
+### 1.3.  Descripción del Proceso
 
 1. **Definir la función de la planta en lazo abierto:**
 Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control.
@@ -53,7 +53,8 @@ Con G(z) y Go(z) definidos, se calcula la función de transferencia del controla
 
 7. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
-### 1.3. Ejemplo
+
+### 1.3. Ejemplos Prácticos
 💡
 ### 1.4. Simluación
 
