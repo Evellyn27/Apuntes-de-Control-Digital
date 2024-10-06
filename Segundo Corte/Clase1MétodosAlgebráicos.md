@@ -80,8 +80,10 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 
 ### 2.3.  Descripción del Proceso
 1. **Definir la función de la planta en lazo abierto:**
+   
 Al igual que el método anterior, como primer paso se identifica la función de trasnferencia en lazo abierto. es decir, en su forma:
 </p><p align="center">$G(z)=\frac{N(z)}{D(z)}$</p>
+
 En ese sentido, la función de transferencia describe la relación entre la entrada y la salida del sistema en el dominio $z$
 
 2. **Establecimiento del Polinomio Deseado:**
