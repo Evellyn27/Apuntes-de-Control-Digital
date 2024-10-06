@@ -150,7 +150,8 @@ Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de
 ### 3.1. Clasificación de Ecuaciones Diofánticas
 ### 3.2. Condiciones de Existencia de Soluciones
 ### 3.4. Aplicaciones en teoría de numeros 
-
+### 3.5 Ejemplo Práctico
+Para resolver la ecuación diofántica lineal $3x+4y=6,$ como primer paso verificamos si existe una solución entera para el ejercicio por tanto necesitamos el máximo común divisor (MCD).
 ## 4. Ejercicios
 
 ## 5. Conclusiones
