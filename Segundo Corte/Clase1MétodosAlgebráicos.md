@@ -192,7 +192,8 @@ Para obtener la solución general, usamos la fórmula general para las ecuacione
 </p><p align="center">$y=6-3k$</p>
 
 ## 4. Ejercicios
-
+📚
+📚
 ## 5. Conclusiones
 Dentro de la temática, se pudo llegar a las siguientes conclusiones:
 
