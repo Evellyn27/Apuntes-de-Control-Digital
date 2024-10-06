@@ -27,11 +27,20 @@ Figura 1. Sistemas Causales
 <p align="center">$P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left| z_{p} \right|\lt 1$</p>
 
 Donde: 
+
 $z_{p}:$ Son los polos de la función
+
 - **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
+<p align="center">$z_{p}\neq  z_{c}$</p>
 
 - **Grados de los polinomios:** El grado del numerador del controlador no debe superar al del denominador del sistema.
+<p align="center">$N\lt D$</p>
 
+**Ejemplo:** Si la planta tiene una función de transferencia:
+
+<p align="center">$G\left( z \right)=\frac{k}{z^{2}+a_{1}z+a_{2}}$</p>
+
+Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a 2 para asegurar la causalidad y realizabilidad.
 - **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
 
 ### 1.2. Procedimiento 
