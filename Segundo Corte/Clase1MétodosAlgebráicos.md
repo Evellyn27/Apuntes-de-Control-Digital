@@ -41,17 +41,17 @@ Como primer paso se debe ejecutarse el cálculo de la función de transferencia 
 
 Donde $B_{G(z)}$ es el numerador y $A_{G(z)}$ es el denominador de la función de transferencia de la planta.
 
-3. **Definir el modelo de referencia:**
+2. **Definir el modelo de referencia:**
 Con el comportamiento del sistema en lazo abierto determinado, se especificará la función de transferencia del modelo de referencia Go(z) que describe el comportamiento deseado del sistema en lazo cerrado, además este tendrá en cuenta aspectos como la estabilidad, el sobreimpulso o el tiempo de establecimiento.
 </p>
 <p align="center">$G_{0} =\frac{B_{G0}}{A_{G0}}$</p>
 
-5. **Diseño del controlador:**
+3. **Diseño del controlador:**
 Con G(z) y Go(z) definidos, se calcula la función de transferencia del controlador C(z) que, cuando ambas funciones se cierran en el lazo, permiten que la función de transferencia del sistema en lazo cerrado sea igual a Go(z), logrando de esta forma que el sistema siguiendo el comportamiento deseado.
 
 </p><p align="center">$C(z) =\frac{G_{0}}{G(z)(1-G_{0})}$</p>
 
-7. **Verificación:**
+4. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
 
 ### 1.3. Ejemplos Prácticos
@@ -79,6 +79,27 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 </p>
 
 ### 2.3.  Descripción del Proceso
+1. **Definir la función de la planta en lazo abierto:**
+Al igual que el método anterior, como primer paso se identifica la función de trasnferencia en lazo abierto. es decir, en su forma:
+</p><p align="center">$G(z)=\frac{N(z)}{D(z)}$</p>
+En ese sentido, la función de transferencia describe la relación entre la entrada y la salida del sistema en el dominio $z$.
+
+2. **Establecimiento del Polinomio Deseado:**
+En este paso, se define el polinomio característico deseado $P_{deseado}(z)$, el cual refleja las características de rendimiento que se esperan del sistema, en ese sentido, este polinomio se puede escribir en la forma general:
+</p><p align="center">$P_{deseado}(z)=z^{n}+a_{n-1}z^{n-1}+...+a_{0}$</p>
+
+3. **Formulación del Sistema en Lazo Cerrado:**
+Este paso busca representar cómo interactúan la planta y el controlador cuando se aplica una retroalimentación negativa. En ese sentido se tiene que:
+</p><p align="center">$G_{0}(z)=\frac{N_{0}(z)}{D_{0}(z)}$</p>
+
+Sin embargo, esta expresión puede estar basada por la representación del controlador $C(z)$ y la función en lazo abierto $G(z)$:
+</p><p align="center">$G_{0}(z)=\frac{C(z)G(z)}{1+C(z)G(z)}$</p>
+
+Al desarrollar esta expresión, el polinomio característico en lazo cerrado se obtiene como:
+
+5.
+6.
+7.
 ### 2.3. Ejemplos
 ### 2.4. Simluación
 
