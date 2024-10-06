@@ -43,7 +43,8 @@ $z_{p}:$ Son los polos de la función
 Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a 2 para asegurar la causalidad y realizabilidad.
 
 - **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
-\begin{table}[]
+  
+\begin{table}[H]
 \begin{tabular}{cll}
 \hline
 **Consideración**                                                                   & \multicolumn{1}{c}{**Descripción**}                                                                                                                    & **Condición Matematica**                                          \\ \hline
