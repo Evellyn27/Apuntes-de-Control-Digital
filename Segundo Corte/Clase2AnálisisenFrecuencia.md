@@ -26,17 +26,17 @@ Si un sistema dinámico está en el dominio tiempo y recibe una señal de entrad
 
 El comportamiento de un sistema dinámico frente a diferentes frecuencias depende del tipo de sistema:
 
-* Filtros pasa-bajos: Atenúan las frecuencias altas y permiten el paso de las bajas.
+* **Filtros pasa-bajos:** Atenúan las frecuencias altas y permiten el paso de las bajas.
 
-* Filtros pasa-altos: Permiten las frecuencias altas y atenúan las bajas.
+* **Filtros pasa-altos:** Permiten las frecuencias altas y atenúan las bajas.
 
-* Sistemas resonantes: Amplifican frecuencias en un rango específico.
+* **Sistemas resonantes:** Amplifican frecuencias en un rango específico.
 
 Estos cambios de amplitud y fase en función de la frecuencia se pueden analizar y visualizar utilizando diagramas de Bode, que muestran la relación entre la frecuencia y la respuesta del sistema.
 
 ### 1.2. Variaciones en Amplitud y Fase
 ### 1.3. Comparación entre Análisis en Frecuencia y Análisis Temporal
-### 1.4. Efecto de los Polos y Ceros en el Comportamiento Frecuencial
+El análisis de sistemas puede ser tratado desde distintas perspectivas, entre las cuales el análisis temporal y el análisis en frecuencia son dos de los enfoques más habituales. De cada uno de estos se extraerá información valiosa y complementaria del comportamiento del sistema frente a diversas condiciones. A continuación se presenta una tabla que recoge las diferencias fundamentales de ambos enfoques.
 
 
 ## 2. Resolución matemática mediante fasores
