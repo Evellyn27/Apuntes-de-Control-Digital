@@ -48,10 +48,13 @@ Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 
 1. **Definir la función de la planta en lazo abierto:**
-Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control. Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
+Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control.
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png" />
 </p>
+
+ Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
+ 
 <p align="center">$G\left( z \right)=\frac{B_{G(z)}}{A_{G(z)}}=\frac{b_{0}+b_{1}z^{-1}+...+b_{m}z^{-m}}{1+a_{1}z^{-1}+...+a_{n}z^{-n}}$</p>
 
 Donde $B_{G(z)}$ es el numerador y $A_{G(z)}$ es el denominador de la función de transferencia de la planta.
@@ -64,8 +67,7 @@ Con el comportamiento del sistema en lazo abierto determinado, se especificará 
 5. **Diseño del controlador:**
 Con G(z) y Go(z) definidos, se calcula la función de transferencia del controlador C(z) que, cuando ambas funciones se cierran en el lazo, permiten que la función de transferencia del sistema en lazo cerrado sea igual a Go(z), logrando de esta forma que el sistema siguiendo el comportamiento deseado.
 
-</p>
-<p align="center">$C(z) =\frac{G_{0}}{G(z)(1-G_{0})}$</p>
+</p><p align="center">$C(z) =\frac{G_{0}}{G(z)(1-G_{0})}$</p>
 
 7. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
@@ -74,7 +76,25 @@ Finalmente, una vez diseñado el controlador, se deben verificar las consideraci
 ### 1.4. Simluación
 
 ## 2. Método de igualación por coeficientes
+La igualación por coeficientes es un método algebraico que se utiliza con frecuencia para contrastar dos expresiones polinómicas o racionales y poder extraer las relaciones entre los coeficientes. En el contexto de control, el método iguala los distintos coeficientes del polinomio característico de un sistema, colocando los polos en las posiciones deseadas en el diseño de un controlador. 
 ### 2.1. Características y Consideraciones
+Al utilizar el método de igualación por coeficientes, es fundamental considerar las siguientes pautas de implementación:
+-**Incremento del Orden del Sistema:**
+La función en lazo cerrado del sistema se describe de esta manera:
+</p><p align="center">$G_{0}=\frac{B(z)N(z)}{A(z)D(z)+B(z)N(z)}$</p>
+Al multiplicar el polinomio del denominador de la planta $A(z)$ por el denominador del controlador $D(z)$, el orden del sistema en lazo cerrado aumenta.
+</p><p align="center">$P_{0}=A(z)D(z)+B(z)N(z)$</p>
+Este incremento en el orden del sistema puede afectar la complejidad del control y la estabilidad general del sistema.
+
+-**Propiedad de las Funciones:**
+Si se emplean las funciones de transferencia del controlador $C(z)$ y de la planta $G(z)$, al multiplicar el numerador de la planta $B(z)$ por el numerador de la función del controlador $N(z)$, será necesario que ambas funciones de transferencia sean propias, esto indica, que el grado del numerador sea menor de que el grado del denominador. 
+
+>🔑 *Función impropia:* Una función de transferencia es impropia si el grado del numerador es mayor que el grado del denominador, esto puede resultar en un comportamiento no físico y potencialmente inestable en el sistema.
+>>🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
+-**Igualación en el Polinomio Característico:**
+Aunque la ubicación de los polos puede fijarse en posiciones deseadas, no hay forma de lograr que los ceros del sistema estén en la misma ubicación, lo que significa que es posible que la respuesta transitoria del sistema no sea ajustable, ya que puede afectar a su comportamiento.
+-**Orden del Controlador:**
+El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto
 ### 2.2. Procedimiento 
 ### 2.3. Ejemplos
 ### 2.4. Simluación
