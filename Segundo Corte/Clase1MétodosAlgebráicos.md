@@ -12,37 +12,6 @@ La igualación por modelo es un procedimiento en el diseño de sistemas de contr
 >🔑 *Sistema Causal:* Es aquel cuya salida en cualquier instante depende únicamente de los valores actuales o pasados de la entrada, nunca de valores futuros.
 ### 1.1. Características y Consideraciones
 Al utilizar el método de igualación por modelo, es crucial tener en cuenta las siguientes consideraciones de implementación:
-
-- **Causalidad:**  El controlador debe depender solo de valores presentes o pasados de la entrada.
-<p align="center">$y\left( t \right)=x\left( t-1 \right)$</p>
-
-<p align="center">
-  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/35f1954f074c0ea0cdaef944a6d5f84aa54e1f65/Imagenes/Causales.png" />
-</p>
-<p align="center">
-Figura 1. Sistemas Causales
-</p>
-
-- **Estabilidad del modelo objetivo:** El modelo de referencia y el sistema en lazo cerrado deben ser estables, con polos dentro del círculo unitario
-<p align="center">$P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left| z_{p} \right|\lt 1$</p>
-
-Donde: 
-
-$z_{p}:$ Son los polos de la función
-
-- **Evitar cancelaciones polo-cero:** Evitar cancelaciones entre polos y ceros que comprometan la estabilidad. 
-<p align="center">$z_{p}\neqz_{c}$</p>
-
-- **Grados de los polinomios:** El grado del numerador del controlador no debe superar al del denominador del sistema.
-<p align="center">$N\lt D$</p>
-
-**Ejemplo:** Si la planta tiene una función de transferencia:
-
-<p align="center">$G\left( z \right)=\frac{k}{z^{2}+a_{1}z+a_{2}}$</p>
-
-Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a 2 para asegurar la causalidad y realizabilidad.
-
-- **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
   
 |            **Consideración**            |                                                **Descripción**                                               | **Condición Matematica**                                            |
 |:---------------------------------------:|:------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------|
@@ -51,9 +20,13 @@ Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a
 | **_Evitar cancelaciones de polo-cero_** | Evitar la eliminación de polos y ceros, ya que esto puede restar características al sistema                  | $z_{p}\neq  z_{c}$                                                  |
 |        **_Grado del polinomio_**        | El grado del numerador del controlador no debe superar  al del denominador del sistema.                      | $N\lt D$                                                            |
 |      **_Ceros de fase  no mínima_**     | Preservar ceros de fase no mínima en el diseño                                                               | Considerar ceros de fase no mínima en $C(z)$                        |
+
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
-
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/e130198b7ce13441d4f726b17b5a32f6302ac4fe/Imagenes/procedimiento.png" />
+</p>
+#### Descripción
 1. **Definir la función de la planta en lazo abierto:**
 Como primer paso se debe ejecutarse el cálculo de la función de transferencia del sistema en lazo abierto $G(z)$ que describe la dinámica natural de la planta sin control.
 <p align="center">
