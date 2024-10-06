@@ -79,6 +79,7 @@ Finalmente, una vez diseñado el controlador, se deben verificar las consideraci
 La igualación por coeficientes es un método algebraico que se utiliza con frecuencia para contrastar dos expresiones polinómicas o racionales y poder extraer las relaciones entre los coeficientes. En el contexto de control, el método iguala los distintos coeficientes del polinomio característico de un sistema, colocando los polos en las posiciones deseadas en el diseño de un controlador. 
 ### 2.1. Características y Consideraciones
 Al utilizar el método de igualación por coeficientes, es fundamental considerar las siguientes pautas de implementación:
+
 -**Incremento del Orden del Sistema:**
 La función en lazo cerrado del sistema se describe de esta manera:
 </p><p align="center">$G_{0}=\frac{B(z)N(z)}{A(z)D(z)+B(z)N(z)}$</p>
@@ -90,58 +91,34 @@ Este incremento en el orden del sistema puede afectar la complejidad del control
 Si se emplean las funciones de transferencia del controlador $C(z)$ y de la planta $G(z)$, al multiplicar el numerador de la planta $B(z)$ por el numerador de la función del controlador $N(z)$, será necesario que ambas funciones de transferencia sean propias, esto indica, que el grado del numerador sea menor de que el grado del denominador. 
 
 >🔑 *Función impropia:* Una función de transferencia es impropia si el grado del numerador es mayor que el grado del denominador, esto puede resultar en un comportamiento no físico y potencialmente inestable en el sistema.
->>🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
+
+>🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
+
 -**Igualación en el Polinomio Característico:**
 Aunque la ubicación de los polos puede fijarse en posiciones deseadas, no hay forma de lograr que los ceros del sistema estén en la misma ubicación, lo que significa que es posible que la respuesta transitoria del sistema no sea ajustable, ya que puede afectar a su comportamiento.
 -**Orden del Controlador:**
 El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto
+
 ### 2.2. Procedimiento 
 ### 2.3. Ejemplos
 ### 2.4. Simluación
 
 ## 3. Ecuaciones diofánticas en Contexto de Control Digital
+Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de tipo entero, estas suelen ser utilizadas en áreas relevantes, como el caso del control digital, donde se aplican para la síntesis y el análisis de sistemas de control. 
 ### 3.1. Clasificación de Ecuaciones Diofánticas
 ### 3.2. Condiciones de Existencia de Soluciones
 ### 3.4. Aplicaciones en teoría de numeros 
 
-Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
-
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
-
-
-💡**Ejemplo 2:**
-
-![Figura de prueba](images/plantilla/Captura2.PNG)
-
-Figura 1. Figura de prueba
-
-
-
-💡**Ejemplo 3:** 
-
-| **Resultado** | **x = número de intentos hasta primer éxito** |
-|---------------|-----------------------------------------------|
-|       S       |                       1                       |
-|       FS      |                       2                       |
-|      FFS      |                       3                       |
-|      ...      |                      ...                      |
-|    FFFFFFS    |                       7                       |
-|      ...      |                      ...                      |
-
-Tabla 1. Tabla de ejemplo
-
-Cada tabla debe llevar la etiqueta que describa su contenido y numeración consecutiva para todas las tablas
-
-💡**Ejemplo 4:**
-```
-var sumar2 = function(numero) {
-  return numero + 2;
-}
-```
-
 ## 4. Ejercicios
 
 ## 5. Conclusiones
+Dentro de la temática, se pudo llegar a las siguientes conclusiones:
+
+*En primer lugar, se identifica que la igualación por modelo permite alinear eficazmente las características de un sistema de control con un modelo deseado, sin embargo, cabe destacar que la precisión del controlador depende de la validez del modelo utilizado.
+
+*Por otro lado, los parámetros del controlador ajustados por el método de igualación por coeficientes, proporciona un control mucho más robusto y efectivo sobre la estabilidad del sistema, no obstante, este limita la capacidad de la ubicación de los ceros, lo que puede afectar la respuesta transitoria del sistema.
+
+*Finalmente, se evidencia que la integración de ecuaciones diofánticas contribuyen a tener un análisis de sistemas, estableciendo condiciones de diseño que aseguran la viabilidad de las soluciones en contextos discretos, esto resalta la interrelación entre la teoría matemática y su aplicación práctica en ingeniería
 
 ## Referencias
 
