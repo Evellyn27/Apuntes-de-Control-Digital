@@ -125,9 +125,19 @@ Expandiendo la igualdad anterior, se obtienen ecuaciones para cada potencia de $
 * Para $z^{n}$ : para ecuaciones $A_{n}, B_{n}$
 * Para $z^{n-1}$ : para ecuaciones $A_{n-1}, B_{n-1}$
 * Y así sucesivamente hasta llegar a $z^{0}$
-  
-8. **Resolución de Ecuaciones:**
-9. **Verificación:**
+Estas ecuaciones son conocidas como ecuaciones diofánticas, las cuales se mencionarán más adelante.
+6. **Resolución de Ecuaciones:**
+
+Una vez que se han obtenido las ecuaciones en términos de los coeficientes, se resuelve el sistema de ecuaciones resultante. En ese sentido, dependiendo del grado de los polinomios, se puede tener tantas ecuaciones como incógnitas. Por lo tanto:
+
+</p><p align="center">$A_{0}D_{0}+B_{0}N_{0}=F_{0}$</p>
+</p><p align="center">$A_{0}D_{1}+A_{1}D_{0}++B_{0}N_{1}+B_{1}N_{0}=F_{1}$</p>
+
+Para la solución del sistema de ecuaciones, se puede llegar a emplear varios metodos, como sustitución, eliminación, matrices, entre otras.
+8. **Verificación:**
+
+Una vez resueltos los coeficientes de $A(z)$ y $B(z)$ se implementa el controlador y se verifica el comportamiento del sistema mediante simulaciones, además se asegura de que los polos estén ubicados correctamente y que la respuesta del sistema sea la deseada.
+
 ### 2.3. Ejemplos
 ### 2.4. Simluación
 
