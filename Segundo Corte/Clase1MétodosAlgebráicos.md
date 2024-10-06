@@ -82,7 +82,7 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 1. **Definir la función de la planta en lazo abierto:**
 Al igual que el método anterior, como primer paso se identifica la función de trasnferencia en lazo abierto. es decir, en su forma:
 </p><p align="center">$G(z)=\frac{N(z)}{D(z)}$</p>
-En ese sentido, la función de transferencia describe la relación entre la entrada y la salida del sistema en el dominio $z$.
+En ese sentido, la función de transferencia describe la relación entre la entrada y la salida del sistema en el dominio $z$
 
 2. **Establecimiento del Polinomio Deseado:**
 En este paso, se define el polinomio característico deseado $P_{deseado}(z)$, el cual refleja las características de rendimiento que se esperan del sistema, en ese sentido, este polinomio se puede escribir en la forma general:
@@ -96,10 +96,24 @@ Sin embargo, esta expresión puede estar basada por la representación del contr
 </p><p align="center">$G_{0}(z)=\frac{C(z)G(z)}{1+C(z)G(z)}$</p>
 
 Al desarrollar esta expresión, el polinomio característico en lazo cerrado se obtiene como:
+</p><p align="center">$P_{cerrado}(z)=A(z)D(z)+B(z)N(z)$</p>
+Aquí, $A(z)$ y $B(z)$ representan el denominador y el numerador de la función de transferencia del controlador $C(z)$
 
-5.
-6.
-7.
+4. **Igualación de los Polinomios:**
+Se iguala el polinomio característico del sistema en lazo cerrado con el polinomio deseado:
+</p><p align="center">$P_{cerrado}=P_{deseado}$</p>
+Esta igualación establece que el comportamiento dinámico del sistema en lazo cerrado debe coincidir con el comportamiento deseado. Por lo tanto:
+</p><p align="center">$A(z)D(z)+B(z)N(z)=P_{deseado}$</p>
+
+6. **Obtención de ecuaciones:**
+Expandiendo la igualdad anterior, se obtienen ecuaciones para cada potencia de $z.$ En ese sentido, aquì se identifica los términos del polinomio característico deseado y los términos que resultan de $A(z)D(z)+B(z)N(z).$ A continuación, se muestra como se igualan:
+
+* Para $z^{n}$ : para ecuaciones $A_{n}, B_{n}$
+* Para $z^{n-1}$ : para ecuaciones $A_{n-1}, B_{n-1}$
+* Y así sucesivamente hasta llegar a $z^{0}$
+  
+8. **Resolución de Ecuaciones:**
+9. **Verificación:**
 ### 2.3. Ejemplos
 ### 2.4. Simluación
 
