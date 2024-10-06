@@ -66,29 +66,15 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 |:-----------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------|
 |      **_Incremento del Orden del Sistema_**     | Al multiplicar el polinomio del denominador de la planta  $D(z)$ por el denominador del controlador $A(z)$, el orden  del sistema en lazo cerrado aumenta. | $P_{0}=A(z)D(z)+B(z)N(z)$       |
 |         **_Propiedad de las Funciones_**        | Las funciones de transferencia del controlador $C(z)$ y de la planta $G(z)$ deben ser propias.                                                             | $B(z)\lt A(z)$ y $N(z)\lt D(z)$ |
-| **_Igualación en el Polinomio Característico_** | La igualación se realiza en el polinomio característico,  permite fijar la ubicación de los polos, pero no de ceros                                        | $D(z)=$Polinomio                |
+| **_Igualación en el Polinomio Característico_** | La igualación se realiza en el polinomio característico,  permite fijar la ubicación de los polos, pero no de ceros                                        | $D(z)=$ Polinomio                |
 |           **_Orden del Controlador_**           | El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto                                 | $A(z)\lt D(z)$                  |
-- **Incremento del Orden del Sistema:**
-La función en lazo cerrado del sistema se describe de esta manera:
-</p><p align="center">$G_{0}=\frac{B(z)N(z)}{A(z)D(z)+B(z)N(z)}$</p>
-Al multiplicar el polinomio del denominador de la planta $A(z)$ por el denominador del controlador $D(z)$, el orden del sistema en lazo cerrado aumenta.
-</p><p align="center">$P_{0}=A(z)D(z)+B(z)N(z)$</p>
-Este incremento en el orden del sistema puede afectar la complejidad del control y la estabilidad general del sistema.
-
-- **Propiedad de las Funciones:**
-Si se emplean las funciones de transferencia del controlador $C(z)$ y de la planta $G(z)$, al multiplicar el numerador de la planta $B(z)$ por el numerador de la función del controlador $N(z)$, será necesario que ambas funciones de transferencia sean propias, esto indica, que el grado del numerador sea menor de que el grado del denominador. 
 
 >🔑 *Función impropia:* Una función de transferencia es impropia si el grado del numerador es mayor que el grado del denominador, esto puede resultar en un comportamiento no físico y potencialmente inestable en el sistema.
 
 >🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
 
-- **Igualación en el Polinomio Característico:**
-Aunque la ubicación de los polos puede fijarse en posiciones deseadas, no hay forma de lograr que los ceros del sistema estén en la misma ubicación, lo que significa que es posible que la respuesta transitoria del sistema no sea ajustable, ya que puede afectar a su comportamiento.
--**Orden del Controlador:**
-El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto
-
-
 ### 2.2. Procedimiento 
+### 2.3.  Descripción del Proceso
 ### 2.3. Ejemplos
 ### 2.4. Simluación
 
