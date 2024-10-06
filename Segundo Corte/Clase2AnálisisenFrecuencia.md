@@ -35,12 +35,36 @@ El comportamiento de un sistema dinámico frente a diferentes frecuencias depend
 Estos cambios de amplitud y fase en función de la frecuencia se pueden analizar y visualizar utilizando diagramas de Bode, que muestran la relación entre la frecuencia y la respuesta del sistema.
 
 ### 1.2. Variaciones en Amplitud y Fase
+Las variaciones en amplitud y fase describen cómo un sistema afecta la señal de entrada, modificando su magnitud y su desfase temporal.
+* **Variación en amplitud:**
+La variación de amplitud se refiere a cómo cambia la magnitud de la señal de salida en comparación con la señal de entrada.
+
+<p align="center">$A_{salida}=A_{entrada}\cdot \left| H (jw) \right|$</p>
+
+Aquí, $\left| H (jw) \right|$ representa cómo el sistema afecta la amplitud de la señal en función de la frecuencia $w$
+
+* **Variación de Fase:**
+La variación de fase se refiere al desplazamiento temporal de la señal de salida en comparación con la señal de entrada.
+
+<p align="center">$Fase_{salida}=\lt \left| H (jw) \right|$</p>
+
 ### 1.3. Comparación entre Análisis en Frecuencia y Análisis Temporal
 El análisis de sistemas puede ser tratado desde distintas perspectivas, entre las cuales el análisis temporal y el análisis en frecuencia son dos de los enfoques más habituales. De cada uno de estos se extraerá información valiosa y complementaria del comportamiento del sistema frente a diversas condiciones. A continuación se presenta una tabla que recoge las diferencias fundamentales de ambos enfoques.
-
+|      **Aspecto**     |                    **Análisis Temporal**                    | **Análisis en Frecuencia**                         |
+|:--------------------:|:-----------------------------------------------------------:|----------------------------------------------------|
+|     **_Enfoque_**    | Cambios de señales a lo largo del tiempo                    | Respuesta del sistema a diferentes frecuencias     |
+| **_Representación_** | Gráficos de señales vs. tiempo                              | Diagramas de Bode o de Nyquist                     |
+|       **_Uso_**      | Análisis de respuestas específicas a entradas               | Evaluación del comportamiento global del sistema   |
+|     **_Método_**     | Transformada de Laplace o análisis en el dominio del tiempo | Transformada de Fourier o función de transferencia |
 
 ## 2. Resolución matemática mediante fasores
+>🔑 *Fasor:* Es una cantidad que tiene tanto magnitud como dirección, y que se representa gráficamente mediante un vector giratorio.
 ### 2.1. Representación de señales con fasores
+La representación de señales mediante fasores es una técnica que permite simplificar el análisis de señales sinusoidales.
+<p align="center">
+  <img src="https://th.bing.com/th/id/OIP.zuyGPTaOr8swWMclaFrpOwHaD4?rs=1&pid=ImgDetMain" />
+</p>
+
 ### 2.2. Análisis de sistemas mediante fasores
 ### 2.3. Relación entre función de transferencia y fasores
 ### 2.4. Limitaciones del análisis mediante fasores en sistemas no lineales
@@ -49,13 +73,10 @@ El análisis de sistemas puede ser tratado desde distintas perspectivas, entre l
 ### 3.1. Representación gráfica
 ### 3.2. Análisis espectral
 ### 3.3. Uso de escalas lineales y logarítmicas
-### 3.4. Comparación entre diagramas de frecuencia y diagramas temporales
-### 3.5. Efecto de polos y ceros en diagramas de frecuencia
 
 ## 4. Análisis en tiempo discreto
 ### 4.1. Transformación bilineal (Tustin)
 ### 4.2. Sistemas en tiempo discreto
-### 4.3. Comparación entre análisis en tiempo continuo y discreto
 
 ## 5. Diagramas de Bode
 ### 5.1. Análisis de estabilidad
