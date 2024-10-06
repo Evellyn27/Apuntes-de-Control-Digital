@@ -151,7 +151,38 @@ Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de
 ### 3.2. Condiciones de Existencia de Soluciones
 ### 3.4. Aplicaciones en teoría de numeros 
 ### 3.5 Ejemplo Práctico
-Para resolver la ecuación diofántica lineal $3x+4y=6,$ como primer paso verificamos si existe una solución entera para el ejercicio por tanto necesitamos el máximo común divisor (MCD).
+Para resolver la ecuación diofántica lineal $3x+4y=6,$ como primer paso verificamos si existe una solución entera para el ejercicio por tanto necesitamos el máximo común divisor (MCD) de 3 y 4 divida al término independiente, 6.
+
+Entonces, dividimos en 4:
+
+</p><p align="center">$4=1\cdot 3 + 1$</p>
+
+Luego, dividimos 3 entre 1:
+
+</p><p align="center">$3=1\cdot 3 + 0$</p>
+
+Ahora, usamos el algoritmo extendido de Euclides para encontrar una solución particular a la ecuación.
+
+Sabemos que:
+
+</p><p align="center">$1=4-1\cdot 3 1=4-1\cdot 3 $</p>
+
+Esto es una combinación lineal de 3 y 4 que nos da 1, pero queremos resolver $3x+4y=6,$ así que multiplicamos ambos lados por 6:
+
+</p><p align="center">$6=6\cdot(4-1\cdot3)=6\cdot4-6\cdot3$</p>
+
+De aquí obtenemos una solución particular:
+
+</p><p align="center">$x_{0}=-6$</p>
+
+</p><p align="center">$y_{0}=6$</p>
+
+Para obtener la solución general, usamos la fórmula general para las ecuaciones diofánticas lineales y obtenemos lo siguiente:
+
+</p><p align="center">$x=-6+4k$</p>
+
+</p><p align="center">$y=6-3k$</p>
+
 ## 4. Ejercicios
 
 ## 5. Conclusiones
