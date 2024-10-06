@@ -43,18 +43,13 @@ $z_{p}:$ Son los polos de la función
 Entonces, el controlador $C(z)$ debe tener un numerador de grado menor o igual a 2 para asegurar la causalidad y realizabilidad.
 
 - **Ceros de fase no mínima:** Preservar ceros de fase no mínima en el diseño.
-  
-\begin{table}[H]
-\begin{tabular}{cll}
-\hline
-**Consideración**                                                                   & \multicolumn{1}{c}{**Descripción**}                                                                                                                    & **Condición Matematica**                                          \\ \hline
-**\_Causalidad\_**                                                                  & \begin{tabular}[c]{@{}l@{}}El controlador debe depender solo de valores presentes\\ o pasados para garantizar la implementación práctica.\end{tabular} & $y\left( t \right)=x\left( t-1 \right)$                           \\
-\begin{tabular}[c]{@{}c@{}}**\_Estabilidad del \\ modelo objetivo\_**\end{tabular}  & Los polos deben ubicarse dentro del circulo unitario                                                                                                   & $P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left| z_{p} \right|\lt 1$ \\
-\begin{tabular}[c]{@{}c@{}}**\_Evitar cancelaciones\\ de polo-cero\_**\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evitar la eliminación de polos y ceros, ya que esto\\ puede restar características al sistema\end{tabular}                  & $z_{p}\neq  z_{c}$                                                \\
-**\_Grado del polinomio\_**                                                         & \begin{tabular}[c]{@{}l@{}}El grado del numerador del controlador no debe superar \\ al del denominador del sistema.\end{tabular}                      & $N\lt D$                                                          \\
-\begin{tabular}[c]{@{}c@{}}**\_Ceros de fase \\ no mínima\_**\end{tabular}          & Preservar ceros de fase no mínima en el diseño                                                                                                         & Considerar ceros de fase no mínima en $C(z)$                      \\ \hline
-\end{tabular}
-\end{table}
+|            **Consideración**            |                                                **Descripción**                                               | **Condición Matematica**                                            |
+|:---------------------------------------:|:------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------|
+|             **_Causalidad_**            | El controlador debe depender solo de valores presentes o pasados para garantizar la implementación práctica. | $y\left( t \right)=x\left( t-1 \right)$                             |
+|  **_Estabilidad del  modelo objetivo_** | Los polos deben ubicarse dentro del circulo unitario                                                         | $P\left( z\right)=z^{2}+a_{1}z+a_{2} : \left\| z_{p} \right\|\lt 1$ |
+| **_Evitar cancelaciones de polo-cero_** | Evitar la eliminación de polos y ceros, ya que esto puede restar características al sistema                  | $z_{p}\neq  z_{c}$                                                  |
+|        **_Grado del polinomio_**        | El grado del numerador del controlador no debe superar  al del denominador del sistema.                      | $N\lt D$                                                            |
+|      **_Ceros de fase  no mínima_**     | Preservar ceros de fase no mínima en el diseño                                                               | Considerar ceros de fase no mínima en $C(z)$                        |
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 
