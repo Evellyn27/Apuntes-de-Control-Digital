@@ -125,6 +125,7 @@ Expandiendo la igualdad anterior, se obtienen ecuaciones para cada potencia de $
 * Para $z^{n}$ : para ecuaciones $A_{n}, B_{n}$
 * Para $z^{n-1}$ : para ecuaciones $A_{n-1}, B_{n-1}$
 * Y así sucesivamente hasta llegar a $z^{0}$
+  
 Estas ecuaciones son conocidas como ecuaciones diofánticas, las cuales se mencionarán más adelante.
 6. **Resolución de Ecuaciones:**
 
