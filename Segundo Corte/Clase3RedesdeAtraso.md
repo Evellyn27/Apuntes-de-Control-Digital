@@ -87,6 +87,10 @@ Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede
 
 ## 7. Referencias
 [1] Ogata, K. (2010). Modern Control Engineering. 5th ed. Prentice Hall.
+
 [2]. Gene Franklin, J. D. Powell, & A. Emami-Naeini. (2014). Feedback Control of Dynamic Systems. 7th ed. Pearson.
-[3]. UNAD. (n.d.). Compensación de adelanto, retraso y adelanto-retraso. Universidad Nacional Abierta y a Distancia. https://repository.unad.edu.co/bitstream/handle/10596/5790/documents.mx_compensacion-de-adelanto-retraso-y-adelanto-retraso-de.pdf;jsessionid=0CDD36E3DA7DBAF1A89C47C6B0CE2C25?sequence=1
-[4]. Fadel, M. (2023). Diseño de Compensadores. Universidad Nacional de Tucumán. https://catedras.facet.unt.edu.ar/sist-control/wp-content/uploads/sites/77/2023/12/Diseno-de-Compensadores-bis-Fadel.pdf
+
+[3]. UNAD. (n.d.). Compensación de adelanto, retraso y adelanto-retraso. Universidad Nacional Abierta y a Distancia. 
+https://repository.unad.edu.co/bitstream/handle/10596/5790/documents.mx_compensacion-de-adelanto-retraso-y-adelanto-retraso-de.pdf;jsessionid=0CDD36E3DA7DBAF1A89C47C6B0CE2C25?sequence=1.
+
+[4]. Fadel, M. (2023). Diseño de Compensadores. Universidad Nacional de Tucumán. https://catedras.facet.unt.edu.ar/sist-control/wp-content/uploads/sites/77/2023/12/Diseno-de-Compensadores-bis-Fadel.pdf.
