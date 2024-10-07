@@ -185,6 +185,9 @@ Este análisis ayuda a identificar qué frecuencias dominan en la señal y cómo
 
 ### 3.3. Uso de escalas lineales y logarítmicas
 En los diagramas de frecuencia, las escalas lineales y logarítmicas juegan un papel clave para la representación de las respuestas del sistema
+
+Tabla 2. Comparación entre escalas lineales y logarítmicas
+
 |     Tipo    |                           Descripción                           |
 |:-----------:|:---------------------------------------------------------------:|
 |    Lineal   | Representa las frecuencias con espaciado uniforme entre valores |
