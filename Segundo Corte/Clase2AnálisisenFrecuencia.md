@@ -152,6 +152,7 @@ Los diagramas de frecuencia se representan principalmente a través de dos tipos
   <p align="center">
   <img src="https://fr.mathworks.com/discovery/bode-plot/_jcr_content/mainParsys/image_752431827.adapt.full.high.png/1550172621946.png" />
 </p>
+
 * **Diagrama de Nyquist:** Representa la respuesta del sistema en un gráfico polar, donde se pueden observar simultáneamente los efectos de amplitud y desfase.
 
 <p align="center">
