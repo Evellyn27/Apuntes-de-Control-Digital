@@ -32,7 +32,9 @@ Consideración: Ayuda a evitar problemas relacionados con el ruido.
 
 
 ## 2. Control PID en análisis de frecuencia
-![]().
+![]()
+El control PID es un tipo de controlador que combina las acciones de proporcional, integral y derivativa. Se considera un caso especial de una red de atraso-adelanto, que permite ajustar la dinámica del sistema controlado.
+
 * Afecta predominantemente la región de alta frecuencia.
 Beneficio: Incrementa el ángulo de adelanto de fase, lo que resulta en una mejora en la estabilidad y la rapidez de respuesta del sistema. Este componente ayuda a minimizar el sobrepaso y a lograr un ajuste más ágil.
 Parte Proporcional-Integral (PI)
