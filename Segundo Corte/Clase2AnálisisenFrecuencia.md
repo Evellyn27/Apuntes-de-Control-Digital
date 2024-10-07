@@ -150,7 +150,7 @@ Los diagramas de frecuencia se representan principalmente a través de dos tipos
 
 * **Diagrama de Bode:** Se descompone en dos gráficos: uno que representa la respuesta del sistema en términos de amplificación o atenuación, y otro que muestra el desfase.
   <p align="center">
-  <img src="https://th.bing.com/th/id/R.fd95de7d4f3f65f0ad2fbb6d404099b0?rik=OyTBw%2fjafitgyg&riu=http%3a%2f%2fpanamahitek.com%2fwp-content%2fuploads%2f2019%2f06%2fdiagrama_de_Bode-01-5.png&ehk=SzHtlcvDQdlxG3LEhbGrPk7BDqSkDE7eLkfchYykt6M%3d&risl=&pid=ImgRaw&r=0" />
+  <img src="https://fr.mathworks.com/discovery/bode-plot/_jcr_content/mainParsys/image_752431827.adapt.full.high.png/1550172621946.png" />
 </p>
 * **Diagrama de Nyquist:** Representa la respuesta del sistema en un gráfico polar, donde se pueden observar simultáneamente los efectos de amplitud y desfase.
 
