@@ -31,7 +31,7 @@ Beneficio: Disminuye el error en estado estacionario.
 Consideración: Ayuda a evitar problemas relacionados con el ruido.
 
 
-## 3. Subsecciones
+## 2. Control PID en análisis de frecuencia
 Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
 ### 3.1. Título de subsecciones
 Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
