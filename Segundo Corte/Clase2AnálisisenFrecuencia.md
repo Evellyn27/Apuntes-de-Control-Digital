@@ -201,9 +201,15 @@ Tras aplicar la transformación bilineal (Tustin), se mapea el plano z al plano 
 
 ## 5. Diagramas de Bode
 ### 5.1. Efecto de los parametros
+En el diagrama de Bode, los polos tienen un efecto fundamental en la respuesta del sistema en frecuencia. Un polo cercano al eje imaginario $j\omega$ como se muestra en la imagen, causa un aumento en la magnitud hasta llegar a la frecuencia natural $\omega​_{n}$ después de lo cual la magnitud comienza a decaer.
+
 <p align="center">
-  <img src="https://isolution.pro/assets/images/VstnU.png" />
+  <img src="[https://isolution.pro/assets/images/VstnU.png](https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/87c42b7803fe9952431bc7f913a6acd75cb603bc/Imagenes/Polosyceros.png)" />
 </p>
+
+La presencia de un polo también afecta la fase, que desciende en una cantidad proporcional a la cercanía del polo a la frecuencia de interés. A medida que la frecuencia se aproxima a $\omega​_{n}$ la fase experimenta una transición, generalmente de -45° hasta -90° por cada polo.
+
+Además, si el sistema presenta un amortiguamiento bajo (bajo $\zeta$), se observará un pico resonante en la magnitud alrededor de $\omega​_{n}$ como indica el máximo en la gráfica de magnitud de la imagen. Este efecto de resonancia es clave en sistemas de control que buscan estabilidad, ya que puede amplificar ciertas frecuencias, afectando la respuesta total del sistema.
 
 ### 5.2. Interpretación de los diagramas de Bode
 
