@@ -108,7 +108,7 @@ Al diseñar redes de atraso, es fundamental tener en cuenta varias consideracion
 
 ![]()
 
-*Margen de Estabilidad:
+* Margen de Estabilidad:
 Asegurarse de que los márgenes de ganancia y fase sean positivos. Un MG o MP cero o negativo puede indicar inestabilidad en el sistema.
 
 * Atenuación en Frecuencias Altas:
@@ -124,10 +124,11 @@ Reconocer que los diseños pueden estar limitados por las características físi
 Mantener una buena documentación del proceso de diseño, incluyendo todas las ecuaciones, resultados de simulaciones y ajustes realizados. Esto facilitará la revisión y futuras mejoras del sistema.
 
 
-## 9. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
+## 5. Ejercicios
 
-## 10. Conclusiones
+----------........--------.-.-.-.-.-.-.-
+
+## 6. Conclusiones
 En primer lugar, el diseño de redes de atraso permite mejorar la estabilidad del sistema en frecuencias bajas sin comprometer la ganancia en altas frecuencias, lo que resulta en una reducción del ruido. Esto es crucial para garantizar un rendimiento más robusto y confiable en entornos industriales donde las perturbaciones externas pueden ser significativas.
 
 Seguidamente, al seguir una metodología estructurada que incluye la discretización de la planta y el análisis a través de diagramas de Bode, se logra ajustar de manera precisa los márgenes de ganancia y fase. Esto asegura que el sistema no solo sea estable, sino que también cumpla con los requisitos de error en estado estacionario y velocidad de respuesta.
