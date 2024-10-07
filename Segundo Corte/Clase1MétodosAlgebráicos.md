@@ -157,6 +157,8 @@ Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de
 |    Ecuaciones Cuadráticas   | $ax^{2}+by^{2}=c$ |
 |  Ecuaciones de Mayor Grado  | $ax^{n}+by^{m}=c$ |
 
+Tabla 3. Tipos de Ecuaciones Diofánticas
+
 ### 3.2. Aplicaciones en teoría de numeros 
 Las ecuaciones diofánticas tienen múltiples aplicaciones, tanto en matemáticas como en otras disciplinas, en primer lugar son fundamentales en la teoría de números, ya que ayudan en la factorización y el estudio de los números primos, además de intervenir también en los algoritmos de cifrado en función de su importancia en la criptografía, como por ejemplo el RSA, por otro lado también son utiles en ciencias computacionales, pues permiten el planteamiento de problemas de programación entera y el cálculo de optimización.
 
