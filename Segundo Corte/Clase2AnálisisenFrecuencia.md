@@ -144,8 +144,31 @@ El análisis fasorial presenta limitaciones en sistemas dinámicos no lineales:
 * **Métodos alternativos:** Se requieren técnicas como el análisis en el dominio del tiempo o series de Fourier para describir adecuadamente el comportamiento de estos sistemas.
   
 ## 3. Diagramas de frecuencia
+Los diagramas de frecuencia permiten visualizar cómo un sistema responde a señales de entrada con diferentes frecuencias, por ende estos diagramas grafican la magnitud y la fase de la respuesta del sistema en función de la frecuencia. 
 ### 3.1. Representación gráfica
+Los diagramas de frecuencia se representan principalmente a través de dos tipos:
+
+* **Diagrama de Bode:** Se descompone en dos gráficos: uno que representa la respuesta del sistema en términos de amplificación o atenuación, y otro que muestra el desfase.
+  <p align="center">
+  <img src="https://th.bing.com/th/id/R.fd95de7d4f3f65f0ad2fbb6d404099b0?rik=OyTBw%2fjafitgyg&riu=http%3a%2f%2fpanamahitek.com%2fwp-content%2fuploads%2f2019%2f06%2fdiagrama_de_Bode-01-5.png&ehk=SzHtlcvDQdlxG3LEhbGrPk7BDqSkDE7eLkfchYykt6M%3d&risl=&pid=ImgRaw&r=0" />
+</p>
+* **Diagrama de Nyquist:** Representa la respuesta del sistema en un gráfico polar, donde se pueden observar simultáneamente los efectos de amplitud y desfase.
+
+<p align="center">
+  <img src="https://es.mathworks.com/help/control/ref/nyquistplotofdynamicsystemexample_01_es.png" />
+</p>
+
+**Diferencias**
+
+El Diagrama de Bode se caracteriza por representar la respuesta del sistema en dos gráficos separados: uno para la ganancia y otro para el desfase, lo que lo convierte en una herramienta ideal para analizar la estabilidad y los márgenes de ganancia y fase. Por otro lado, el Diagrama de Nyquist combina la información de magnitud y fase en un solo gráfico polar, lo que facilita una evaluación directa de la estabilidad del sistema mediante el criterio de Nyquist.
 ### 3.2. Análisis espectral
+Este análisis ayuda a identificar qué frecuencias dominan en la señal y cómo el sistema filtra o amplifica estas frecuencias.
+
+**Factores a tener en cuenta:**
+* Resolución espectral
+* Ruido
+* Aliasing
+
 ### 3.3. Uso de escalas lineales y logarítmicas
 
 ## 4. Análisis en tiempo discreto
@@ -153,7 +176,7 @@ El análisis fasorial presenta limitaciones en sistemas dinámicos no lineales:
 ### 4.2. Sistemas en tiempo discreto
 
 ## 5. Diagramas de Bode
-### 5.1. Análisis de estabilidad
+### 5.1. Efecto de los parametros
 ### 5.2. Uso de decibelios para la representación de ganancia
 ### 5.3 Interpretación del desfase en diagramas de Bode
 ### 5.4 Consideraciones de diseño basadas en diagramas de Bode
