@@ -74,7 +74,8 @@ Si el margen de ganancia (MG) y el margen de fase (MP) son positivos, el sistema
 El procedimiento de diseño en control digital se desarrolla en varias etapas. Primero, se discretiza la planta analógica para obtener un modelo equivalente  𝐺(𝑧), lo que transforma la representación continua del sistema en una adecuada para el análisis digital. Luego, se convierte 𝐺(𝑧) a  G(ω) para trabajar en el dominio de frecuencia. Posteriormente, se grafican los diagramas de Bode, fundamentales para visualizar la respuesta en frecuencia y evaluar la estabilidad y rendimiento del sistema. A continuación, se aplica un método de diseño específico para la función de control C(ω), ajustando así los parámetros del sistema. Finalmente, se recupera C(𝑧) a partir de C(ω)para garantizar que el diseño sea programable en el sistema digital, completando el ciclo de diseño e integrando el controlador en la aplicación deseada.
 
 ## 5. Redes de atraso
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
+
+.........
 
 
 
