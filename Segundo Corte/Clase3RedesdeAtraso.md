@@ -126,5 +126,8 @@ Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas t
 ## 10. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-## 11. Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
+## 7. Referencias
+[1] Ogata, K. (2010). Modern Control Engineering. 5th ed. Prentice Hall.
+[2]. Gene Franklin, J. D. Powell, & A. Emami-Naeini. (2014). Feedback Control of Dynamic Systems. 7th ed. Pearson.
+[3]. UNAD. (n.d.). Compensación de adelanto, retraso y adelanto-retraso. Universidad Nacional Abierta y a Distancia. https://repository.unad.edu.co/bitstream/handle/10596/5790/documents.mx_compensacion-de-adelanto-retraso-y-adelanto-retraso-de.pdf;jsessionid=0CDD36E3DA7DBAF1A89C47C6B0CE2C25?sequence=1
+[4]. Fadel, M. (2023). Diseño de Compensadores. Universidad Nacional de Tucumán. https://catedras.facet.unt.edu.ar/sist-control/wp-content/uploads/sites/77/2023/12/Diseno-de-Compensadores-bis-Fadel.pdf
