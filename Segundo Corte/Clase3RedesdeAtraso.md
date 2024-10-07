@@ -54,6 +54,15 @@ El margen de ganancia se define como el cambio en la ganancia de lazo abierto ne
 * MG>0: Indica un margen de ganancia positivo, lo que significa que el sistema es estable. En este caso, el sistema puede tolerar aumentos en la ganancia antes de volverse inestable.
 * 𝑀𝐺<0: Indica un margen de ganancia negativo, lo que implica que el sistema es inestable. Esto significa que cualquier aumento adicional en la ganancia puede llevar al sistema a un comportamiento incontrolado.
 
+### 3.2. Márgen de fase
+El margen de fase se define como el cambio en la fase de lazo abierto que es necesario para que un sistema en lazo cerrado se vuelva inestable. Este margen se expresa en grados (°), lo que permite evaluar la estabilidad del sistema a través del análisis de la fase. Para su medición, se toma como referencia la ganancia unitaria (0 dB), un punto crucial que determina el umbral en el que el sistema puede perder su estabilidad.
+
+![]() Interpretación del Margen de Fase
+
+* 𝑀𝑃>−180°: Indica un margen de fase positivo, lo que significa que el sistema es estable. Esto sugiere que el sistema puede tolerar variaciones en la fase antes de llegar a la inestabilidad.
+
+* 𝑀𝑃<−180°: Indica un margen de fase negativo, lo que implica que el sistema es inestable. En este caso, cualquier cambio adicional en la fase puede llevar al sistema a un comportamiento incontrolado.
+
 ## 5. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
 
