@@ -91,13 +91,14 @@ Graficar los diagramas de Bode de G(z) para observar el comportamiento del siste
 
 *Diseño de la Red de Atraso:
 Definir la función de transferencia de la red de atraso C(s) como
-C(s)= 1+T 1s1+aT 1s
+<p align="center">$C(s) = \frac{1 + aT_{1}s}{1 + T_{1}s}$</p>
+
 ​donde 0<a<1 representa la relación de atenuación.
 
 *Cálculo de Parámetros:
 Determinar el valor de 
 𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
-ev= s→0limsKpG(s)1
+<p align="center">$e_{v} = \lim_{s \to 0} \frac{1}{s K_{p} G(s)}$</p>
 *Simulación y Ajuste:
 
 Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
