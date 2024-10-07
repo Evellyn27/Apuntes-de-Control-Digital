@@ -204,18 +204,41 @@ Tras aplicar la transformación bilineal (Tustin), se mapea el plano z al plano 
 En el diagrama de Bode, los polos tienen un efecto fundamental en la respuesta del sistema en frecuencia. Un polo cercano al eje imaginario $j\omega$ como se muestra en la imagen, causa un aumento en la magnitud hasta llegar a la frecuencia natural $\omega​_{n}$ después de lo cual la magnitud comienza a decaer.
 
 <p align="center">
-  <img src="[https://isolution.pro/assets/images/VstnU.png](https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/87c42b7803fe9952431bc7f913a6acd75cb603bc/Imagenes/Polosyceros.png)" />
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/87c42b7803fe9952431bc7f913a6acd75cb603bc/Imagenes/Polosyceros.png"/>
 </p>
 
 La presencia de un polo también afecta la fase, que desciende en una cantidad proporcional a la cercanía del polo a la frecuencia de interés. A medida que la frecuencia se aproxima a $\omega​_{n}$ la fase experimenta una transición, generalmente de -45° hasta -90° por cada polo.
 
 Además, si el sistema presenta un amortiguamiento bajo (bajo $\zeta$), se observará un pico resonante en la magnitud alrededor de $\omega​_{n}$ como indica el máximo en la gráfica de magnitud de la imagen. Este efecto de resonancia es clave en sistemas de control que buscan estabilidad, ya que puede amplificar ciertas frecuencias, afectando la respuesta total del sistema.
 
-### 5.2. Interpretación de los diagramas de Bode
+### 5.2. Consideraciones claves para la interpretación de los diagramas de Bode
 
+1. Identificar polos y ceros: Analizar cómo influyen en la magnitud y fase para determinar el tipo de filtro o respuesta que tiene el sistema.
+
+2. Márgenes de estabilidad: Revisar los márgenes de fase y ganancia para determinar la robustez del sistema.
+
+3. Frecuencia de corte: Determinar a qué frecuencias el sistema empieza a atenuar señales.
+
+4. Pendientes de las curvas: La pendiente en la gráfica de magnitud ofrece información sobre la atenuación o amplificación del sistema, clave para definir si actúa como un filtro paso bajo, paso alto, etc.
+
+5. Resonancia: Verificar si existen picos de resonancia que puedan generar amplificaciones no deseadas en frecuencias particulares.
 
 ## 6. Ejercicios
 📚
 ## 7. Conclusiones
+De este trabajo se puede llegar a concluir lo siguiente:
+
+En primer lugar, el análisis en frecuencia permite estudiar el comportamiento de los sistemas dinámicos en función de las diferentes frecuencias de entrada, proporcionando una visión clara sobre cómo responden en términos de amplitud y fase. Lo anterior, resulta clave para identificar los puntos críticos donde el sistema puede ser más vulnerable a inestabilidades o perturbaciones.
+
+Por otra parte, los diagramas de Bode y Nyquist son herramientas fundamentales en este tipo de análisis, ya que permiten visualizar de manera gráfica las respuestas de un sistema a diversas frecuencias, facilitando la interpretación del comportamiento de amplificación o atenuación, así como los desfases introducidos en la señal de salida.
+
+Finalmente, aunque el análisis de frecuencia es una técnica poderosa, presenta limitaciones en sistemas no lineales, donde la dependencia de la amplitud y la falta de superposición dificultan su uso, en tales casos, es necesario recurrir a otros métodos como el análisis en el dominio del tiempo o la serie de Fourier para lograr una caracterización más precisa del sistema.
 
 ## Referencias
+[1] Diagrama de bode paso a paso: Lo que NO te enseñaron - 2024. (s.f.). Control Automático Educación. https://controlautomaticoeducacion.com/control-realimentado/1-diagrama-de-bode/#:~:text=Aquí%20aprenderas%20a%20graficar,%20hacer%20y
+
+[2] Fasores. (s.f.). Análisis de Circuitos Eléctricos. https://circuitoselectricosac.blogspot.com/p/12-fasores.html#:~:text=Un%20fasor%20es%20un%20numero%20complejo%20que%20representa,eléctricos%20en%20corriente%20alterna%20excitados%20por%20fuentes%20sinusoidales.
+
+[3] ¿Qué representa un diagrama de Bode y qué es un polo y cero de un diagrama de Bode? (2020, 14 de abril). Stack. https://isolution.pro/es/q/et13490787/que-representa-un-diagrama-de-bode-y-que-es-un-polo-y-cero-de-un-diagrama-de-bode
+
+[4] Universidad De Cantabria. (s.f.). Análisis frecuencial. En Automática. Open Course Ware. https://ocw.unican.es/pluginfile.php/1829/course/section/1438/capitulo_7.1.pdf#:~:text=Esta%20metodología,%20se%20conoce%20como%20"Análisis
