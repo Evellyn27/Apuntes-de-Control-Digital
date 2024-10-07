@@ -80,7 +80,7 @@ El diseño de redes de atraso se realiza siguiendo un procedimiento sistemático
 Determinar los márgenes de ganancia (MG) y margen de fase (MP) requeridos.
 2. **Transformación de la Planta:**
 Discretizar la planta analógica G(s) para obtener la representación G(z). Esta transformación se realiza mediante la aproximación de Tustin o la regla de bilinealidad.
-$G(z)=G(s)$ mediante transformaciones como $z=2/T(1−z −1)$
+$G(z)=G(s)$ mediante transformaciones como $ z=2/T(1−z −1) $
 
 
 ## 9. Ejercicios
