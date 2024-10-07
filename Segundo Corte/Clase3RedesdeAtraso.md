@@ -45,8 +45,10 @@ Sintonización del Control PID
 Métodos de Sintonización: Es posible ajustar los parámetros del controlador PID mediante análisis en frecuencia, lo que permite optimizar el rendimiento en función de la respuesta del sistema.
 Práctica en la Industria: En entornos industriales, la sintonización del PID se lleva a cabo generalmente utilizando métodos en el dominio del tiempo, que permiten ajustes más directos basados en la respuesta temporal del sistema. Este enfoque es preferido por su simplicidad y efectividad en la implementación práctica.
 
-## 4. Ejemplos
-Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
+## 3. Márgenes de ganancia y fase
+
+### 3.1. Márgen de ganancia
+El margen de ganancia se define como el cambio en la ganancia de lazo abierto necesario para que un sistema en lazo cerrado se vuelva inestable. Este parámetro se expresa en decibelios (dB), lo que facilita la comparación y el análisis de las variaciones en la ganancia del sistema. La medición del margen de ganancia se realiza tomando como referencia la fase de 180°, un punto crucial que indica el límite en el que el sistema puede volverse inestable al cruzar el umbral de **0 dB**.
 
 ## 5. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
