@@ -74,14 +74,35 @@ Si el margen de ganancia (MG) y el margen de fase (MP) son positivos, el sistema
 El procedimiento de diseño en control digital se desarrolla en varias etapas. Primero, se discretiza la planta analógica para obtener un modelo equivalente  𝐺(𝑧), lo que transforma la representación continua del sistema en una adecuada para el análisis digital. Luego, se convierte 𝐺(𝑧) a  G(ω) para trabajar en el dominio de frecuencia. Posteriormente, se grafican los diagramas de Bode, fundamentales para visualizar la respuesta en frecuencia y evaluar la estabilidad y rendimiento del sistema. A continuación, se aplica un método de diseño específico para la función de control C(ω), ajustando así los parámetros del sistema. Finalmente, se recupera C(𝑧) a partir de C(ω)para garantizar que el diseño sea programable en el sistema digital, completando el ciclo de diseño e integrando el controlador en la aplicación deseada.
 
 ## 4. Redes de atraso
-El diseño de redes de atraso se realiza siguiendo un procedimiento sistemático que asegura que el sistema cumpla con los requisitos de rendimiento establecidos. La metodología se puede resumir en los siguientes pasos:
+![]() El diseño de redes de atraso se realiza siguiendo un procedimiento sistemático que asegura que el sistema cumpla con los requisitos de rendimiento establecidos. La metodología se puede resumir en los siguientes pasos:
 
-1. **Definición de Especificaciones del Sistema:**
+ **Definición de Especificaciones del Sistema:**
+ 
 Determinar los márgenes de ganancia (MG) y margen de fase (MP) requeridos.
-2. **Transformación de la Planta:**
+ **Transformación de la Planta:**
+
 Discretizar la planta analógica G(s) para obtener la representación G(z). Esta transformación se realiza mediante la aproximación de Tustin o la regla de bilinealidad.
 $G(z)=G(s)$ mediante transformaciones como $ z=2/T(1−z −1) $
 
+ **Análisis de Frecuencia:**
+
+Graficar los diagramas de Bode de G(z) para observar el comportamiento del sistema. Esto incluye la amplitud y la fase en función de la frecuencia.
+
+**Diseño de la Red de Atraso:**
+Definir la función de transferencia de la red de atraso C(s) como
+C(s)= 1+T 1s1+aT 1s
+​donde 0<a<1 representa la relación de atenuación.
+
+**Cálculo de Parámetros:**
+Determinar el valor de 
+𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
+ev= s→0limsKpG(s)1
+**Simulación y Ajuste:**
+
+Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
+
+### 4.1 Consideraciones
+Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
 
 ## 9. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
