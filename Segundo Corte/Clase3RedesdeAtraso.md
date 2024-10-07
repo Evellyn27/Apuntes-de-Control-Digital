@@ -123,7 +123,11 @@ Mantener una buena documentación del proceso de diseño, incluyendo todas las e
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
 ## 10. Conclusiones
-Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
+En primer lugar, el diseño de redes de atraso permite mejorar la estabilidad del sistema en frecuencias bajas sin comprometer la ganancia en altas frecuencias, lo que resulta en una reducción del ruido. Esto es crucial para garantizar un rendimiento más robusto y confiable en entornos industriales donde las perturbaciones externas pueden ser significativas.
+
+Seguidamente, al seguir una metodología estructurada que incluye la discretización de la planta y el análisis a través de diagramas de Bode, se logra ajustar de manera precisa los márgenes de ganancia y fase. Esto asegura que el sistema no solo sea estable, sino que también cumpla con los requisitos de error en estado estacionario y velocidad de respuesta.
+
+Finalmente, es importante tener en cuenta las limitaciones físicas del sistema durante el proceso de diseño, ya que los componentes pueden restringir el rango de frecuencias que se pueden controlar.
 
 ## 7. Referencias
 [1] Ogata, K. (2010). Modern Control Engineering. 5th ed. Prentice Hall.
