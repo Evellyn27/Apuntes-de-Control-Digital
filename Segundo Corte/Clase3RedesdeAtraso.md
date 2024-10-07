@@ -96,16 +96,18 @@ Definir la función de transferencia de la red de atraso C(s) como
 ​donde 0<a<1 representa la relación de atenuación.
 
 * Cálculo de Parámetros:
-Determinar el valor de 
-𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
+Determinar el valor de 𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
 <p align="center">$e_{v} = \lim_{s \to 0} \frac{1}{s K_{p} G(s)}$</p>
+
 * Simulación y Ajuste:
 
 Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
 
 ### 4.1 Consideraciones
 Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
+
 ![]()
+
 *Margen de Estabilidad:
 Asegurarse de que los márgenes de ganancia y fase sean positivos. Un MG o MP cero o negativo puede indicar inestabilidad en el sistema.
 
