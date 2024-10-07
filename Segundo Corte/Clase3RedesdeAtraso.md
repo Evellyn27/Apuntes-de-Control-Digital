@@ -69,7 +69,9 @@ El margen de fase se define como el cambio en la fase de lazo abierto que es nec
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/4ef34470b9ad3909853b418504dba5f5559c5fee/Imagenes/WhatsApp%20Image%202024-10-06%20at%2023.48.46.jpeg" />
 </p>
-Fig. 1. EStabilidad según diagrama de Bode
+
+Fig. 1. Estabilidad según diagrama de Bode
+
 
 Si el margen de ganancia (MG) y el margen de fase (MP) son positivos, el sistema se considera estable en lazo cerrado. Para garantizar un funcionamiento óptimo, es deseable que tanto MG como MP sean lo más grandes posible. Sin embargo, si alguno de estos márgenes es cero o negativo, el sistema puede volverse inestable en lazo cerrado, lo que podría comprometer su rendimiento y control.
 
