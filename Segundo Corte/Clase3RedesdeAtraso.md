@@ -5,12 +5,12 @@ El diseño de redes de atraso en sistemas de control digital es una técnica cla
 1.  Controladores por análisis en frecuencia
 2.  Control PID en análisis de frecuencia
 3.  Márgenes de ganancia y fase
-4.  Medición de márgenes de estabilidad desde el diagrama de Bode
+4.  Ganancia proporcional
 5.  Diseño de redes de atraso por análisis de frecuencia
-6.  Metodología de diseño para redes de atraso
-7.  Resultados del diseño
-8. Ejercicios
-9. Conclusiones
+6.  Ejercicios
+7.  Conclusiones
+10. Referencias
+
 
 
 
