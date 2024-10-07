@@ -2,16 +2,15 @@
 El diseño de redes de atraso en sistemas de control digital es una técnica clave utilizada para optimizar el rendimiento de sistemas dinámicos en lazo cerrado mediante el análisis en frecuencia. Este enfoque se basa en herramientas como los diagramas de Bode, que permiten evaluar y ajustar los márgenes de estabilidad, la ganancia y el comportamiento en frecuencia del sistema. A lo largo de este documento, se detallan las ventajas del uso de diagramas de Bode, su relación con los controladores PID, y el procedimiento sistemático para el diseño de redes de atraso. Este método facilita la corrección de errores de estado estacionario y mejora la estabilidad del sistema sin aumentar la susceptibilidad al ruido.
 
 ## Índice
-1.  Ventajas del diseño por diagrama de Bode
-2.  Controladores por análisis en frecuencia
-3.  Control PID en análisis de frecuencia
-4.  Márgenes de ganancia y fase
-5.  Medición de márgenes de estabilidad desde el diagrama de Bode
-6.  Diseño de redes de atraso por análisis de frecuencia
-7.  Metodología de diseño para redes de atraso
-8.  Resultados del diseño
-9. Ejercicios
-10. Conclusiones
+1.  Controladores por análisis en frecuencia
+2.  Control PID en análisis de frecuencia
+3.  Márgenes de ganancia y fase
+4.  Medición de márgenes de estabilidad desde el diagrama de Bode
+5.  Diseño de redes de atraso por análisis de frecuencia
+6.  Metodología de diseño para redes de atraso
+7.  Resultados del diseño
+8. Ejercicios
+9. Conclusiones
 
 
 
