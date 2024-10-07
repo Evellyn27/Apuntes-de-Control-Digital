@@ -81,7 +81,7 @@ Tabla 2. Consideraciones del Controlador en Sistemas de Lazo Cerrado
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/cc65b4113a45c8c91511db0b597729d4bfcf77c0/Imagenes/ProcedimientoE.png" />
 </p>
 
-Fig 3. 
+Fig 3. Procedimiento del método de coeficientes 
 
 ### 2.3.  Descripción del Proceso
 1. **Definir la función de la planta en lazo abierto:**
