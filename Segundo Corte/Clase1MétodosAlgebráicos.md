@@ -21,6 +21,8 @@ Al utilizar el método de igualación por modelo, es crucial tener en cuenta las
 |        **_Grado del polinomio_**        | El grado del numerador del controlador no debe superar  al del denominador del sistema.                      | $N\lt D$                                                            |
 |      **_Ceros de fase  no mínima_**     | Preservar ceros de fase no mínima en el diseño                                                               | Considerar ceros de fase no mínima en $C(z)$                        |
 
+Tabla 1. Consideraciones clave en el diseño de controladores
+
 ### 1.2. Procedimiento 
 El procedimiento para la igualación por modelo consiste en los siguientes pasos:
 <p align="center">
