@@ -225,7 +225,44 @@ Además, si el sistema presenta un amortiguamiento bajo (bajo $\zeta$), se obser
 5. Resonancia: Verificar si existen picos de resonancia que puedan generar amplificaciones no deseadas en frecuencias particulares.
 
 ## 6. Ejercicios
-📚
+📚 **Ejercicio 1:**
+Calcular la magnitud de la siguiente función de transferencia:
+
+<p align="center">$H(s)=\frac{s^{2}+6s+8}{\left( s+3 \right)\left( s+5 \right)\left( s^{2}+s+5 \right)}$</p>
+
+Se factoriza el numerador:
+
+<p align="center">$(s+2)(s+4)=s^{2}+6s+8$</p>
+
+Los ceros de la función son: 
+
+<p align="center">$s=-2$</p>
+<p align="center">$s=-4$</p>
+
+Revisamos los polos de la función:
+
+<p align="center">$s=-3$</p>
+<p align="center">$s=-5$</p>
+<p align="center">$s=-2$</p>
+
+Ahora, se reemplaza s=jω en la función de transferencia:
+
+<p align="center">$H(jw)=\frac{jw^{2}+6jw+8}{\left( jw+3 \right)\left( jw+5 \right)\left( jw^{2}+jw+5 \right)}
+$</p>
+
+Entonces:
+<p align="center">$\left| jw+2 \right|=\sqrt{w^{2}+4}$</p>
+<p align="center">$w=-2$</p>
+<p align="center">$w=-4$</p>
+
+El mismo procedimiento se le hace al denominador:
+
+<p align="center">$w=-3$</p>
+<p align="center">$w=-5$</p>
+
+<p align="center">$∣H(jω)∣dB​=20log_{10}∣H(jω)∣$</p>
+La magnitud en dB para ω=1 es aproximadamente -28.94 dB.
+
 ## 7. Conclusiones
 De este trabajo se puede llegar a concluir lo siguiente:
 
