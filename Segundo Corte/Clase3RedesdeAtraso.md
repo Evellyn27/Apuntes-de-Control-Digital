@@ -104,20 +104,21 @@ Determinar el valor de
 Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
 
 ### 4.1 Consideraciones
-![]() Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
+Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
+![]()
 *Margen de Estabilidad:
 Asegurarse de que los márgenes de ganancia y fase sean positivos. Un MG o MP cero o negativo puede indicar inestabilidad en el sistema.
 
-*Atenuación en Frecuencias Altas:
+* Atenuación en Frecuencias Altas:
 Las redes de atraso tienden a reducir la ganancia en frecuencias altas, lo que puede disminuir la sensibilidad del sistema al ruido. Es importante encontrar un balance adecuado entre la velocidad de respuesta y la robustez frente al ruido.
 
-*Interacción con Controladores:
+* Interacción con Controladores:
 Comprender cómo las redes de atraso interactúan con otros controladores en el sistema, especialmente los PID. La parte proporcional del PID puede afectar la estabilidad del sistema si no se ajusta correctamente.
 
-*Limitaciones en el Diseño:
+* Limitaciones en el Diseño:
 Reconocer que los diseños pueden estar limitados por las características físicas de los componentes. Por ejemplo, en sistemas eléctricos, la frecuencia de corte puede estar determinada por las capacidades y resistencias de los circuitos.
 
-*Documentación:
+* Documentación:
 Mantener una buena documentación del proceso de diseño, incluyendo todas las ecuaciones, resultados de simulaciones y ajustes realizados. Esto facilitará la revisión y futuras mejoras del sistema.
 
 
