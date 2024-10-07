@@ -69,6 +69,12 @@ El margen de fase se define como el cambio en la fase de lazo abierto que es nec
 
 Si el margen de ganancia (MG) y el margen de fase (MP) son positivos, el sistema se considera estable en lazo cerrado. Para garantizar un funcionamiento óptimo, es deseable que tanto MG como MP sean lo más grandes posible. Sin embargo, si alguno de estos márgenes es cero o negativo, el sistema puede volverse inestable en lazo cerrado, lo que podría comprometer su rendimiento y control.
 
+### 3.4. Procedimiento de diseño
+El procedimiento de diseño  se lleva a cabo en varias etapas clave. En primer lugar, se discretiza la planta analógica para obtener un modelo equivalente 
+𝐺(𝑧). Esta etapa es fundamental para transformar la representación continua del sistema en una adecuada para el análisis digital. A continuación, se realiza la transformación de 𝐺(𝑧)a G(ω), lo que permite trabajar en el dominio de frecuencia.Una vez obtenida la función G(ω), se procede a graficar los diagramas de Bode, los cuales son esenciales para visualizar la respuesta en frecuencia del sistema y evaluar sus características de estabilidad y rendimiento. Posteriormente, se aplica un método de diseño específico para la función de control C(ω), con el fin de ajustar los parámetros del sistema y mejorar su comportamiento.
+Finalmente, se recupera C(z) a partir de C(ω) para que el diseño sea programable en el sistema digital. Este proceso asegura que los controladores diseñados sean implementables en hardware, completando así el ciclo de diseño y permitiendo la integración efectiva del controlador en la aplicación deseada
+
+
 ## 5. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
 
