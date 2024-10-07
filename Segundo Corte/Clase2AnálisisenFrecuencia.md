@@ -51,6 +51,8 @@ La variación de fase se refiere al desplazamiento temporal de la señal de sali
 ### 1.3. Comparación entre Análisis en Frecuencia y Análisis Temporal
 El análisis de sistemas puede ser tratado desde distintas perspectivas, entre las cuales el análisis temporal y el análisis en frecuencia son dos de los enfoques más habituales. De cada uno de estos se extraerá información valiosa y complementaria del comportamiento del sistema frente a diversas condiciones. A continuación se presenta una tabla que recoge las diferencias fundamentales de ambos enfoques.
 
+Tabla 1. Comparación entre Análisis en Frecuencia y Análisis Temporal
+
 |      **Aspecto**     |                    **Análisis Temporal**                    | **Análisis en Frecuencia**                         |
 |:--------------------:|:-----------------------------------------------------------:|----------------------------------------------------|
 |     **_Enfoque_**    | Cambios de señales a lo largo del tiempo                    | Respuesta del sistema a diferentes frecuencias     |
@@ -69,6 +71,8 @@ La representación de señales mediante fasores es una técnica que permite simp
 <p align="center">
   <img src="https://th.bing.com/th/id/OIP.zuyGPTaOr8swWMclaFrpOwHaD4?rs=1&pid=ImgDetMain" />
 </p>
+
+Fig. 1. Representación de señales con fasores
 
 Y pueden estar representados tanto en forma polar:
 
@@ -99,7 +103,10 @@ Recordando, el sistema puede ser representado como una función de transferencia
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/ec883afddec2edf759d6c28980f7f3a7a773a904/Imagenes/plantaControl.png" />
 </p>
 
+Fig. 2. Gráfico de sistema de procesos
+
  Por tanto,
+ 
 <p align="center">$G(s)=\frac{A_{2}\lt \phi_{2}}{A_{1}\lt \phi_{1}}=M\lt \phi$</p>
 
 Donde: 
@@ -111,6 +118,7 @@ Donde:
 
 2. Expresión de la Función de Transferencia:
 El análisis comienza expresando la función de transferencia en términos de la frecuencia:
+
 <p align="center">$s=j\omega$</p>
 
 Esto implica que para representar la función de transferencia en el dominio de la frecuencia, se debe considerar la equivalencia:
@@ -153,11 +161,15 @@ Los diagramas de frecuencia se representan principalmente a través de dos tipos
   <img src="https://fr.mathworks.com/discovery/bode-plot/_jcr_content/mainParsys/image_752431827.adapt.full.high.png/1550172621946.png" />
 </p>
 
+Fig. 3. Representación de Diagrama de Bode
+
 * **Diagrama de Nyquist:** Representa la respuesta del sistema en un gráfico polar, donde se pueden observar simultáneamente los efectos de amplitud y desfase.
 
 <p align="center">
   <img src="https://es.mathworks.com/help/control/ref/nyquistplotofdynamicsystemexample_01_es.png" />
 </p>
+
+Fig. 4. Representación de Diagrama de Nyquist
 
 **Diferencias**
 
@@ -207,6 +219,8 @@ En el diagrama de Bode, los polos tienen un efecto fundamental en la respuesta d
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/87c42b7803fe9952431bc7f913a6acd75cb603bc/Imagenes/Polosyceros.png"/>
 </p>
+
+Fig. 5. Diagrama de Bode en 3D
 
 La presencia de un polo también afecta la fase, que desciende en una cantidad proporcional a la cercanía del polo a la frecuencia de interés. A medida que la frecuencia se aproxima a $\omega​_{n}$ la fase experimenta una transición, generalmente de -45° hasta -90° por cada polo.
 
