@@ -32,7 +32,7 @@ Consideración: Ayuda a evitar problemas relacionados con el ruido.
 
 
 ## 2. Control PID en análisis de frecuencia
-* Primero escribimos ![]().
+
 * Afecta predominantemente la región de alta frecuencia.
 Beneficio: Incrementa el ángulo de adelanto de fase, lo que resulta en una mejora en la estabilidad y la rapidez de respuesta del sistema. Este componente ayuda a minimizar el sobrepaso y a lograr un ajuste más ágil.
 Parte Proporcional-Integral (PI)
