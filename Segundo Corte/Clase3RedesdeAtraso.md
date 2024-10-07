@@ -13,59 +13,63 @@ El diseño de redes de atraso en sistemas de control digital es una técnica cla
 
 
 ## 1. Controladores por análisis en frecuencia
-*Adelanto de Fase*
-Función: Aumenta el ancho de banda del sistema y mejora los márgenes de estabilidad.
-Beneficio: Permite que el sistema responda con mayor velocidad.
-Consideración: Un incremento en la ganancia a alta frecuencia puede hacer al sistema más susceptible al ruido.
 
-*Atraso de Fase*
-Función: Reduce la ganancia en frecuencias altas sin afectar las frecuencias bajas.
-Impacto: Disminuye el ancho de banda del sistema, lo que a su vez reduce la velocidad de respuesta.
-Beneficio: Disminuye la afectación por ruido, aumentando la estabilidad.
+**Adelanto de Fase**
+* Función: Aumenta el ancho de banda del sistema y mejora los márgenes de estabilidad.
+* Beneficio: Permite que el sistema responda con mayor velocidad.
+* Consideración: Un incremento en la ganancia a alta frecuencia puede hacer al sistema más susceptible al ruido.
 
-*Atraso – Adelanto de Fase*
-Función: Mejora los márgenes de estabilidad y aumenta el ancho de banda.
-Beneficio: Disminuye el error en estado estacionario.
-Consideración: Ayuda a evitar problemas relacionados con el ruido.
+**Atraso de Fase**
+* Función: Reduce la ganancia en frecuencias altas sin afectar las frecuencias bajas.
+* Impacto: Disminuye el ancho de banda del sistema, lo que a su vez reduce la velocidad de respuesta.
+* Beneficio: Disminuye la afectación por ruido, aumentando la estabilidad.
+
+**Atraso – Adelanto de Fase**
+* Función: Mejora los márgenes de estabilidad y aumenta el ancho de banda.
+* Beneficio: Disminuye el error en estado estacionario.
+* Consideración: Ayuda a evitar problemas relacionados con el ruido.
 
 
 ## 2. Control PID en análisis de frecuencia
-![]()
 El control PID es un tipo de controlador que combina las acciones de proporcional, integral y derivativa. Se considera un caso especial de una red de atraso-adelanto, que permite ajustar la dinámica del sistema controlado.
 
 * Afecta predominantemente la región de alta frecuencia.
-Beneficio: Incrementa el ángulo de adelanto de fase, lo que resulta en una mejora en la estabilidad y la rapidez de respuesta del sistema. Este componente ayuda a minimizar el sobrepaso y a lograr un ajuste más ágil.
-Parte Proporcional-Integral (PI)
+* Beneficio: Incrementa el ángulo de adelanto de fase, lo que resulta en una mejora en la estabilidad y la rapidez de respuesta del sistema, en ese sentido ayuda a minimizar el sobrepaso y a lograr un ajuste más ágil.
+
+### 2.1. Proporcional-Integral (PI)
 
 * Se comporta como una red de atraso, enfocándose en las bajas frecuencias.
+  
 Contribuye a eliminar el error en estado estacionario y asegura que el sistema alcance el valor deseado a largo plazo, mejorando así la precisión del control.
-Sintonización del Control PID
-Métodos de Sintonización: Es posible ajustar los parámetros del controlador PID mediante análisis en frecuencia, lo que permite optimizar el rendimiento en función de la respuesta del sistema.
-Práctica en la Industria: En entornos industriales, la sintonización del PID se lleva a cabo generalmente utilizando métodos en el dominio del tiempo, que permiten ajustes más directos basados en la respuesta temporal del sistema. Este enfoque es preferido por su simplicidad y efectividad en la implementación práctica.
+
+### 2.2. Sintonización del Control PID
+* Métodos de Sintonización:Es posible ajustar los parámetros del controlador PID mediante análisis en frecuencia, lo que permite optimizar el rendimiento en función de la respuesta del sistema.
+* Práctica en la Industria: En entornos industriales, la sintonización del PID se lleva a cabo generalmente utilizando métodos en el dominio del tiempo, que permiten ajustes más directos basados en la respuesta temporal del sistema. Este enfoque es preferido por su simplicidad y efectividad en la implementación práctica.
 
 ## 3. Márgenes de ganancia y fase
 
 ### 3.1. Márgen de ganancia
 El margen de ganancia se define como el cambio en la ganancia de lazo abierto necesario para que un sistema en lazo cerrado se vuelva inestable. Este parámetro se expresa en decibelios (dB), lo que facilita la comparación y el análisis de las variaciones en la ganancia del sistema. La medición del margen de ganancia se realiza tomando como referencia la fase de 180°, un punto crucial que indica el límite en el que el sistema puede volverse inestable al cruzar el umbral de **0 dB**.
 
-![]() Interpretación del Margen de Ganancia
+**Interpretación del Margen de Ganancia**
+
 * MG>0: Indica un margen de ganancia positivo, lo que significa que el sistema es estable. En este caso, el sistema puede tolerar aumentos en la ganancia antes de volverse inestable.
 * 𝑀𝐺<0: Indica un margen de ganancia negativo, lo que implica que el sistema es inestable. Esto significa que cualquier aumento adicional en la ganancia puede llevar al sistema a un comportamiento incontrolado.
 
 ### 3.2. Márgen de fase
 El margen de fase se define como el cambio en la fase de lazo abierto que es necesario para que un sistema en lazo cerrado se vuelva inestable. Este margen se expresa en grados (°), lo que permite evaluar la estabilidad del sistema a través del análisis de la fase. Para su medición, se toma como referencia la ganancia unitaria (0 dB), un punto crucial que determina el umbral en el que el sistema puede perder su estabilidad.
 
-![]() Interpretación del Margen de Fase
+**Interpretación del Margen de Fase**
 
 * 𝑀𝑃>−180°: Indica un margen de fase positivo, lo que significa que el sistema es estable. Esto sugiere que el sistema puede tolerar variaciones en la fase antes de llegar a la inestabilidad.
 
 * 𝑀𝑃<−180°: Indica un margen de fase negativo, lo que implica que el sistema es inestable. En este caso, cualquier cambio adicional en la fase puede llevar al sistema a un comportamiento incontrolado.
 
 ### 3.3. Medida de márgenes de estabilidad desde diagrama de Bode 
-
-
-💡**Figura 1:**
-**ADICIONAR IMAGENESSSSS**
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/4ef34470b9ad3909853b418504dba5f5559c5fee/Imagenes/WhatsApp%20Image%202024-10-06%20at%2023.48.46.jpeg" />
+</p>
+Fig. 1. EStabilidad según diagrama de Bode
 
 Si el margen de ganancia (MG) y el margen de fase (MP) son positivos, el sistema se considera estable en lazo cerrado. Para garantizar un funcionamiento óptimo, es deseable que tanto MG como MP sean lo más grandes posible. Sin embargo, si alguno de estos márgenes es cero o negativo, el sistema puede volverse inestable en lazo cerrado, lo que podría comprometer su rendimiento y control.
 
@@ -105,23 +109,21 @@ Simular el sistema en condiciones de operación utilizando software especializad
 ### 4.1 Consideraciones
 Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
 
-![]()
-
 * Margen de Estabilidad:
+  
 Asegurarse de que los márgenes de ganancia y fase sean positivos. Un MG o MP cero o negativo puede indicar inestabilidad en el sistema.
 
 * Atenuación en Frecuencias Altas:
+  
 Las redes de atraso tienden a reducir la ganancia en frecuencias altas, lo que puede disminuir la sensibilidad del sistema al ruido. Es importante encontrar un balance adecuado entre la velocidad de respuesta y la robustez frente al ruido.
 
 * Interacción con Controladores:
+  
 Comprender cómo las redes de atraso interactúan con otros controladores en el sistema, especialmente los PID. La parte proporcional del PID puede afectar la estabilidad del sistema si no se ajusta correctamente.
 
 * Limitaciones en el Diseño:
+  
 Reconocer que los diseños pueden estar limitados por las características físicas de los componentes. Por ejemplo, en sistemas eléctricos, la frecuencia de corte puede estar determinada por las capacidades y resistencias de los circuitos.
-
-* Documentación:
-Mantener una buena documentación del proceso de diseño, incluyendo todas las ecuaciones, resultados de simulaciones y ajustes realizados. Esto facilitará la revisión y futuras mejoras del sistema.
-
 
 ## 5. Conclusiones
 En primer lugar, el diseño de redes de atraso permite mejorar la estabilidad del sistema en frecuencias bajas sin comprometer la ganancia en altas frecuencias, lo que resulta en una reducción del ruido. Esto es crucial para garantizar un rendimiento más robusto y confiable en entornos industriales donde las perturbaciones externas pueden ser significativas.
