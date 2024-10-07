@@ -76,7 +76,7 @@ El procedimiento de diseño en control digital se desarrolla en varias etapas. P
 ## 4. Redes de atraso
 ![]() El diseño de redes de atraso se realiza siguiendo un procedimiento sistemático que asegura que el sistema cumpla con los requisitos de rendimiento establecidos. La metodología se puede resumir en los siguientes pasos:
 
- *Definición de Especificaciones del Sistema:
+ * Definición de Especificaciones del Sistema:
  
 Determinar los márgenes de ganancia (MG) y margen de fase (MP) requeridos.
  *Transformación de la Planta:
@@ -85,21 +85,21 @@ Discretizar la planta analógica G(s) para obtener la representación G(z). Esta
 
 <p align="center">$G(z) = G(s) \text{ mediante transformaciones como } z = \frac{2}{T}(1 - z^{-1})$</p>
 
- *Análisis de Frecuencia:
+ * Análisis de Frecuencia:
 
 Graficar los diagramas de Bode de G(z) para observar el comportamiento del sistema. Esto incluye la amplitud y la fase en función de la frecuencia.
 
-*Diseño de la Red de Atraso:
+* Diseño de la Red de Atraso:
 Definir la función de transferencia de la red de atraso C(s) como
 <p align="center">$C(s) = \frac{1 + aT_{1}s}{1 + T_{1}s}$</p>
 
 ​donde 0<a<1 representa la relación de atenuación.
 
-*Cálculo de Parámetros:
+* Cálculo de Parámetros:
 Determinar el valor de 
 𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
 <p align="center">$e_{v} = \lim_{s \to 0} \frac{1}{s K_{p} G(s)}$</p>
-*Simulación y Ajuste:
+* Simulación y Ajuste:
 
 Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
 
