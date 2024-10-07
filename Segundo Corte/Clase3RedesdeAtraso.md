@@ -16,15 +16,15 @@ El diseño de redes de atraso en sistemas de control digital es una técnica cla
 
 
 ## 1. Ventajas del diseño por diagrama de Bode
-*Adelanto de Fase
+*Adelanto de Fase*
 Función: Aumenta el ancho de banda del sistema y mejora los márgenes de estabilidad.
 Beneficio: Permite que el sistema responda con mayor velocidad.
 Consideración: Un incremento en la ganancia a alta frecuencia puede hacer al sistema más susceptible al ruido.
-*Atraso de Fase
+*Atraso de Fase*
 Función: Reduce la ganancia en frecuencias altas sin afectar las frecuencias bajas.
 Impacto: Disminuye el ancho de banda del sistema, lo que a su vez reduce la velocidad de respuesta.
 Beneficio: Disminuye la afectación por ruido, aumentando la estabilidad.
-*Atraso – Adelanto de Fase
+*Atraso – Adelanto de Fase*
 Función: Mejora los márgenes de estabilidad y aumenta el ancho de banda.
 Beneficio: Disminuye el error en estado estacionario.
 Consideración: Ayuda a evitar problemas relacionados con el ruido.
