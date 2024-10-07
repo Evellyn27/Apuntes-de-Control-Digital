@@ -38,6 +38,8 @@ Como primer paso se debe ejecutarse el cálculo de la función de transferencia 
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/996ea6fe1d28796c7c152e3ed1341f08853b751a/Imagenes/plantaControl.png" />
 </p>
 
+Fig 2. Modelo de la planta en lazo abierto
+
  Esta función se puede obtener directamente de las características físicas del sistema o bien mediante un modelado matemático.
  
 <p align="center">$G\left( z \right)=\frac{B_{G(z)}}{A_{G(z)}}=\frac{b_{0}+b_{1}z^{-1}+...+b_{m}z^{-m}}{1+a_{1}z^{-1}+...+a_{n}z^{-n}}$</p>
@@ -68,6 +70,8 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 | **_Igualación en el Polinomio Característico_** | La igualación se realiza en el polinomio característico,  permite fijar la ubicación de los polos, pero no de ceros                                        | $D(z)=$ Polinomio                |
 |           **_Orden del Controlador_**           | El orden de la función de transferencia del controlador $C(z)$ debe ser un grado menor que el de la planta en lazo abierto                                 | $A(z)\lt D(z)$                  |
 
+Tabla 2. Consideraciones del Controlador en Sistemas de Lazo Cerrado
+
 >🔑 *Función impropia:* Una función de transferencia es impropia si el grado del numerador es mayor que el grado del denominador, esto puede resultar en un comportamiento no físico y potencialmente inestable en el sistema.
 
 >🔑 *Función bipropia:*  Una función de transferencia es bipropia si el grado del numerador es igual al grado del denominador
@@ -76,6 +80,8 @@ Al utilizar el método de igualación por coeficientes, es fundamental considera
 <p align="center">
   <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/cc65b4113a45c8c91511db0b597729d4bfcf77c0/Imagenes/ProcedimientoE.png" />
 </p>
+
+Fig 3. 
 
 ### 2.3.  Descripción del Proceso
 1. **Definir la función de la planta en lazo abierto:**
