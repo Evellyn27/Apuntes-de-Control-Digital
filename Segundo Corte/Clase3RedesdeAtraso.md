@@ -32,11 +32,16 @@ Consideración: Ayuda a evitar problemas relacionados con el ruido.
 
 
 ## 2. Control PID en análisis de frecuencia
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+
+*Afecta predominantemente la región de alta frecuencia.
+Beneficio: Incrementa el ángulo de adelanto de fase, lo que resulta en una mejora en la estabilidad y la rapidez de respuesta del sistema. Este componente ayuda a minimizar el sobrepaso y a lograr un ajuste más ágil.
+Parte Proporcional-Integral (PI)
+
+*Se comporta como una red de atraso, enfocándose en las bajas frecuencias.
+Contribuye a eliminar el error en estado estacionario y asegura que el sistema alcance el valor deseado a largo plazo, mejorando así la precisión del control.
+Sintonización del Control PID
+Métodos de Sintonización: Es posible ajustar los parámetros del controlador PID mediante análisis en frecuencia, lo que permite optimizar el rendimiento en función de la respuesta del sistema.
+Práctica en la Industria: En entornos industriales, la sintonización del PID se lleva a cabo generalmente utilizando métodos en el dominio del tiempo, que permiten ajustes más directos basados en la respuesta temporal del sistema. Este enfoque es preferido por su simplicidad y efectividad en la implementación práctica.
 
 ## 4. Ejemplos
 Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
