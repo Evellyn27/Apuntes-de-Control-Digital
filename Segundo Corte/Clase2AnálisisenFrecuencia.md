@@ -169,18 +169,44 @@ Este análisis ayuda a identificar qué frecuencias dominan en la señal y cómo
 * Ruido
 * Aliasing
 
+
 ### 3.3. Uso de escalas lineales y logarítmicas
+En los diagramas de frecuencia, las escalas lineales y logarítmicas juegan un papel clave para la representación de las respuestas del sistema
+|     Tipo    |                           Descripción                           |
+|:-----------:|:---------------------------------------------------------------:|
+|    Lineal   | Representa las frecuencias con espaciado uniforme entre valores |
+| Logarítmica | Las frecuencias se representan en potencias de diez             |
 
 ## 4. Análisis en tiempo discreto
 ### 4.1. Transformación bilineal (Tustin)
+La transformación bilineal (también llamada método de Tustin) es una técnica utilizada para convertir un sistema continuo (en el dominio $s)$ a un sistema discreto (en el dominio $z)$ . La transformación se basa en una aproximación de la derivada que evita el aliasing y mejora la precisión de las respuestas dinámicas en el diseño de controladores discretos. 
+
+El método de Tustin se expresa como:
+
+<p align="center">$w=\frac{2}{T}\frac{z-1}{z+1}$</p>
+
+Aproximando:
+<p align="center">$z=\frac{\left( 1+\frac{wT}{2} \right)}{\left(1-\frac{wT}{2}\right)}$</p>
+
+Se reemplaza $z=e^{jwT}$:
+
+<p align="center">$w=j\frac{2}{T}tan\left( \frac{wT}{2} \right)$</p>
+
+Se sustituye $w=jv$:
+
+<p align="center">$v=\frac{2}{T}tan\left( \frac{wT}{2} \right)$</p>
+
 ### 4.2. Sistemas en tiempo discreto
+Tras aplicar la transformación bilineal (Tustin), se mapea el plano z al plano w para analizar el sistema discreto en una representación más cercana al dominio continuo.Al operar en el plano w, es más fácil realizar ajustes en los controladores digitales mientras se mantienen las características deseadas del sistema original, especialmente en aplicaciones de filtrado y control.
 
 ## 5. Diagramas de Bode
 ### 5.1. Efecto de los parametros
-### 5.2. Uso de decibelios para la representación de ganancia
-### 5.3 Interpretación del desfase en diagramas de Bode
-### 5.4 Consideraciones de diseño basadas en diagramas de Bode
-### 5.5 Efecto de la frecuencia de Nyquist en sistemas discretos
+<p align="center">
+  <img src="https://isolution.pro/assets/images/VstnU.png" />
+</p>
+
+### 5.2. Interpretación de los diagramas de Bode
+
 
 ## 6. Ejercicios
 📚
