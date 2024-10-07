@@ -76,33 +76,48 @@ El procedimiento de diseño en control digital se desarrolla en varias etapas. P
 ## 4. Redes de atraso
 ![]() El diseño de redes de atraso se realiza siguiendo un procedimiento sistemático que asegura que el sistema cumpla con los requisitos de rendimiento establecidos. La metodología se puede resumir en los siguientes pasos:
 
- **Definición de Especificaciones del Sistema:**
+ *Definición de Especificaciones del Sistema:
  
 Determinar los márgenes de ganancia (MG) y margen de fase (MP) requeridos.
- **Transformación de la Planta:**
+ *Transformación de la Planta:
 
 Discretizar la planta analógica G(s) para obtener la representación G(z). Esta transformación se realiza mediante la aproximación de Tustin o la regla de bilinealidad.
 $G(z)=G(s)$ mediante transformaciones como $ z=2/T(1−z −1) $
 
- **Análisis de Frecuencia:**
+ *Análisis de Frecuencia:
 
 Graficar los diagramas de Bode de G(z) para observar el comportamiento del sistema. Esto incluye la amplitud y la fase en función de la frecuencia.
 
-**Diseño de la Red de Atraso:**
+*Diseño de la Red de Atraso:
 Definir la función de transferencia de la red de atraso C(s) como
 C(s)= 1+T 1s1+aT 1s
 ​donde 0<a<1 representa la relación de atenuación.
 
-**Cálculo de Parámetros:**
+*Cálculo de Parámetros:
 Determinar el valor de 
 𝐾𝑝 para garantizar que se cumpla el requisito del error de estado estacionario. Utilizar la fórmula de error de estado estacionario para sistemas en lazo abierto:
 ev= s→0limsKpG(s)1
-**Simulación y Ajuste:**
+*Simulación y Ajuste:
 
 Simular el sistema en condiciones de operación utilizando software especializado. Ajustar los parámetros hasta que se logren los márgenes de ganancia y fase deseados.
 
 ### 4.1 Consideraciones
-Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
+![]() Al diseñar redes de atraso, es fundamental tener en cuenta varias consideraciones para garantizar el rendimiento y la estabilidad del sistema:
+*Margen de Estabilidad:
+Asegurarse de que los márgenes de ganancia y fase sean positivos. Un MG o MP cero o negativo puede indicar inestabilidad en el sistema.
+
+*Atenuación en Frecuencias Altas:
+Las redes de atraso tienden a reducir la ganancia en frecuencias altas, lo que puede disminuir la sensibilidad del sistema al ruido. Es importante encontrar un balance adecuado entre la velocidad de respuesta y la robustez frente al ruido.
+
+*Interacción con Controladores:
+Comprender cómo las redes de atraso interactúan con otros controladores en el sistema, especialmente los PID. La parte proporcional del PID puede afectar la estabilidad del sistema si no se ajusta correctamente.
+
+*Limitaciones en el Diseño:
+Reconocer que los diseños pueden estar limitados por las características físicas de los componentes. Por ejemplo, en sistemas eléctricos, la frecuencia de corte puede estar determinada por las capacidades y resistencias de los circuitos.
+
+*Documentación:
+Mantener una buena documentación del proceso de diseño, incluyendo todas las ecuaciones, resultados de simulaciones y ajustes realizados. Esto facilitará la revisión y futuras mejoras del sistema.
+
 
 ## 9. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
