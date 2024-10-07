@@ -54,10 +54,6 @@ Con G(z) y Go(z) definidos, se calcula la función de transferencia del controla
 4. **Verificación:**
 Finalmente, una vez diseñado el controlador, se deben verificar las consideraciones decritas anteriormente para asegurar que el sistema sea implementable en la práctica.
 
-### 1.3. Ejemplos Prácticos
-💡
-### 1.4. Simluación
-
 ## 2. Método de igualación por coeficientes
 La igualación por coeficientes es un método algebraico que se utiliza con frecuencia para contrastar dos expresiones polinómicas o racionales y poder extraer las relaciones entre los coeficientes. En el contexto de control, el método iguala los distintos coeficientes del polinomio característico de un sistema, colocando los polos en las posiciones deseadas en el diseño de un controlador. 
 ### 2.1. Características y Consideraciones
@@ -141,9 +137,6 @@ Para la solución del sistema de ecuaciones, se puede llegar a emplear varios me
 
 Una vez resueltos los coeficientes de $A(z)$ y $B(z)$ se implementa el controlador y se verifica el comportamiento del sistema mediante simulaciones, además se asegura de que los polos estén ubicados correctamente y que la respuesta del sistema sea la deseada.
 
-### 2.3. Ejemplos
-### 2.4. Simluación
-
 ## 3. Ecuaciones diofánticas en Contexto de Control Digital
 Las ecuaciones diofánticas son ecuaciones polinómicas que buscan soluciones de tipo entero, estas suelen ser utilizadas en áreas relevantes, como el caso del control digital, donde se aplican para la síntesis y el análisis de sistemas de control. 
 
@@ -192,8 +185,35 @@ Para obtener la solución general, usamos la fórmula general para las ecuacione
 </p><p align="center">$y=6-3k$</p>
 
 ## 4. Ejercicios
-📚
-📚
+📚**Ejercicio 1:**
+Dada una planta con la siguiente función de transferencia en lazo abierto:
+
+</p><p align="center">$G(z)=\frac{1}{z-0.5}$</p>
+
+Diseña un controlador $C(z)$ utilizando el método de igualación por modelo para que el sistema en lazo cerrado siga el siguiente modelo de referencia deseado:
+
+</p><p align="center">$G_{0}(z)=\frac{1}{z-0.8}$</p>
+
+Por tanto:
+
+</p><p align="center">$C(z)=\frac{\frac{1}{z-0.8}}{\frac{1}{z-0.5}\left( 1- \frac{1}{z-0.8} \right)}$</p>
+
+En primer lugar, empezamos a simplificar el denominador:
+
+</p><p align="center">$C(z)=\frac{\frac{1}{z-0.8}}{\frac{1}{z-0.5}\left( \frac{z-1.8}{z-0.8} \right)}$</p>
+​
+Seguimos simplificando:
+
+ </p><p align="center">$\frac{1}{z-0.5}\cdot \frac{z-1.8}{z-0.8}=\frac{z-1.8}{\left( z-0.5 \right)\left( z-0.8 \right)}$</p>
+
+Reescribimos la expresión completa y hacemos ley de extremos:
+
+</p><p align="center">$C(z)=\frac{\frac{1}{z-0.8}}{\frac{z-1.8}{\left( z-0.5 \right)\left( z-0.8 \right)}}​$</p>
+
+Finalmente: 
+
+</p><p align="center">$C(z)=\frac{z-0.5}{z-1.8}$</p>
+
 ## 5. Conclusiones
 Dentro de la temática, se pudo llegar a las siguientes conclusiones:
 
