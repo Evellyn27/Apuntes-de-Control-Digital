@@ -1,7 +1,20 @@
 # Diseño de redes de atraso por análisis en frecuencia
-El título de cada clase, correspondiente al tema general que se trabaje en clase. Siempre después de cada título de clase, redactar una breve introducción (mínimo un párrafo) que de una mirada general al tema
-## 1. Subtítulos
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+El diseño de redes de atraso en sistemas de control digital es una técnica clave utilizada para optimizar el rendimiento de sistemas dinámicos en lazo cerrado mediante el análisis en frecuencia. Este enfoque se basa en herramientas como los diagramas de Bode, que permiten evaluar y ajustar los márgenes de estabilidad, la ganancia y el comportamiento en frecuencia del sistema. A lo largo de este documento, se detallan las ventajas del uso de diagramas de Bode, su relación con los controladores PID, y el procedimiento sistemático para el diseño de redes de atraso. Este método facilita la corrección de errores de estado estacionario y mejora la estabilidad del sistema sin aumentar la susceptibilidad al ruido.
+
+## Índice
+1.  Introducción al diseño de redes de atraso
+2.  Ventajas del diseño por diagrama de Bode
+3.  Controladores por análisis en frecuencia
+4.  Control PID en análisis de frecuencia
+5.  Márgenes de ganancia y fase
+6.  Medición de márgenes de estabilidad desde el diagrama de Bode
+7.  Diseño de redes de atraso por análisis de frecuencia
+8.  Metodología de diseño para redes de atraso
+9.  Resultados del diseño
+10. Ejercicios
+11. Conclusiones
+
+
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
