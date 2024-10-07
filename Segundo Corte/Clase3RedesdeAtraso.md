@@ -83,7 +83,7 @@ Determinar los márgenes de ganancia (MG) y margen de fase (MP) requeridos.
 
 Discretizar la planta analógica G(s) para obtener la representación G(z). Esta transformación se realiza mediante la aproximación de Tustin o la regla de bilinealidad.
 
-G(z) = G(s) \text{ mediante transformaciones como } z = \frac{2}{T}(1 - z^{-1})
+<p align="center">$G(z) = G(s) \text{ mediante transformaciones como } z = \frac{2}{T}(1 - z^{-1})$</p>
 
  *Análisis de Frecuencia:
 
