@@ -6,9 +6,8 @@ El diseño de redes de atraso en sistemas de control digital es una técnica cla
 2.  Control PID en análisis de frecuencia
 3.  Márgenes de ganancia y fase
 4.  Redes de atraso
-5.  Ejercicios
-6.  Conclusiones
-7.  Referencias
+5.  Conclusiones
+6.  Referencias
 
 
 
@@ -124,18 +123,14 @@ Reconocer que los diseños pueden estar limitados por las características físi
 Mantener una buena documentación del proceso de diseño, incluyendo todas las ecuaciones, resultados de simulaciones y ajustes realizados. Esto facilitará la revisión y futuras mejoras del sistema.
 
 
-## 5. Ejercicios
-
-----------........--------.-.-.-.-.-.-.-
-
-## 6. Conclusiones
+## 5. Conclusiones
 En primer lugar, el diseño de redes de atraso permite mejorar la estabilidad del sistema en frecuencias bajas sin comprometer la ganancia en altas frecuencias, lo que resulta en una reducción del ruido. Esto es crucial para garantizar un rendimiento más robusto y confiable en entornos industriales donde las perturbaciones externas pueden ser significativas.
 
 Seguidamente, al seguir una metodología estructurada que incluye la discretización de la planta y el análisis a través de diagramas de Bode, se logra ajustar de manera precisa los márgenes de ganancia y fase. Esto asegura que el sistema no solo sea estable, sino que también cumpla con los requisitos de error en estado estacionario y velocidad de respuesta.
 
 Finalmente, es importante tener en cuenta las limitaciones físicas del sistema durante el proceso de diseño, ya que los componentes pueden restringir el rango de frecuencias que se pueden controlar.
 
-## 7. Referencias
+## 6. Referencias
 [1] Ogata, K. (2010). Modern Control Engineering. 5th ed. Prentice Hall.
 
 [2]. Gene Franklin, J. D. Powell, & A. Emami-Naeini. (2014). Feedback Control of Dynamic Systems. 7th ed. Pearson.
