@@ -10,43 +10,37 @@ El espacio de estados es una representación matemática, la cual esta centrada 
 6. Conclusiones
    
 
-## 
+## 1. Variables de Estados
 
 >🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
 
-## 
+## 2. Ecuaciones de Estado
 
-##
+## 3. Tipos de Sistemas en Espacio de Estados
 
-##
+## 4. Conversión de Modelos a Espacio de Estados
 
 💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
 
 $$R=\frac{V}{I}$$
 
-## 
+## 5. Ejercicios
+📚
 
-![Figura de prueba](images/plantilla/Captura2.PNG)
+![Figura de prueba](https://controlautomaticoeducacion.com/wp-content/uploads/2016/05/VE-300x148.png)
 
 Figura 1. Figura de prueba
 
 
-## 
+## 6. Conclusiones
 
 
 
-##
 ```
 var sumar2 = function(numero) {
   return numero + 2;
 }
 ```
-
-## 9. Ejercicios
- 📚
-
-## Conclusiones
-
 
 ## Referencias
 
