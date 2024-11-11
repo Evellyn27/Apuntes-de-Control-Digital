@@ -10,10 +10,21 @@ El espacio de estados es una representación matemática, la cual esta centrada 
 6. Conclusiones
    
 
-## 1. Variables de Estados
+## 1. Variables de Estado
+Las variables de estado son cruciales porque permiten capturar toda la información necesaria para entender y predecir el comportamiento de un sistema a lo largo del tiempo. A diferencia de otros enfoques, las variables de estado proporcionan una representación compacta y completa del sistema, sin necesidad de conocer su historial completo.
 
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+>🔑 *Variables de estados:* Son las variables internas que determinan el comportamiento dinámico de un sistema y permiten su descripción completa.
 
+![Figura de prueba](https://controlautomaticoeducacion.com/wp-content/uploads/2016/05/VE-300x148.png)
+
+Figura 1. Variables de estado
+
+### 1.1 Consideraciones para la Selección de Variables de Estado
+La selección de variables de estado es crucial para representar un sistema de forma efectiva, en ese sentido estas deben cumplir con las siguientes condiciones:
+* Las variables de estado deben reflejar los aspectos clave del sistema.
+* Deben ser suficientes para describir completamente el comportamiento del sistema.
+* Solo se deben seleccionar variables que no sean redundantes.
+* Las variables seleccionadas deben ser medibles o estimables fácilmente.
 ## 2. Ecuaciones de Estado
 
 ## 3. Tipos de Sistemas en Espacio de Estados
@@ -27,9 +38,6 @@ $$R=\frac{V}{I}$$
 ## 5. Ejercicios
 📚
 
-![Figura de prueba](https://controlautomaticoeducacion.com/wp-content/uploads/2016/05/VE-300x148.png)
-
-Figura 1. Figura de prueba
 
 
 ## 6. Conclusiones
