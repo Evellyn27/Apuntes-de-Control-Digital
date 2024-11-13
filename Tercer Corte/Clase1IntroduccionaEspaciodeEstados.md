@@ -68,8 +68,12 @@ Donde:
 - $\( D \):$ Matriz de transmisión directa
 
 
-## 4. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
+## 3. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
 Para representar una ecuación en diferencias en el espacio de estados, se sigue estos pasos:
+
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/7817a69ded3b7eac6b0106396f349afdd9d23f02/Imagenes/Espacio.jpeg" />
+</p>
 
 **Paso 1: Despejar el Máximo Adelanto de la Ecuación en Diferencias**
 
@@ -139,7 +143,7 @@ $$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\
 x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
 
-## 5. Ejercicios
+## 4. Ejercicios
 📚 **Ejercicio 1:** Convierte la siguiente ecuación en diferencias a su forma en espacio de estados:
 
 $$y(k+2) - 0.5y(k+1) + 0.2y(k) = u(k)$$
@@ -180,6 +184,11 @@ La salida $y(k)$ se expresa como:
 $$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\
 x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/8d53a1c213f99079dae996ddef2752eec9262f35/Imagenes/WhatsApp%20Image%202024-11-13%20at%2009.19.20.jpeg" />
+</p>
+
+
 📚 **Ejercicio 2:** Convierte la siguiente ecuación en diferencias a su forma en espacio de estados:
 
 $$y(k+2) + 0.3y(k+1) + 0.5y(k) = 3u(k)$$
@@ -219,7 +228,13 @@ La salida $y(k)$ se expresa como:
 $$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\
 x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
-## 6. Conclusiones
+
+<p align="center">
+  <img src="https://github.com/Evellyn27/Apuntes-de-Control-Digital/blob/deccc50a83ccb8fa5a0bd6d7298422205f72fe90/Imagenes/WhatsApp%20Image%202024-11-13%20at%2009.31.16.jpeg" />
+</p>
+
+
+## 5. Conclusiones
 Dentro de la temática del espacio de estados, se pueden destacar las siguientes conclusiones:
 
 En primer lugar, el espacio de estados proporciona una representación matemática completa y versátil para modelar sistemas dinámicos complejos. Esta herramienta permite describir eficazmente sistemas con múltiples entradas y salidas, lo que facilita su análisis y control, ofreciendo una mayor claridad en la comprensión del comportamiento del sistema en función del tiempo.
