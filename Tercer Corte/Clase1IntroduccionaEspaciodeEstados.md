@@ -4,10 +4,9 @@ El espacio de estados es una representación matemática, la cual esta centrada 
 ## Índice
 1. Variables de Estado
 2. Ecuaciones de Estado
-3. Tipos de Sistemas en Espacio de Estados
-4. Conversión de Ecuación Diferencial a Espacio de Estados
-5. Ejercicios
-6. Conclusiones
+3. Conversión de Ecuación Diferencial a Espacio de Estados
+4. Ejercicios
+5. Conclusiones
    
 
 ## 1. Variables de Estado
@@ -33,17 +32,98 @@ Las ecuaciones de estado son fundamentales para el modelado de sistemas dinámic
 >🔑 *Estado:*Es un conjunto mínimo de variables necesarias para describir completamente su comportamiento en cualquier instante de tiempo.
 
 ### 2.1. Representación General
+La representación general en espacio de estados utiliza un conjunto de ecuaciones para describir la evolución de las variables de estado. Este enfoque permite modelar tanto sistemas continuos como discretos:
+
+* **Ecuación de estado:**
+  
+$$ X(k+1) = f(X(k), U(k), k)$$
+
+* **Ecuación de salida:**
+  
+$$Y(k) = g(X(k), U(k), k) $$
+
 ### 2.2. Representación Matricial
-### 2.3. Correlación entre Función de Transferencia y Ecuación de Estado
-💡**Ejemplo:**
-## 3. Tipos de Sistemas en Espacio de Estados
-💡**Ejemplo:**
-💡**Ejemplo:**
-## 4. Conversión de Modelos a Espacio de Estados
+Para sistemas lineales e invariantes en el tiempo (LTI), la representación en el espacio de estados se simplifica en forma matricial:
 
-💡**Ejemplo:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
+$$X(k+1) = A \cdot X(k) + B \cdot U(k)$$
 
-$$R=\frac{V}{I}$$
+Donde:
+- $\( A \):$ Matriz de estado
+- $\( B \):$ Matriz de control
+
+$$Y(k) = C \cdot X(k) + D \cdot U(k)$$
+
+Donde:
+- $\( C \):$ Matriz de salida
+- $\( D \):$ Matriz de transmisión directa
+
+
+💡**Ejemplo:**
+💡**Ejemplo:**
+
+## 4. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
+Para representar una ecuación en diferencias en el espacio de estados, se sigue estos pasos:
+
+### Paso 1: Despejar el Máximo Adelanto de la Ecuación en Diferencias
+Reorganiza la ecuación de modo que el término de máximo adelanto de la salida esté aislado en el lado izquierdo. Esto facilita identificar las relaciones entre las variables de estado y sus desplazamientos en el tiempo.
+  
+### Paso 2: Igualar la Salida a la Variable de Estado
+Define una variable de estado que represente la salida del sistema. Por ejemplo, si la salida es $y(k)$, establece $x_1=(k)$ donde $x_1$ será la primera variable de estado del sistema.
+
+### Paso 3: Desplazar Sucesivamente para Obtener las Derivadas de las Variables de Estado
+Expresa las sucesivas variables de estado en función de los términos de adelanto o retardo. Esto implica identificar cómo cada variable de estado en $k+1$ o $k−1$ depende de otras variables de estado y de la entrada $u(k)$.
+
+### Paso 4: Organizar los Términos en las Matrices A, B, C y D
+Una vez que se han obtenido las ecuaciones de primer orden para las variables de estado, se deben organizar los coeficientes en las matrices A, B, C y D para representar el sistema en espacio de estados. 
+
+💡**Ejemplo:** 
+
+La ecuación en diferencias es:
+
+$$y(k+2) + y(k+1) + 0.16y(k) = 2u(k)$$
+
+**Paso 1: Despejar la Máxima Derivada**
+
+Despejamos  $y(k+2)$:
+
+$$y(k+2) = -y(k+1) - 0.16y(k) + 2u(k)$$
+
+**Paso 2: Igualar la Salida a la Variable de Estado**
+
+Definimos las variables de estado. En este caso, seleccionamos $y(k)$ y $y(k+1)$ como nuestras variables de estado.
+
+Definimos las siguientes variables de estado:
+
+- $$y(k) = x_1(k)$$
+- $$y(k+1) = x_2(k)$$
+
+Entonces, tenemos:
+
+$$y(k+1) = x_1(k+1) = x_2(k)$$
+
+$$y(k+2) = x_2(k+1) = -x_2(k) - 0.16x_1(k) + 2u(k)$$
+
+**Paso 3: Desplazar Sucesivamente para Obtener las Derivadas de las Variables de Estado**
+
+Ahora desplazamos las ecuaciones para obtener las derivadas de las variables de estado. Esto se hace expresando las ecuaciones de primer orden para cada variable de estado, de modo que cada variable en k+1 dependa de sus valores anteriores y la entrada u(k).
+
+Para las variables de estado x_1 (k) y x_2 (k):
+
+$$x_1(k+1) = x_2(k)$$
+
+$$x_2(k+1) = -x_2(k) - 0.16x_1(k) + 2u(k)$$
+
+ **Paso 4: Organizar los Términos en las Matrices A, B, C y D**
+
+Una vez obtenidas las ecuaciones de primer orden, organizamos los coeficientes en las matrices A, B, C y D para representar el sistema en espacio de estados.
+
+$$X(k+1) = \begin{bmatrix} x_1(k+1) \\ x_2(k+1) \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -0.16 & -1 \end{bmatrix} \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix} + \begin{bmatrix} 0 \\ 2 \end{bmatrix} u(k)$$
+
+La salida $$y(k)$$ se expresa como:
+
+
+$$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
+
 
 ## 5. Ejercicios
 📚
