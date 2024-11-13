@@ -1,5 +1,7 @@
 # Operaciones en el Espacio de Estados
 
+Las operaciones en el espacio de estados son esenciales para analizar sistemas dinámicos complejos, ya que permiten modelar su comportamiento mediante vectores de estado y matrices, ofreciendo una descripción completa de todas las configuraciones posibles. A partir de una función de transferencia, se puede obtener su representación en espacio de estados, que puede adoptar distintas formas canónicas, como la controlable, observable o diagonal, dependiendo del enfoque del análisis. Por tanto, el enfoque en el espacio de estados, complementado con el análisis del polinomio característico, no solo permite evaluar propiedades esenciales como la estabilidad y la dinámica del sistema, sino que también ofrece un marco versátil para abordar problemas de control.
+
 ## Índice
 1. Obtención del Espacio de Estados
 2. Análisis Dinámico en el Espacio de Estados
@@ -28,8 +30,7 @@
 ### 4.1 Determinantes
 ### 4.2 Inversión y Transposición de Matrices
 
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
-
+💡**Ejemplo 1:** 
 $$R=\frac{V}{I}$$
 
 ## 5. Ejercicios
