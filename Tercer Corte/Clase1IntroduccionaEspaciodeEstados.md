@@ -17,7 +17,10 @@ Las variables de estado son cruciales porque permiten capturar toda la informaci
   <img src="https://controlautomaticoeducacion.com/wp-content/uploads/2016/05/VE-300x148.png" />
 </p>
 
-Figura 1. Variables de estado
+<p align="center">
+  Figura 1. Variables de estado
+</p>
+
 
 ### 1.1. Consideraciones para la Selección de Variables de Estado
 La selección de variables de estado es crucial para representar un sistema de forma efectiva, en ese sentido estas deben cumplir con las siguientes condiciones:
