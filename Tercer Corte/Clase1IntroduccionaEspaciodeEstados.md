@@ -105,9 +105,9 @@ $$y(k+2) = x_2(k+1) = -x_2(k) - 0.16x_1(k) + 2u(k)$$
 
 **Paso 3: Desplazar Sucesivamente para Obtener las Derivadas de las Variables de Estado**
 
-Ahora desplazamos las ecuaciones para obtener las derivadas de las variables de estado. Esto se hace expresando las ecuaciones de primer orden para cada variable de estado, de modo que cada variable en k+1 dependa de sus valores anteriores y la entrada u(k).
+Ahora desplazamos las ecuaciones para obtener las derivadas de las variables de estado. Esto se hace expresando las ecuaciones de primer orden para cada variable de estado, de modo que cada variable en k+1 dependa de sus valores anteriores y la entrada $$u(k)$$.
 
-Para las variables de estado x_1 (k) y x_2 (k):
+Para las variables de estado $$x_1 (k)$$ y $$x_2 (k):$$
 
 $$x_1(k+1) = x_2(k)$$
 
@@ -126,19 +126,83 @@ $$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\ x_2(k) \e
 
 
 ## 5. Ejercicios
-📚
+📚 **Ejercicio 1:** Convierte la siguiente ecuación en diferencias a su forma en espacio de estados:
 
+$$y(k+2) - 0.5y(k+1) + 0.2y(k) = u(k)$$
 
+Despejamos la derivada de mayor orden $$y(k+2)$$
+
+$$y(k+2) = 0.5y(k+1) - 0.2y(k) + u(k)$$
+
+Definimos las variables de estado. En este caso, seleccionamos $x_1(k)$ y $x_2(k)$ como nuestras variables de estado.
+
+$$y(k) = x_1(k)$$
+
+$$y(k+1) = x_2(k)$$
+
+Entonces, tenemos:
+
+$$y(k+1) = x_1(k+1) = x_2(k)$$
+
+$$y(k+2) = x_2(k+1) = 0.5x_2(k) - 0.2x_1(k) + u(k)$$
+
+Ahora desplazamos las ecuaciones para obtener:
+
+$$x_1(k+1) = x_2(k)$$
+
+$$x_2(k+1) = 0.5x_2(k) - 0.2x_1(k) + u(k)$$
+
+Las ecuaciones se organizan de la siguiente forma para obtener el modelo en espacio de estados:
+
+$$ X(k+1) = \begin{bmatrix} x_1(k+1) \\  x_2(k+1) \end{bmatrix} = \begin{bmatrix}   0 & 1 \\  -0.2 & 0.5 \end{bmatrix} 
+\begin{bmatrix}  x_1(k) \\  x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\  1 \end{bmatrix} u(k)$$
+
+La salida $y(k)$ se expresa como:
+
+$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
+
+📚 **Ejercicio 2:** Convierte la siguiente ecuación en diferencias a su forma en espacio de estados:
+
+$$y(k+2) + 0.3y(k+1) + 0.5y(k) = 3u(k)$$
+
+Despejamos la derivada de mayor orden $$y(k+2)$$
+
+$$y(k+2) = -0.3y(k+1) - 0.5y(k) + 3u(k)$$
+
+Definimos las variables de estado. En este caso, seleccionamos $x_1(k)$ y $x_2(k)$ como nuestras variables de estado.
+
+$$y(k) = x_1(k)$$
+
+$$y(k+1) = x_2(k)$$
+
+Entonces, tenemos:
+
+$$y(k+1) = x_1(k+1) = x_2(k)$$
+
+$$y(k+2) = x_2(k+1) = -0.3x_2(k) - 0.5x_1(k) + 3u(k)$$
+
+Ahora desplazamos las ecuaciones para obtener:
+
+$$x_1(k+1) = x_2(k)$$
+
+$$x_2(k+1) = -0.3x_2(k) - 0.5x_1(k) + 3u(k)$$
+
+Las ecuaciones se organizan de la siguiente forma para obtener el modelo en espacio de estados:
+
+$$X(k+1) = \begin{bmatrix}   x_1(k+1) \\  x_2(k+1) \end{bmatrix} = \begin{bmatrix}  0 & 1 \\  -0.5 & -0.3 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\  3 \end{bmatrix} u(k)$$
+
+La salida $y(k)$ se expresa como:
+
+$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
 ## 6. Conclusiones
+Dentro de la temática del espacio de estados, se pueden destacar las siguientes conclusiones:
 
+En primer lugar, el espacio de estados proporciona una representación matemática completa y versátil para modelar sistemas dinámicos complejos. Esta herramienta permite describir eficazmente sistemas con múltiples entradas y salidas, lo que facilita su análisis y control, ofreciendo una mayor claridad en la comprensión del comportamiento del sistema en función del tiempo.
 
+Por otro lado, el espacio de estados ofrece una notable flexibilidad al permitir diversas representaciones para un mismo sistema, lo que permite adaptar el modelo según las necesidades específicas del diseño y control. Esta capacidad de transformar el sistema mediante cambios de coordenadas facilita la simplificación de su análisis, optimizando así la implementación de estrategias de control más efectivas y adaptadas al contexto.
 
-```
-var sumar2 = function(numero) {
-  return numero + 2;
-}
-```
+Finalmente, se concluye que el uso del espacio de estados en el diseño de controladores resulta en soluciones más robustas y fiables. Al proporcionar una representación precisa de la dinámica del sistema, permite desarrollar estrategias de control que mejoran la estabilidad, la respuesta ante perturbaciones y la capacidad de adaptación del sistema, lo que es esencial en aplicaciones industriales y tecnológicas de alto rendimiento.
 
 ## Referencias
 
