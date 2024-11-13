@@ -25,6 +25,14 @@ La selección de variables de estado es crucial para representar un sistema de f
 * Deben ser suficientes para describir completamente el comportamiento del sistema.
 * Solo se deben seleccionar variables que no sean redundantes.
 * Las variables seleccionadas deben ser medibles o estimables fácilmente.
+
+ 💡**Ejemplo:**
+
+### Ejemplo 1: Sistema Masa-Resorte
+En un sistema masa-resorte, las variables de estado podrían ser la posición y la velocidad de la masa, donde $$x_1(k)$$ representa la posición y $$x_2(k)$$ la velocidad.
+
+- $$x_1(k) = x(k)$$ (posición de la masa)
+- $$x_2(k) = v(k)$$ (velocidad de la masa)
   
 ## 2. Ecuaciones de Estado
 Las ecuaciones de estado son fundamentales para el modelado de sistemas dinámicos, ya que permiten capturar su comportamiento a lo largo del tiempo. Estas ecuaciones expresan cómo el estado de un sistema, representado por un conjunto de variables, cambia en función de su estado anterior y de las entradas al sistema.
@@ -58,7 +66,6 @@ Donde:
 - $\( D \):$ Matriz de transmisión directa
 
 
-💡**Ejemplo:**
 💡**Ejemplo:**
 
 ## 4. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
