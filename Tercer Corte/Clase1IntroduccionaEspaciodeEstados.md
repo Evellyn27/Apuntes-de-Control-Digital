@@ -126,12 +126,17 @@ $$x_2(k+1) = -x_2(k) - 0.16x_1(k) + 2u(k)$$
 
 Una vez obtenidas las ecuaciones de primer orden, organizamos los coeficientes en las matrices A, B, C y D para representar el sistema en espacio de estados.
 
-$$X(k+1) = \begin{bmatrix} x_1(k+1) \\ x_2(k+1) \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -0.16 & -1 \end{bmatrix} \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix} + \begin{bmatrix} 0 \\ 2 \end{bmatrix} u(k)$$
+$$X(k+1) = \begin{bmatrix} x_1(k+1) \\
+x_2(k+1) \end{bmatrix} = \begin{bmatrix} 0 & 1 \\
+-0.16 & -1 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix} 0 \\
+2 \end{bmatrix} u(k)$$
 
 La salida $$y(k)$$ se expresa como:
 
 
-$$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
+$$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
 
 ## 5. Ejercicios
@@ -163,12 +168,17 @@ $$x_2(k+1) = 0.5x_2(k) - 0.2x_1(k) + u(k)$$
 
 Las ecuaciones se organizan de la siguiente forma para obtener el modelo en espacio de estados:
 
-$$ X(k+1) = \begin{bmatrix} x_1(k+1) \\  x_2(k+1) \end{bmatrix} = \begin{bmatrix}   0 & 1 \\  -0.2 & 0.5 \end{bmatrix} 
-\begin{bmatrix}  x_1(k) \\  x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\  1 \end{bmatrix} u(k)$$
+$$ X(k+1) = \begin{bmatrix} x_1(k+1) \\ 
+x_2(k+1) \end{bmatrix} = \begin{bmatrix}   0 & 1 \\
+-0.2 & 0.5 \end{bmatrix} 
+\begin{bmatrix}  x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\
+1 \end{bmatrix} u(k)$$
 
 La salida $y(k)$ se expresa como:
 
-$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
+$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\
+x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
 📚 **Ejercicio 2:** Convierte la siguiente ecuación en diferencias a su forma en espacio de estados:
 
@@ -198,11 +208,16 @@ $$x_2(k+1) = -0.3x_2(k) - 0.5x_1(k) + 3u(k)$$
 
 Las ecuaciones se organizan de la siguiente forma para obtener el modelo en espacio de estados:
 
-$$X(k+1) = \begin{bmatrix}   x_1(k+1) \\  x_2(k+1) \end{bmatrix} = \begin{bmatrix}  0 & 1 \\  -0.5 & -0.3 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\  3 \end{bmatrix} u(k)$$
+$$X(k+1) = \begin{bmatrix}   x_1(k+1) \\ 
+x_2(k+1) \end{bmatrix} = \begin{bmatrix}  0 & 1 \\
+-0.5 & -0.3 \end{bmatrix} \begin{bmatrix}   x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix}   0 \\
+3 \end{bmatrix} u(k)$$
 
 La salida $y(k)$ se expresa como:
 
-$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\  x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
+$$y(k) = \begin{bmatrix}   1 & 0 \end{bmatrix} \begin{bmatrix}   x_1(k) \\
+x_2(k) \end{bmatrix} + [0] \cdot u(k)$$
 
 ## 6. Conclusiones
 Dentro de la temática del espacio de estados, se pueden destacar las siguientes conclusiones:
