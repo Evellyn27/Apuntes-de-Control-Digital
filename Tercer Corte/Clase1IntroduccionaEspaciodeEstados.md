@@ -26,9 +26,7 @@ La selección de variables de estado es crucial para representar un sistema de f
 * Solo se deben seleccionar variables que no sean redundantes.
 * Las variables seleccionadas deben ser medibles o estimables fácilmente.
 
- 💡**Ejemplo:**
-
-### Ejemplo 1: Sistema Masa-Resorte
+ 💡**Ejemplo:** Sistema Masa-Resorte
 En un sistema masa-resorte, las variables de estado podrían ser la posición y la velocidad de la masa, donde $$x_1(k)$$ representa la posición y $$x_2(k)$$ la velocidad.
 
 - $$x_1(k) = x(k)$$ (posición de la masa)
@@ -71,16 +69,20 @@ Donde:
 ## 4. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
 Para representar una ecuación en diferencias en el espacio de estados, se sigue estos pasos:
 
-### Paso 1: Despejar el Máximo Adelanto de la Ecuación en Diferencias
+**Paso 1: Despejar el Máximo Adelanto de la Ecuación en Diferencias**
+
 Reorganiza la ecuación de modo que el término de máximo adelanto de la salida esté aislado en el lado izquierdo. Esto facilita identificar las relaciones entre las variables de estado y sus desplazamientos en el tiempo.
   
-### Paso 2: Igualar la Salida a la Variable de Estado
+**Paso 2: Igualar la Salida a la Variable de Estado**
+
 Define una variable de estado que represente la salida del sistema. Por ejemplo, si la salida es $y(k)$, establece $x_1=(k)$ donde $x_1$ será la primera variable de estado del sistema.
 
-### Paso 3: Desplazar Sucesivamente para Obtener las Derivadas de las Variables de Estado
+**Paso 3: Desplazar Sucesivamente para Obtener las Derivadas de las Variables de Estado**
+
 Expresa las sucesivas variables de estado en función de los términos de adelanto o retardo. Esto implica identificar cómo cada variable de estado en $k+1$ o $k−1$ depende de otras variables de estado y de la entrada $u(k)$.
 
-### Paso 4: Organizar los Términos en las Matrices A, B, C y D
+**Paso 4: Organizar los Términos en las Matrices A, B, C y D**
+
 Una vez que se han obtenido las ecuaciones de primer orden para las variables de estado, se deben organizar los coeficientes en las matrices A, B, C y D para representar el sistema en espacio de estados. 
 
 💡**Ejemplo:** 
