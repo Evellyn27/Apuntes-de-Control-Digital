@@ -6,9 +6,8 @@ Las operaciones en el espacio de estados son esenciales para analizar sistemas d
 1. Obtención del Espacio de Estados
 2. Análisis Dinámico en el Espacio de Estados
 3. Conversión entre Representaciones
-4. Operaciones Matriciales en el Espacio de Estados
-5. Ejercicios
-6. Conclusiones
+4. Ejercicios
+5. Conclusiones
    
 ## 1. Obtención del Espacio de Estados
 Para obtener el espacio de estados, se transforma el sistema original, descrito por una función de transferencia o ecuaciones diferenciales, en un conjunto de ecuaciones de primer orden. Esto se logra definiendo un vector de estado **$$x$$** que contiene las variables necesarias para describir el sistema en el tiempo. La dinámica del sistema se expresa con matrices: $$A,$$ que relaciona los estados; $$B,$$ que muestra cómo la entrada $$u$$ afecta al estado; $$C,$$ que conecta los estados con la salida $$y,$$ y $$D,$$ que representa el efecto directo de la entrada en la salida.
@@ -29,17 +28,18 @@ la forma canónica se obtiene estructurando las matrices en función de los coef
 La representación en formas canónicas organiza las matrices de espacio de estados para destacar propiedades como la controlabilidad y observabilidad, facilitando la manipulación del sistema. A continuación se presentan las tres formas canónicas más comunes:
 
 - **Forma Canónica Controlable**
-  
-   En esta forma, el sistema es controlable, lo cual significa que todos los estados pueden ser influenciados desde la entrada. Las matrices del sistema se estructuran así:
 
-  
-  $$ A = \begin{bmatrix} 
+En esta forma, el sistema es controlable, lo cual significa que todos los estados pueden ser influenciados desde la entrada. Las matrices del sistema se estructuran así:
+
+ $$
+  A = \begin{bmatrix} 
        0 & 1 & 0 & \dots & 0 \\
        0 & 0 & 1 & \dots & 0 \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        0 & 0 & 0 & \dots & 1 \\
        -a_n & -a_{n-1} & \dots & -a_1
-   \end{bmatrix} $$
+   \end{bmatrix}
+$$
   
 
 $$
@@ -57,12 +57,12 @@ $$
    Esta forma permite que todos los estados sean observables desde la salida del sistema, lo que facilita la estimación de estados internos a partir de mediciones:
 
 $$
-  A = \begin{bmatrix} 
-       0 & 1 & 0 & \dots & 0 \\
-       0 & 0 & 1 & \dots & 0 \\
-       \vdots & \vdots & \vdots & \ddots & \vdots \\
-       0 & 0 & 0 & \dots & 1 \\
-       -a_n & -a_{n-1} & \dots & -a_1
+A = \begin{bmatrix} 
+       0 & 0 & \dots & 0 & -a_n \\
+       1 & 0 & \dots & 0 & -a_{n-1} \\
+       0 & 1 & \dots & 0 & -a_{n-2} \\
+       \vdots & \vdots & \ddots & \vdots & \vdots \\
+       0 & 0 & \dots & 1 & -a_1
    \end{bmatrix}
 $$
 
@@ -77,8 +77,10 @@ $$
 $$
 
 - **Forma Canónica Diagonal**
-  
-   Cuando los polos del sistema son distintos, la matriz \( A \) puede tomar una forma diagonal en la que cada elemento diagonal corresponde a un polo. Esta forma es útil para sistemas que pueden descomponerse en modos independientes:
+
+$$ \( P_1 = z_1; \, P_2 = z_2; \, \dots ; \, P_n = z_n \)$$  
+
+   Cuando los polos del sistema son distintos, la matriz $A$ puede tomar una forma diagonal en la que cada elemento diagonal corresponde a un polo. Esta forma es útil para sistemas que pueden descomponerse en modos independientes:
 
  $$
    A = \begin{bmatrix} 
@@ -101,19 +103,156 @@ $$
 
 
 ## 2. Análisis Dinámico en el Espacio de Estados
+El análisis dinámico en el espacio de estados es fundamental para estudiar el comportamiento temporal de un sistema. 
 ### 2.1 Polinomio Característico
+El polinomio característico es fundamental para calcular los polos de un sistema en el espacio de estados. Estos polos están relacionados con los valores propios de la matriz $$A,$$ la cual describe las dinámicas del sistema en el espacio de estados. Los valores propios se encuentran resolviendo el polinomio característico, que se deriva del determinante de la matriz $$zI - A = 0,$$ donde $$I$$ es la matriz identidad y $$z$$ es la variable compleja asociada con los valores propios.
+
 ### 2.2 Raíces del Polinomio Característico
+
+Para ilustrar cómo calcular las raíces del polinomio característico, se utiliza una matriz general $$A$$ de un sistema, cuyos polos se calcularán a partir de la ecuación característica derivada.
+
+#### Paso 1: Formar la ecuación $$zI - A$$
+
+La ecuación característica se obtiene restando la matriz $$A$$ multiplicada por la variable $$z$$ de la matriz identidad $$I$$:
+
+$$
+zI - A = \begin{bmatrix}
+z & 0 & 0 \\
+0 & z & 0 \\
+0 & 0 & z
+\end{bmatrix}
+$$
+
+- A
+Este resultado dará lugar a una nueva matriz $$zI - A,$$ cuya determinante es el polinomio característico.
+
+#### Paso 2: Calcular el determinante de $$zI - A$$
+
+El siguiente paso consiste en calcular el determinante de la matriz $$zI - A.$$ Este determinante es el polinomio característico:
+
+$$
+\text{det}(zI - A) = p(z) = z^3 + a_2z^2 + a_1z + a_0
+$$
+
+#### Paso 3: Resolver el polinomio característico
+
+El polinomio característico es una ecuación algebraica cuya solución se obtiene al encontrar las raíces de la ecuación:
+
+$$
+p(z) = 0
+$$
+
+Las raíces de esta ecuación corresponden a los polos del sistema, es decir, los valores propios de la matriz $$A.$$
+
+💡**Ejemplo 1:** 
+
+Consideremos el siguiente ejemplo con una matriz $$A$$ dada:
+
+$$
+A = \begin{bmatrix}
+0 & -1 & 0 \\
+0 & 0 & 1 \\
+-6 & -11 & -6
+\end{bmatrix}
+$$
+
+$$
+zI - A = \begin{bmatrix}
+z & 0 & 0 \\
+0 & z & 0 \\
+0 & 0 & z
+\end{bmatrix} -\begin{bmatrix}
+0 & -1 & 0 \\
+0 & 0 & 1 \\
+-6 & -11 & -6
+\end{bmatrix}
+= \begin{bmatrix}
+z & 1 & 0 \\
+0 & z & -1 \\
+6 & 11 & z + 6
+\end{bmatrix}
+$$
+
+
+$$
+\text{det}(zI - A) = \begin{vmatrix}
+z & 1 & 0 \\
+0 & z & -1 \\
+6 & 11 & z + 6
+\end{vmatrix}
+$$
+
+Calculamos este determinante por cofactores:
+
+$$
+= z \begin{vmatrix}
+z & -1 \\
+11 & z + 6
+\end{vmatrix} -1\begin{vmatrix}
+0 & -1 \\
+6 & z + 6
+\end{vmatrix}+ 0 \cdot \begin{vmatrix}
+0 & z \\
+6 & 11
+\end{vmatrix}
+$$
+
+* Determinante de la primera submatriz:
+  
+$$
+\[
+\begin{vmatrix}
+z & -1 \\
+11 & z + 6
+\end{vmatrix} = z(z + 6) - (-1)(11) = z^2 + 6z + 11
+\]
+$$
+
+* Determinante de la segunda submatriz:
+
+$$
+\begin{vmatrix}
+0 & -1 \\
+6 & z + 6
+\end{vmatrix} = 0(z + 6) - (-1)(6) = 6
+$$
+
+Sustituyendo en la ecuación del determinante:
+
+$$
+\text{det}(zI - A) = z(z^2 + 6z + 11) - 1(6)
+$$
+
+$$
+= z^3 + 6z^2 + 11z - 6
+$$
+
+
+El polinomio característico es:
+
+$$
+z^3 + 6z^2 + 11z - 6 = 0
+$$
+
+Para encontrar las raíces de esta ecuación, que corresponden a los polos del sistema, podemos factorizar el polinomio directamente:
+
+$$
+(z + 1)(z + 2)(z + 3) = 0
+$$
+
+Por lo tanto, los polos del sistema son:
+
+$$
+z = -1, \quad z = -2, \quad z = -3
+$$
+
 
 ## 3. Conversión entre Representaciones
 ### 3.1 De Espacio de Estados a Función de Transferencia
 ### 3.2 De Función de Transferencia a Espacio de Estados
 
-## 4. Operaciones Matriciales en el Espacio de Estados
-### 4.1 Determinantes
-### 4.2 Inversión y Transposición de Matrices
-
 💡**Ejemplo 1:** 
-$$R=\frac{V}{I}$$
+$$$$
 
 ## 5. Ejercicios
 
