@@ -27,6 +27,7 @@ La selección de variables de estado es crucial para representar un sistema de f
 * Las variables seleccionadas deben ser medibles o estimables fácilmente.
 
  💡**Ejemplo:** Sistema Masa-Resorte
+ 
 En un sistema masa-resorte, las variables de estado podrían ser la posición y la velocidad de la masa, donde $$x_1(k)$$ representa la posición y $$x_2(k)$$ la velocidad.
 
 - $$x_1(k) = x(k)$$ (posición de la masa)
@@ -63,8 +64,6 @@ Donde:
 - $\( C \):$ Matriz de salida
 - $\( D \):$ Matriz de transmisión directa
 
-
-💡**Ejemplo:**
 
 ## 4. Procedimiento para Convertir una Ecuación en Diferencias a Espacio de Estados
 Para representar una ecuación en diferencias en el espacio de estados, se sigue estos pasos:
