@@ -87,9 +87,7 @@ Expresa las sucesivas variables de estado en función de los términos de adelan
 
 Una vez que se han obtenido las ecuaciones de primer orden para las variables de estado, se deben organizar los coeficientes en las matrices A, B, C y D para representar el sistema en espacio de estados. 
 
-💡**Ejemplo:** 
-
-La ecuación en diferencias es:
+💡**Ejemplo:** La ecuación en diferencias es:
 
 $$y(k+2) + y(k+1) + 0.16y(k) = 2u(k)$$
 
@@ -216,4 +214,6 @@ Por otro lado, el espacio de estados ofrece una notable flexibilidad al permitir
 Finalmente, se concluye que el uso del espacio de estados en el diseño de controladores resulta en soluciones más robustas y fiables. Al proporcionar una representación precisa de la dinámica del sistema, permite desarrollar estrategias de control que mejoran la estabilidad, la respuesta ante perturbaciones y la capacidad de adaptación del sistema, lo que es esencial en aplicaciones industriales y tecnológicas de alto rendimiento.
 
 ## Referencias
+[1] Control Automático Educación, *Variables de Estado y Espacio de Estados*, Control Automático Educación, 2023. [Enlace]. Consultado el 13 de noviembre de 2024. Disponible en: [https://controlautomaticoeducacion.com/sistemas-dinamicos-lineales/variables-de-estado-espacio-de-estados/](https://controlautomaticoeducacion.com/sistemas-dinamicos-lineales/variables-de-estado-espacio-de-estados/)
 
+[2] Cote B., J. E., *Espacio de Estados*, 8° semestre, 2023. [Diapositivas]. Consultado el 13 de noviembre de 2024.
