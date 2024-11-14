@@ -506,30 +506,173 @@ El objetivo es encontrar la función de transferencia $G(z) = \frac{Y(z)}{U(z)},
    G(z) = \frac{\mathbf{Y}(z)}{\mathbf{U}(z)} = C (zI - A)^{-1} B + D
   $$
 
-💡**Ejemplo 1:** 
-
-Consideremos un sistema con la siguiente representación en espacio de estados:
-
-$$
-\mathbf{x}(k+1) = \begin{bmatrix} 0 & 1 \\ -\frac{K}{M} & -\frac{B}{M} \end{bmatrix} \mathbf{x}(k) + \begin{bmatrix} 0 \\ \frac{1}{M} \end{bmatrix} \mathbf{u}(k)
-$$
-$$
-\mathbf{y}(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{x}(k) + \begin{bmatrix} 0 \end{bmatrix} \mathbf{u}(k)
-$$
-
-Aplicando el procedimiento descrito, obtenemos la función de transferencia del sistema en el dominio Z:
-
-$$
-G(z) = \frac{Y(z)}{U(z)} = \frac{z}{z^2 + \frac{B}{M}z + \frac{K}{M}}
-$$
-
-
-
-$$$$
-
 ## 5. Ejercicios
 
-📚
+📚 **Ejercicio 1:**
+
+Dada la siguiente función de transferencia discreta:
+
+$$
+G(z) = \frac{z + 2}{z^2 + 1.4z + 0.5}
+$$
+
+Se requiere realizar la representación en el espacio de estados de la función de transferencia, identificando las matrices de estado y salida.
+
+1. **Obten los coeficientes del polinomio característico** de la función de transferencia. Los coeficientes son:  
+   -  $a_1 = 0.5$
+   -  $a_2 = 1.4$
+
+2. **Ecuación de Estado:**
+
+La ecuación de estado tiene la forma:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = A \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + B u(k)
+$$
+
+Donde las matrices $A$ y $B$ deben ser determinadas a partir de los coeficientes obtenidos.
+
+Sustituyendo las matrices:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = \begin{bmatrix}
+0 & 1 \\
+-0.5 & -1.4
+\end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix} 1 \\
+0 \end{bmatrix} u(k)
+$$
+
+3. **Ecuación de Salida:**
+
+La ecuación de salida tiene la forma:
+
+$$
+y(k) = C \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
+$$
+
+Donde la matriz $$C$$ es:
+
+$$
+y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
+$$
+
+
+📚 **Ejercicio 2:**
+Consideremos la siguiente matriz \( A \):
+
+$$
+A = \begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 1 \\
+-4 & -8 & -5
+\end{bmatrix}
+$$
+
+Ahora, calculamos \( zI - A \):
+
+$$
+zI - A = \begin{bmatrix}
+z & 0 & 0 \\
+0 & z & 0 \\
+0 & 0 & z
+\end{bmatrix} - \begin{bmatrix}
+1 & -1 & 0 \\
+0 & 0 & 1 \\
+-4 & -8 & -5
+\end{bmatrix}
+= \begin{bmatrix}
+z - 1 & 1 & 0 \\
+0 & z & -1 \\
+4 & 8 & z + 5
+\end{bmatrix}
+$$
+
+El determinante de \( zI - A \) es:
+
+$$
+\text{det}(zI - A) = \begin{vmatrix}
+z - 1 & 1 & 0 \\
+0 & z & -1 \\
+4 & 8 & z + 5
+\end{vmatrix}
+$$
+
+Calculamos este determinante por cofactores:
+
+$$
+= (z - 1) \begin{vmatrix}
+z & -1 \\
+8 & z + 5
+\end{vmatrix} - 1 \begin{vmatrix}
+0 & -1 \\
+4 & z + 5
+\end{vmatrix} + 0 \cdot \begin{vmatrix}
+0 & z \\
+4 & 8
+\end{vmatrix}
+$$
+
+* Determinante de la primera submatriz:
+
+$$
+\begin{vmatrix}
+z & -1 \\
+8 & z + 5
+\end{vmatrix} = z(z + 5) - (-1)(8) = z^2 + 5z + 8
+$$
+
+* Determinante de la segunda submatriz:
+
+$$
+\begin{vmatrix}
+0 & -1 \\
+4 & z + 5
+\end{vmatrix} = 0(z + 5) - (-1)(4) = 4
+$$
+
+Sustituyendo en la ecuación del determinante:
+
+$$
+\text{det}(zI - A) = (z - 1)(z^2 + 5z + 8) - 1(4)
+$$
+
+$$
+= (z - 1)(z^2 + 5z + 8) - 4
+$$
+
+Ahora expandimos el producto:
+
+$$
+= z(z^2 + 5z + 8) - 1(z^2 + 5z + 8) - 4
+$$
+
+$$
+= z^3 + 5z^2 + 8z - z^2 - 5z - 8 - 4
+$$
+
+$$
+= z^3 + 4z^2 + 3z - 12
+$$
+
+El polinomio característico es:
+
+$$
+z^3 + 4z^2 + 3z - 12 = 0
+$$
+
+$$
+z_1 \approx -4.47, \quad z_2 \approx 0.21, \quad z_3 \approx -0.74
+$$
 
 ## 6. Conclusiones
 Las conclusiones derivadas del tema indican que:
