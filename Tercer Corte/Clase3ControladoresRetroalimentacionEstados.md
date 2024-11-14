@@ -21,7 +21,16 @@ la matriz de controlabilidad $U$ está definida como:
 $$U = [B \; AB \; A^2B \; \dots \; A^{n-1}B]$$
 
 
-Esta matriz describe cómo las entradas de control afectan cada variable de estado a través de sus combinaciones con las potencias de la matriz $A.$ Las dimensiones de $U$ son las mismas que las de la matriz $A$, y si el determinante de $U$ es distinto de cero o si el rango de $U$ es igual a la cantidad de variables de estado, el sistema es controlable. Esto implica que todas las variables del sistema pueden ser gobernadas por las entradas de control y que es posible llevar el sistema a cualquier estado deseado en un intervalo de tiempo finito.
+La matriz \( U \) es fundamental para determinar la controlabilidad del sistema. A continuación, se presentan las características principales de \( U \):
+
+| **Característica**                | **Descripción**                                                                                       |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Dimensiones**                   | Las mismas que la matriz \( A \), lo que asegura que \( U \) puede relacionarse directamente con las variables de estado. |
+| **Determinante de \( U \)**       | Si el determinante es distinto de cero, indica que el sistema es controlable.                          |
+| **Rango de \( U \)**              | Cuando el rango de \( U \) es igual al número de variables de estado, el sistema es controlable.       |
+| **Significado de Controlabilidad** | Todas las variables del sistema pueden ser gobernadas por las entradas de control.                     |
+| **Implicación**                   | Permite llevar el sistema a cualquier estado deseado en un intervalo de tiempo finito.                 |
+
 
 >🔑 *Determinante:* Valor calculado a partir de la matriz que, si es diferente de cero, indica controlabilidad.
 
@@ -83,15 +92,196 @@ Dado que el determinante de $U$ es distinto de cero, el sistema es controlable.
 
 ## 2. Observabilidad
 
-### 2.1. Matriz de Observabilidad
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
- 
+La observabilidad es una propiedad fundamental en los sistemas de control que permite determinar si es posible conocer el estado interno del sistema a partir de sus salidas y entradas a lo largo del tiempo. Un sistema es observable si, al analizar las salidas, es posible reconstruir su estado completo.
+
+### 2.1. Características Clave de la Observabilidad
+
+| **Característica**                          | **Descripción**                                                                                         |
+|---------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **Definición**                              | La observabilidad permite inferir el estado interno de un sistema mediante sus salidas y entradas.      |
+| **Componente Matemático**                   | Se utiliza una construcción de matrices que combinan la matriz \( C \) con las potencias de la matriz \( A \).                             |
+| **Condición para ser Observable**           | Un sistema es observable si el determinante de la matriz formada por \( C \) y las potencias de \( A \) es diferente de cero, o si su rango es igual al número de variables de estado. |
+| **Importancia**                             | La observabilidad es clave para poder estimar el estado completo del sistema, incluso si no se tienen todas las variables directamente observadas.  |
+
+### 2.2. Construcción de la Matriz de Observación
+
+Para un sistema descrito por:
+
+$$
+X(k+1) = AX(k) + Bu(k)
+$$
+
+$$
+y(k) = CX(k) + Du(k)
+$$
+
+La matriz de observación se define como:
+
+$$
+V = \begin{bmatrix} C \\
+CA \\
+CA^2 \\
+\vdots \\
+CA^{n-1} \end{bmatrix}
+$$
+
+Este conjunto de matrices refleja cómo cada estado se ve en las salidas del sistema a lo largo del tiempo, proporcionando la herramienta para verificar si el sistema es observable.
+
 💡**Ejemplo:** 
 
+Consideramos el siguiente sistema:
+
+$$
+\begin{bmatrix} x_1(k+1) \\
+x_2(k+1) \end{bmatrix} = \begin{bmatrix} 1.5 & 1 \\
+1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix} 1 \\
+0 \end{bmatrix} u(k)
+$$
+
+$$
+y(k) = \begin{bmatrix} 2 & -1 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
+$$
+
+**Paso 1: Construcción de la matriz de observación $V$.**
+
+La matriz $C$:
+  
+   $$C = \begin{bmatrix} 2 & -1 \end{bmatrix}$$
+
+Calculamos $CA$:
+   
+  $$
+   CA = \begin{bmatrix} 2 & -1 \end{bmatrix} \begin{bmatrix} 1.5 & 1 \\
+   1 & 0 \end{bmatrix} = \begin{bmatrix} 2 & 2 \end{bmatrix}
+  $$
+
+La matriz de observación $V$ es:
+
+$$
+V = \begin{bmatrix} 2 & -1 \\
+2 & 2 \end{bmatrix}
+$$
+
+**Paso 2: Verificación de la observabilidad.**
+
+Calculamos el determinante de $V$:
+
+$$
+\det(V) = 6
+$$
+
+Como el determinante es distinto de cero, concluimos que el sistema es observable.
+
 ## 3. Diseño de Controladores por Retroalimentación de Estados
+Los controladores por retroalimentación de estados son una técnica esencial en la teoría de control moderno. Su propósito es modificar el comportamiento dinámico del sistema al realimentar todas sus variables de estado. Esto permite asignar los polos del sistema en lazo cerrado en ubicaciones específicas, mejorando así la estabilidad, el tiempo de respuesta y la capacidad de rechazo a perturbaciones.
+
 ### 3.1 Condiciones de diseño
+El diseño de controladores por retroalimentación de estados requiere cumplir con las siguientes condiciones:
+
+- **Controlabilidad:**  
+  El sistema debe ser completamente controlable, lo que implica que todas las variables de estado pueden ser controladas mediante la entrada. La matriz de controlabilidad $U$ se define como:
+  
+ $$
+  U = [B \quad AB \quad A^2B \quad \dots \quad A^{n-1}B]
+  $$
+  
+  **Condición:** El rango de $U$ debe ser igual al número de estados $n$.
+
+- **Medición de Variables de Estado:**  
+  Todas las variables de estado deben ser **medibles** o **estimables** mediante un observador.
+
+
 ### 3.2 Metodología de diseño
+El proceso de diseño sigue estos pasos:
+
+1. **Verificación de la Controlabilidad:**
+   
+   Calcular la matriz de controlabilidad $U$ y verificar que su rango sea $n$.
+
+2. **Obtención del Polinomio Característico en Lazo Abierto:**
+   
+   Determinar el polinomio característico del sistema:
+   
+  $$
+   |zI - A| = z^n + a_1z^{n-1} + \dots + a_n
+  $$
+
+3. **Definición del Polinomio Característico Deseado:**
+   
+   Especificar el polinomio deseado según los requisitos de desempeño:
+    
+   $$
+   P_d(z) = z^n + \alpha_1z^{n-1} + \dots + \alpha_n
+   $$
+
+4. **Determinación de la Matriz de Transformación $T$:**  
+   Si el sistema no está en forma canónica controlable, se utiliza la matriz $T$ para transformar el sistema:
+   
+   $$
+   T = UW^{-1}
+   $$
+   
+   Donde $W$ es una matriz de Vandermonde basada en los coeficientes del polinomio característico.
+
+5. **Cálculo de las Ganancias del Controlador:**  
+   Finalmente, se calculan las ganancias $K$:
+   
+   $$
+   K = (\alpha - a)T^{-1}
+   $$
+
 💡**Ejemplo:** 
+
+**Sistema:**  
+$$
+A = \begin{bmatrix} 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+-1 & -5 & -6 
+\end{bmatrix}, \quad 
+B = \begin{bmatrix} 
+0 \\ 
+0 \\ 
+1 
+\end{bmatrix}
+$$
+
+**Polos Deseados:**  
+$$
+z_1 = -0.2 + j0.4, \quad z_2 = -0.2 - j0.4, \quad z_3 = -0.02
+$$
+
+**Matriz de Controlabilidad:**  
+   $$
+   U = [B \quad AB \quad A^2B] = 
+   \begin{bmatrix} 
+   0 & 0 & -1 \\ 
+   0 & 1 & -5 \\ 
+   1 & -5 & -6 
+   \end{bmatrix}
+   $$
+   
+   **Rango:** 3 → El sistema es controlable.
+
+**Polinomio Característico en Lazo Abierto:** 
+
+   $$
+   P(z) = z^3 + 6z^2 + 5z + 1
+   $$
+
+**Polinomio Característico Deseado:**  
+
+   $$
+   P_d(z) = z^3 + 0.402z^2 + 0.2008z + 0.0004
+   $$
+   
+**Cálculo de las Ganancias:**  
+
+  $$
+   K = [-0.996 \quad -4.799 \quad -5.598]
+   $$
 
 ## 4. Ejercicios
 📚 **Ejercicio 1:**
