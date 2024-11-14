@@ -196,11 +196,11 @@ El diseño de controladores por retroalimentación de estados requiere cumplir c
 ### 3.2 Metodología de diseño
 El proceso de diseño sigue estos pasos:
 
-1. **Verificación de la Controlabilidad:**
+**Verificación de la Controlabilidad:**
    
    Calcular la matriz de controlabilidad $U$ y verificar que su rango sea $n$.
 
-2. **Obtención del Polinomio Característico en Lazo Abierto:**
+**Obtención del Polinomio Característico en Lazo Abierto:**
    
    Determinar el polinomio característico del sistema:
    
@@ -208,7 +208,7 @@ El proceso de diseño sigue estos pasos:
    |zI - A| = z^n + a_1z^{n-1} + \dots + a_n
   $$
 
-3. **Definición del Polinomio Característico Deseado:**
+**Definición del Polinomio Característico Deseado:**
    
    Especificar el polinomio deseado según los requisitos de desempeño:
     
@@ -216,7 +216,8 @@ El proceso de diseño sigue estos pasos:
    P_d(z) = z^n + \alpha_1z^{n-1} + \dots + \alpha_n
    $$
 
-4. **Determinación de la Matriz de Transformación $T$:**  
+**Determinación de la Matriz de Transformación $T$:**
+   
    Si el sistema no está en forma canónica controlable, se utiliza la matriz $T$ para transformar el sistema:
    
    $$
@@ -225,7 +226,8 @@ El proceso de diseño sigue estos pasos:
    
    Donde $W$ es una matriz de Vandermonde basada en los coeficientes del polinomio característico.
 
-5. **Cálculo de las Ganancias del Controlador:**  
+**Cálculo de las Ganancias del Controlador:**
+   
    Finalmente, se calculan las ganancias $K$:
    
    $$
@@ -235,6 +237,7 @@ El proceso de diseño sigue estos pasos:
 💡**Ejemplo:** 
 
 **Sistema:**  
+
 $$
 A = \begin{bmatrix} 
 0 & 1 & 0 \\ 
@@ -249,11 +252,13 @@ B = \begin{bmatrix}
 $$
 
 **Polos Deseados:**  
+
 $$
 z_1 = -0.2 + j0.4, \quad z_2 = -0.2 - j0.4, \quad z_3 = -0.02
 $$
 
 **Matriz de Controlabilidad:**  
+
    $$
    U = [B \quad AB \quad A^2B] = 
    \begin{bmatrix} 
@@ -285,7 +290,172 @@ $$
 
 ## 4. Ejercicios
 📚 **Ejercicio 1:**
+
+**Sistema:**
+
+$$
+A = \begin{bmatrix} 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+-2 & -3 & -4 
+\end{bmatrix}, \quad 
+B = \begin{bmatrix} 
+0 \\ 
+1 \\ 
+1 
+\end{bmatrix}
+$$
+
+**Cálculo de la matriz de controlabilidad** \( U \):
+
+$$
+U = [B \quad AB \quad A^2B]
+$$
+
+- \( AB \):
+  
+  $$
+  AB = \begin{bmatrix} 
+  0 & 1 & 0 \\ 
+  0 & 0 & 1 \\
+  -2 & -3 & -4 
+  \end{bmatrix}
+  \begin{bmatrix} 
+  0 \\ 
+  1 \\ 
+  1 
+  \end{bmatrix} = 
+  \begin{bmatrix} 
+  1 \\ 
+  1 \\ 
+  -7 
+  \end{bmatrix}
+  $$
+
+- \( A^2B \):
+  
+  $$
+  A^2B = A(AB) = 
+  \begin{bmatrix} 
+  0 & 1 & 0 \\ 
+  0 & 0 & 1 \\ 
+  -2 & -3 & -4 
+  \end{bmatrix}
+  \begin{bmatrix} 
+  1 \\ 
+  1 \\ 
+  -7 
+  \end{bmatrix} = 
+  \begin{bmatrix} 
+  1 \\ 
+  -7 \\ 
+  27 
+  \end{bmatrix}
+  $$
+
+Ahora, \( U \) es:
+
+$$
+U = \begin{bmatrix} 
+0 & 1 & 1 \\ 
+1 & 1 & -7 \\ 
+1 & -7 & 27 
+\end{bmatrix}
+$$
+
+Calculemos el determinante de \( U \):
+
+$$
+\text{det}(U) = 
+\begin{vmatrix} 
+0 & 1 & 1 \\ 
+1 & 1 & -7 \\ 
+1 & -7 & 27 
+\end{vmatrix} = 0(1 \times 27 - (-7)(-7)) - 1(1 \times 27 - (-7)(1)) + 1(1(-7) - 1(1)) = 54
+$$
+
+El determinante es distinto de cero, por lo tanto, el rango es 3 y el sistema es controlable.
+
 📚 **Ejercicio 2:**
+
+**Sistema:**
+
+$$
+A = \begin{bmatrix} 
+1 & 2 & 0 \\ 
+0 & 1 & 3 \\ 
+0 & 0 & 1 
+\end{bmatrix}, \quad 
+C = \begin{bmatrix} 
+1 & 0 & 1 
+\end{bmatrix}
+$$
+
+**Cálculo de la matriz de observabilidad** \( V \):
+
+$$
+V = \begin{bmatrix} 
+C \\ 
+CA \\ 
+CA^2 
+\end{bmatrix}
+$$
+
+- \( CA \):
+  
+  $$
+  CA = \begin{bmatrix} 
+  1 & 0 & 1 
+  \end{bmatrix}
+  \begin{bmatrix} 
+  1 & 2 & 0 \\ 
+  0 & 1 & 3 \\ 
+  0 & 0 & 1 
+  \end{bmatrix}  = 
+  \begin{bmatrix} 
+  1 & 2 & 1 
+  \end{bmatrix}
+  $$
+
+- \( CA^2 \):
+  
+  $$
+  CA^2 = C(A^2) = 
+  \begin{bmatrix} 
+  1 & 0 & 1 
+  \end{bmatrix}
+  \begin{bmatrix} 
+  1 & 2 & 0 \\ 
+  0 & 1 & 3 \\ 
+  0 & 0 & 1 
+  \end{bmatrix}^2 =
+  \begin{bmatrix} 
+  1 & 4 & 7 
+  \end{bmatrix}
+  $$
+
+Entonces:
+
+$$
+V = \begin{bmatrix} 
+1 & 0 & 1 \\ 
+1 & 2 & 1 \\ 
+1 & 4 & 7 
+\end{bmatrix}
+$$
+
+Calculemos el determinante de \( V \):
+
+$$
+\text{det}(V) = 
+\begin{vmatrix} 
+1 & 0 & 1 \\ 
+1 & 2 & 1 \\ 
+1 & 4 & 7 
+\end{vmatrix} = 1(2 \times 7 - 4 \times 1) - 0 + 1(1 \times 4 - 1 \times 2) = 12
+$$
+
+El determinante es distinto de cero, por lo tanto, el rango es 3 y el sistema es observable.
 
 ## 5. Conclusiones
 Las conclusiones derivadas del tema indican que:
