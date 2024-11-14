@@ -5,7 +5,7 @@ Las operaciones en el espacio de estados son esenciales para analizar sistemas d
 ## Índice
 1. Obtención del Espacio de Estados
 2. Análisis Dinámico en el Espacio de Estados
-3. Conversión entre Representaciones
+3. Conversión entre Espacio de Estados a Función de Transferencia
 4. Ejercicios
 5. Conclusiones
    
@@ -87,7 +87,8 @@ $$
 * Ecuación de Salida:
 
 $$
-y(k) = C_c \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix}
+y(k) = C_c \begin{bmatrix} x_1(k) 
+\\ x_2(k) \end{bmatrix}
 $$
 
 Sustituyendo la matriz $$C_c$$:
@@ -195,6 +196,115 @@ La descomposición en fracciones parciales es:
 $$
 \frac{z + 1}{z^2 + 1.3z + 0.4} = \frac{C_1}{z + 0.8} + \frac{C_2}{z + 0.5}
 $$
+
+Se Multiplica por el denominador común
+
+$$
+z + 1 = C_1(z + 0.5) + C_2(z + 0.8)
+$$
+
+Expandiendo:
+
+$$
+z + 1 = C_1z + 0.5C_1 + C_2z + 0.8C_2
+$$
+
+Agrupamos los términos:
+
+$$
+z + 1 = (C_1 + C_2)z + (0.5C_1 + 0.8C_2)
+$$
+
+Comparando los coeficientes:
+
+- Coeficiente de $z:$
+  
+ $$
+  C_1 + C_2 = 1
+$$
+
+- Término independiente:
+  
+$$
+  0.5C_1 + 0.8C_2 = 1
+$$
+
+Resolviendo el sistema de ecuaciones:
+
+$$ C_1 + C_2 = 1 $$
+$$ 0.5C_1 + 0.8C_2 = 1 $$
+
+De la primera ecuación:
+
+$$
+C_1 = 1 - C_2
+$$
+
+Sustituyendo en la segunda ecuación:
+
+$$
+0.5(1 - C_2) + 0.8C_2 = 1
+$$
+
+Simplificando:
+
+$$
+0.5 - 0.5C_2 + 0.8C_2 = 1
+$$
+
+$$
+0.3C_2 = 0.5
+$$
+
+$$
+C_2 = \frac{5}{3}
+$$
+
+Sustituyendo en $C_1 = 1 - C_2\:$
+
+$$
+C_1 = 1 - \frac{5}{3} = -\frac{2}{3}
+$$
+
+Expresión final
+
+$$
+\frac{z + 1}{z^2 + 1.3z + 0.4} = \frac{-\frac{2}{3}}{z + 0.8} + \frac{\frac{5}{3}}{z + 0.5}
+$$
+
+* Ecuaciones de Estado
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} =
+\begin{bmatrix}
+-0.8 & 0 \\
+0 & -0.5
+\end{bmatrix}
+\begin{bmatrix}
+x_1(k) \\
+x_2(k)
+\end{bmatrix}+\begin{bmatrix}1 \\
+1
+\end{bmatrix}
+u(k)
+$$
+
+* Ecuación de Salida
+
+$$
+y(k) =
+\begin{bmatrix}
+\frac{5}{3} & -\frac{2}{3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1(k) \\
+x_2(k)
+\end{bmatrix}
+$$
+
 
 ## 2. Análisis Dinámico en el Espacio de Estados
 El análisis dinámico en el espacio de estados es fundamental para estudiar el comportamiento temporal de un sistema. 
@@ -341,9 +451,8 @@ z = -1, \quad z = -2, \quad z = -3
 $$
 
 
-## 3. Conversión entre Representaciones
-### 3.1 De Espacio de Estados a Función de Transferencia
-### 3.2 De Función de Transferencia a Espacio de Estados
+## 3. Conversión entre Espacio de Estados a Función de Transferencia
+
 
 💡**Ejemplo 1:** 
 $$$$
@@ -353,6 +462,12 @@ $$$$
 📚
 
 ## 6. Conclusiones
+Las conclusiones derivadas del tema indican que:
 
+En primer lugar, es posible obtener diversas representaciones del espacio de estados a partir de la función de transferencia del sistema, en ese sentido, esta flexibilidad ofrece una alternativa eficaz para modelar sistemas dinámicos, permitiendo transformar la información de una forma que se adapte mejor a las necesidades del análisis o diseño del sistema, facilitando su comprensión desde distintas perspectivas.
+
+De igual manera, también es factible obtener la función de transferencia a partir de cualquiera de las representaciones en el espacio de estados, lo que establece una relación bidireccional entre ambos enfoques. Esta capacidad de conversión entre modelos amplía las herramientas disponibles y facilita la selección del enfoque más adecuado en función de los requerimientos del análisis o el control del sistema.
+
+Finalmente, cuando se trabaja con representaciones de estados, es indispensable la aplicación de las operaciones básicas con matrices, tales como la aritmética matricial, transposición, determinación de determinantes e inversión de matrices, por ende, estas operaciones son esenciales para la manipulación de los modelos y para obtener soluciones precisas en el análisis de la estabilidad y el control de sistemas dinámicos, asegurando que se pueda modelar, optimizar y controlar el comportamiento del sistema con eficacia.
 
 ## Referencias
