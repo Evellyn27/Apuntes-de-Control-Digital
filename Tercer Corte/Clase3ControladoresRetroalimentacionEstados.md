@@ -289,9 +289,9 @@ $$
    $$
 
 ## 4. Ejercicios
-📚 **Ejercicio 1:**
+📚 **Ejercicio 1: Verificación de Controlabilidad**
 
-**Sistema:**
+Dado el sistema definido por las matrices:
 
 $$
 A = \begin{bmatrix} 
@@ -312,7 +312,7 @@ $$
 U = [B \quad AB \quad A^2B]
 $$
 
-- \( AB \):
+\( AB \):
   
   $$
   AB = \begin{bmatrix} 
@@ -332,7 +332,7 @@ $$
   \end{bmatrix}
   $$
 
-- \( A^2B \):
+ \( A^2B \):
   
   $$
   A^2B = A(AB) = 
@@ -363,7 +363,7 @@ U = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Calculemos el determinante de \( U \):
+Se calcula el determinante de \( U \):
 
 $$
 \text{det}(U) = 
@@ -376,9 +376,9 @@ $$
 
 El determinante es distinto de cero, por lo tanto, el rango es 3 y el sistema es controlable.
 
-📚 **Ejercicio 2:**
+📚 **Ejercicio 2:  Verificación de Observabilidad**
 
-**Sistema:**
+Considere el sistema representado por las siguientes matrices:
 
 $$
 A = \begin{bmatrix} 
@@ -401,7 +401,7 @@ CA^2
 \end{bmatrix}
 $$
 
-- \( CA \):
+\( CA \):
   
   $$
   CA = \begin{bmatrix} 
@@ -417,7 +417,7 @@ $$
   \end{bmatrix}
   $$
 
-- \( CA^2 \):
+\( CA^2 \):
   
   $$
   CA^2 = C(A^2) = 
@@ -444,7 +444,7 @@ V = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Calculemos el determinante de \( V \):
+Se calcula el determinante de \( V \):
 
 $$
 \text{det}(V) = 
