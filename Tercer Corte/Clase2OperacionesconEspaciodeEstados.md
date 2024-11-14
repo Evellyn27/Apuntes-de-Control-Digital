@@ -453,8 +453,78 @@ $$
 
 ## 3. Conversión entre Espacio de Estados a Función de Transferencia
 
+La conversión entre el espacio de estados y la función de transferencia es un proceso fundamental en el análisis y diseño de sistemas dinámicos, tanto continuos como discretos. A través de este procedimiento, se puede obtener una representación en el dominio de Laplace (o Z para sistemas discretos) de un sistema dinámico descrito por ecuaciones de espacio de estados.
+
+#### 3.1 Procedimiento:
+
+Consideremos un sistema discreto representado por las siguientes ecuaciones en espacio de estados:
+
+$$\mathbf{x}(k+1) = A \mathbf{x}(k) + B \mathbf{u}(k)$$
+
+$$\mathbf{y}(k) = C \mathbf{x}(k) + D \mathbf{u}(k)$$
+
+
+Donde:
+- $\mathbf{x}(k)$ es el vector de estado.
+- $\mathbf{u}(k)$ es el vector de entrada.
+- $\mathbf{y}(k)$ es el vector de salida.
+- $A, B, C, D$ son matrices de dimensiones adecuadas.
+
+El objetivo es encontrar la función de transferencia $G(z) = \frac{Y(z)}{U(z)},$ que es la relación entre la salida $Y(z)$ y la entrada $U(z)$ en el dominio $z.$
+
+**Paso 1: Transformación de la ecuación en espacio de estados al dominio Z**:  
+   Aplicando la Transformada Z a las ecuaciones en espacio de estados, obtenemos las siguientes ecuaciones en el dominio Z:
+   
+  $$z \mathbf{X}(z) - \mathbf{x}(z) = A \mathbf{X}(z) + B \mathbf{U}(z)$$
+   
+  $$\mathbf{Y}(z) = C \mathbf{X}(z) + D \mathbf{U}(z)$$
+   
+**Paso 2: Despeje de $$\mathbf{X}(z)$$**:  
+   Para despejar $$\mathbf{X}(z),$$ se resuelve la ecuación de estado:
+   
+  $$
+   (zI - A) \mathbf{X}(z) = B \mathbf{U}(z)
+  $$
+   
+   Entonces:
+   
+   $$
+   \mathbf{X}(z) = (zI - A)^{-1} B \mathbf{U}(z)
+  $$
+   
+   **Paso 3: Sustitución en la ecuación de salida**:  
+   Sustituyendo la expresión de $$\mathbf{X}(z)$$ en la ecuación de salida:
+   
+  $$
+   \mathbf{Y}(z) = C (zI - A)^{-1} B \mathbf{U}(z) + D \mathbf{U}(z)
+   $$
+   
+   **Paso 4: Función de transferencia**:  
+   Finalmente, la función de transferencia \( G(z) \) se obtiene como la relación entre $$\mathbf{Y}(z)$$ y $$\mathbf{U}(z)$$:
+   
+   $$
+   G(z) = \frac{\mathbf{Y}(z)}{\mathbf{U}(z)} = C (zI - A)^{-1} B + D
+  $$
 
 💡**Ejemplo 1:** 
+
+Consideremos un sistema con la siguiente representación en espacio de estados:
+
+$$
+\mathbf{x}(k+1) = \begin{bmatrix} 0 & 1 \\ -\frac{K}{M} & -\frac{B}{M} \end{bmatrix} \mathbf{x}(k) + \begin{bmatrix} 0 \\ \frac{1}{M} \end{bmatrix} \mathbf{u}(k)
+$$
+$$
+\mathbf{y}(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{x}(k) + \begin{bmatrix} 0 \end{bmatrix} \mathbf{u}(k)
+$$
+
+Aplicando el procedimiento descrito, obtenemos la función de transferencia del sistema en el dominio Z:
+
+$$
+G(z) = \frac{Y(z)}{U(z)} = \frac{z}{z^2 + \frac{B}{M}z + \frac{K}{M}}
+$$
+
+
+
 $$$$
 
 ## 5. Ejercicios
