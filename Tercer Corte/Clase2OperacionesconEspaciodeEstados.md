@@ -52,6 +52,52 @@ $$
    \end{bmatrix}, \quad C = \begin{bmatrix} b_n & b_{n-1} & \dots & b_1 \end{bmatrix}, \quad D = [0]
 $$
 
+💡**Ejemplo:**  
+
+Dada la siguiente funcion de transferencia:
+
+$$G(z) = \frac{z + 1}{z^2 + 1.3z + 0.4}$$
+
+Los coeficientes del polinomio característico son $a_1 = 0.4$ y $a_2 = 1.3.$
+
+* Ecuación de Estado:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = A_c \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + B_c u(k)
+$$
+
+Sustituyendo las matrices:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = \begin{bmatrix}
+0 & 1 \\
+-0.4 & -1.3
+\end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix} 1 \\
+0 \end{bmatrix} u(k)
+$$
+
+* Ecuación de Salida:
+
+$$
+y(k) = C_c \begin{bmatrix} x_1(k) \\ x_2(k) \end{bmatrix}
+$$
+
+Sustituyendo la matriz $$C_c$$:
+
+$$
+y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
+$$
+
+
 - **Forma Canónica Observable**
   
    Esta forma permite que todos los estados sean observables desde la salida del sistema, lo que facilita la estimación de estados internos a partir de mediciones:
@@ -74,6 +120,48 @@ $$
        \vdots \\
        b_1 
    \end{bmatrix}, \quad C = \begin{bmatrix} 1 & 0 & \dots & 0 \end{bmatrix}, \quad D = [0]
+$$
+
+💡**Ejemplo:** 
+
+Retomando el ejemplo anteior se puefde expresar:
+
+* Ecuación de Estado:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = A_o \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + B_o u(k)
+$$
+
+Sustituyendo las matrices:
+
+$$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix} = \begin{bmatrix}
+0 & -0.4 \\
+1 & -1.3
+\end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix} + \begin{bmatrix} 1 \\
+1 \end{bmatrix} u(k)
+$$
+
+* Ecuación de Salida:
+
+$$
+y(k) = C_o \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
+$$
+
+Sustituyendo la matriz $$C_o:$$
+
+$$
+y(k) = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} x_1(k) \\
+x_2(k) \end{bmatrix}
 $$
 
 - **Forma Canónica Diagonal**
@@ -100,7 +188,13 @@ $$
    \end{bmatrix}, \quad C = \begin{bmatrix} c_1 & c_2 & \dots & c_n \end{bmatrix}, \quad D = [0]
  $$
 
+💡**Ejemplo:** 
 
+La descomposición en fracciones parciales es:
+
+$$
+\frac{z + 1}{z^2 + 1.3z + 0.4} = \frac{C_1}{z + 0.8} + \frac{C_2}{z + 0.5}
+$$
 
 ## 2. Análisis Dinámico en el Espacio de Estados
 El análisis dinámico en el espacio de estados es fundamental para estudiar el comportamiento temporal de un sistema. 
@@ -144,7 +238,7 @@ $$
 
 Las raíces de esta ecuación corresponden a los polos del sistema, es decir, los valores propios de la matriz $$A.$$
 
-💡**Ejemplo 1:** 
+💡**Ejemplo:** 
 
 Consideremos el siguiente ejemplo con una matriz $$A$$ dada:
 
@@ -182,7 +276,7 @@ z & 1 & 0 \\
 \end{vmatrix}
 $$
 
-Calculamos este determinante por cofactores:
+- Calculamos este determinante por cofactores:
 
 $$
 = z \begin{vmatrix}
@@ -217,7 +311,7 @@ $$
 \end{vmatrix} = 0(z + 6) - (-1)(6) = 6
 $$
 
-Sustituyendo en la ecuación del determinante:
+- Sustituyendo en la ecuación del determinante:
 
 $$
 \text{det}(zI - A) = z(z^2 + 6z + 11) - 1(6)
