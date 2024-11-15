@@ -684,3 +684,6 @@ De igual manera, también es factible obtener la función de transferencia a par
 Finalmente, cuando se trabaja con representaciones de estados, es indispensable la aplicación de las operaciones básicas con matrices, tales como la aritmética matricial, transposición, determinación de determinantes e inversión de matrices, por ende, estas operaciones son esenciales para la manipulación de los modelos y para obtener soluciones precisas en el análisis de la estabilidad y el control de sistemas dinámicos, asegurando que se pueda modelar, optimizar y controlar el comportamiento del sistema con eficacia.
 
 ## Referencias
+[1] “Formas canónicas de un espacio de estados — diseño y ajuste de sistemas de control”. GDM - Personal Webpage. Accedido el 14 de noviembre de 2024. [En línea]. Disponible: https://gonmolina.github.io/DSFyC_book/sources/notebooks_sources/modulo_ve/formas_canonicas.html
+
+[2] “Controlabilidad”. D.E.A. Accedido el 12 de noviembre de 2024. [En línea]. Disponible: http://dea.unsj.edu.ar/control2/Calse%2007_d-EE-Controlabilidad_Observabilidad,_Realizaciones%20Balanceadas.pdf
