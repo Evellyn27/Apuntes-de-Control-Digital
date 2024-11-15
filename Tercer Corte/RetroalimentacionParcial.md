@@ -84,7 +84,24 @@ $$
 C(z) = \frac{G_0(z)}{G(z) \cdot (1 - G(z))}
 $$
 
+Para calcular \( 1 - G(z) \), tenemos que restar $G(z)$ de 1:
 
+$$
+1 - G(z) = 1 - \frac{1.61 \times 10^{-7} z^3 + 6.25 \times 10^{-7} z^2 + 4.15 \times 10^{-7}}{z^3 - 2.87z^2 + 2.75z - 0.88}
+$$
+
+Esto da lugar a:
+
+$$
+1 - G(z) = \frac{(z^3 - 2.87z^2 + 2.75z - 0.88) - (1.61 \times 10^{-7} z^3 + 6.25 \times 10^{-7} z^2 + 4.15 \times 10^{-7})}{z^3 - 2.87z^2 + 2.75z - 0.88}
+$$
+
+
+Sustituyendo $G_0(z),$ $G(z),$ y $1 - G(z)$ en la fórmula del controlador:
+
+$$
+C(z) = \frac{\frac{1}{z^5 + 304z^4 + 31210z^3 + 1120000z^2 + 4380000z + 11452900}}{\frac{1.61 \times 10^{-7} z^3 + 6.25 \times 10^{-7} z^2 + 4.15 \times 10^{-7}}{z^3 - 2.87z^2 + 2.75z - 0.88} \cdot \frac{z^3 - 2.87z^2 + 2.75z - 0.88 - (1.61 \times 10^{-7} z^3 + 6.25 \times 10^{-7} z^2 + 4.15 \times 10^{-7})}{z^3 - 2.87z^2 + 2.75z - 0.88}}
+$$
 ## 📚Ejercicio 2
 Calculo del controlador por Método de igualación por coeficientes
 
