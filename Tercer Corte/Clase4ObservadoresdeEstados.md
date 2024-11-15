@@ -442,4 +442,7 @@ Por último, los observadores de estados representan una herramienta esencial en
 
 
 ## Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
+
+[1] S. Castaño Giraldo, “Variables de estado – espacio de estados – control”, *Control Automático Educación*, acceso el 11 de noviembre de 2024. [En línea]. Disponible en: https://controlautomaticoeducacion.com/sistemas-dinamicos-lineales/variables-de-estado-espacio-de-estados/#google_vignette
+
+[2] S. Castaño Giraldo, “Error en estado estacionario”, *Control Automático Educación*, acceso el 13 de noviembre de 2024. [En línea]. Disponible en: https://controlautomaticoeducacion.com/control-realimentado/error-en-estado-estacionario/
