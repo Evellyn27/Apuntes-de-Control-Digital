@@ -467,4 +467,5 @@ Por otro lado, el método de retroalimentación de estados facilita la ubicació
 Por último, cuando un sistema se encuentra en forma canónica controlable, se reduce significativamente la cantidad de cálculos necesarios para obtener las ganancias de retroalimentación. Esta simplificación favorece la eficiencia en el proceso de diseño, mejorando la optimización y el control de sistemas complejos de manera más precisa y efectiva.
 
 ## Referencias
-[1] Cote B., J. E., Controladores por retroalimentación de estados, 8° semestre, 2022. [Diapositivas]. Consultado el 13 de noviembre de 2024.
+[1] R. A. Palacios Ochoa. “Implementación de controladores por realimentación de estados y controlador PID aplicado a un motor de DC con dos masas mediante dspace”. Scielo. Accedido el 14 de noviembre de 2024. [En línea]. Disponible: http://scielo.senescyt.gob.ec/scielo.php?script=sci_arttext&amp;pid=S1390-67122017000100022
+[2] Cote B., J. E., Controladores por retroalimentación de estados, 8° semestre, 2022. [Diapositivas]. Consultado el 13 de noviembre de 2024.
